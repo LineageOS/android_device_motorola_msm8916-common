@@ -334,6 +334,19 @@ int HubSensor::setDelay(int32_t handle, int64_t ns)
     return err;
 }
 
+void HubSensor::logAlsEvent(int16_t lux, int64_t ts_ns) {
+    static int16_t last_logged_val = -1;
+    static int64_t last_logged_ts_ns;
+    int16_t luxDelta = abs(lux - last_logged_val);
+    if (last_logged_val == -1 ||
+        (luxDelta > last_logged_val * 0.15 && luxDelta >= 5 &&
+         ts_ns - last_logged_ts_ns >= 1000000000LL)) {
+        ALOGD("ALS %d", lux);
+        last_logged_val = lux;
+        last_logged_ts_ns = ts_ns;
+    }
+}
+
 int HubSensor::readEvents(sensors_event_t* d, int dLen)
 {
     struct stml0xx_android_sensor_data buff;
@@ -399,6 +412,7 @@ int HubSensor::readEvents(sensors_event_t* d, int dLen)
                 data->type = SENSOR_TYPE_LIGHT;
                 data->light = (uint16_t)STM16TOH(buff.data + LIGHT_LIGHT);
                 data->timestamp = buff.timestamp;
+                logAlsEvent((int16_t)data->light, data->timestamp);
                 data++;
                 break;
             case DT_DISP_ROTATE:
