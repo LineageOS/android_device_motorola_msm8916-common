@@ -107,6 +107,7 @@ private:
 	uint8_t mErrorCnt[ERROR_TYPES];
 	gzFile open_dropbox_file(const char* timestamp, const char* dst, const int flags);
 	short capture_dump(char* timestamp, const int id, const char* dst, const int flags);
+	void logAlsEvent(int16_t lux, int64_t ts_ns);
 };
 
 /*****************************************************************************/
