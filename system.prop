@@ -1,7 +1,8 @@
 # system.prop for msm8916-common
 
-# Android Run Time
+# Art
 ro.sys.fw.dex2oat_thread_count=4
+dalvik.vm.dex2oat-flags=--no-watch-dog
 
 # Audio
 audio.dolby.ds2.enabled=true
