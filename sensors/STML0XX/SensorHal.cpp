@@ -19,6 +19,7 @@
  */
 
 #include <float.h>
+#include <string.h>
 
 #include <cutils/log.h>
 

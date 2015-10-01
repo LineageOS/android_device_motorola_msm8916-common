@@ -58,7 +58,7 @@ private:
 	enum {
 		sensor_hub = 0,
 #ifdef _ENABLE_MAGNETOMETER
-		akm        = 1,
+		akm,
 #endif
 		numSensorDrivers,
 		numFds,

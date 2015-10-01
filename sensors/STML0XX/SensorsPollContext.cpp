@@ -27,6 +27,7 @@
 #include <pthread.h>
 #include <stdlib.h>
 #include <new>
+#include <string.h>
 
 #include <linux/input.h>
 
@@ -180,7 +181,11 @@ int SensorsPollContext::pollEvents(sensors_event_t* data, int count)
 	int err;
 
 	while (true) {
+#ifdef _ENABLE_MAGNETOMETER
 		ret = poll(mPollFds, numFds, nbEvents ? 0 : -1);
+#else
+		ret = poll(mPollFds, numSensorDrivers, nbEvents ? 0 : -1);
+#endif
 		err = errno;
 		// Success
 		if (ret >= 0)
