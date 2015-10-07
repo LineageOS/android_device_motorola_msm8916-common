@@ -34,6 +34,8 @@ ifeq ($(BOARD_USES_MOT_SENSOR_HUB), true)
 
     ifneq ($(TARGET_SIMULATOR),true)
 
+        UTILS_PATH := utils
+
         ###########################################
         # Select sensorhub type based on platform #
         ###########################################
@@ -190,6 +192,7 @@ ifeq ($(BOARD_USES_MOT_SENSOR_HUB), true)
     LOCAL_PRELINK_MODULE := false
     LOCAL_MODULE_RELATIVE_PATH := hw
     LOCAL_SRC_FILES := $(SH_PATH)/sensorhub.c
+    LOCAL_SRC_FILES += $(UTILS_PATH)/sensor_time.cpp
 
     ifneq (,$(filter motosh stml0xx,$(SH_MODULE)))
         LOCAL_C_INCLUDES += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include
@@ -201,7 +204,7 @@ ifeq ($(BOARD_USES_MOT_SENSOR_HUB), true)
         LOCAL_C_INCLUDES += bionic/libc/kernel/common
     endif # SH_MODULE == "motosh"/"stml0xx"
 
-    LOCAL_SHARED_LIBRARIES := libcutils libc
+    LOCAL_SHARED_LIBRARIES := libcutils libc libutils
     LOCAL_MODULE := sensorhub.$(TARGET_BOARD_PLATFORM)
     LOCAL_MODULE_TAGS := optional
 

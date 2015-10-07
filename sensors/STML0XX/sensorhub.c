@@ -39,6 +39,8 @@
 
 #include <hardware/mot_sensorhub_stml0xx.h>
 
+#include "utils/sensor_time.h"
+
 /* paths to the driver fds */
 #define DRIVER_CONTROL_PATH "/dev/stml0xx"
 #define DRIVER_DATA_NAME "/dev/stml0xx_ms"
@@ -83,23 +85,6 @@ static int64_t get_wall_clock()
     struct timeval time;
     gettimeofday(&time, NULL);
     return (int64_t)((time.tv_sec*(int64_t)1000) + (time.tv_usec/(int64_t)1000));
-}
-
-static int64_t get_elapsed_realtime()
-{
-    struct timespec ts;
-    int fd, result;
-
-    fd = open("/dev/alarm", O_RDONLY);
-    if (fd < 0)
-        return fd;
-
-   result = ioctl(fd, ANDROID_ALARM_GET_TIME(ANDROID_ALARM_ELAPSED_REALTIME), &ts);
-   close(fd);
-
-    if (result == 0)
-        return (int64_t)((ts.tv_sec*(int64_t)1000) + (ts.tv_nsec/(int64_t)1000000));
-    return -1;
 }
 
 static int sensorhub_enable(struct sensorhub_device_t* device, struct sensorhub_algo_t* algo)
@@ -164,7 +149,7 @@ static int sensorhub_algo_req(struct sensorhub_device_t* device, uint16_t algo,
     unsigned char bytes[sizeof(algo) + sizeof(req_len) + req_len];
 
     pthread_mutex_lock(&g_lock);
-    ALOGD("sensorhub_algo_req(): algo: %d, active_parts: %d, num_parts: %d, req_len: %d, bytes: %d",
+    ALOGD("sensorhub_algo_req(): algo: %d, active_parts: %d, num_parts: %d, req_len: %d, bytes: %zu",
         algo, active_parts, num_parts[algo], req_len, sizeof(bytes));
 
     algos = context->active_algos;
@@ -308,7 +293,7 @@ static int sensorhub_poll(struct sensorhub_device_t* device, struct sensorhub_ev
             // all other sensorhub data which are sent big endian.
             algo = buff.data[ALGO_ALGO];
             event->time = get_wall_clock();
-            elapsed_ms = get_elapsed_realtime();
+            elapsed_ms = sensor_elapsed_realtime();
             event->ertime = elapsed_ms > 0 ? elapsed_ms : 0;
             if (algo == SENSORHUB_ALGO_ACCUM_MVMT) {
                 event->type = SENSORHUB_EVENT_ACCUM_MVMT;
@@ -370,6 +355,8 @@ static int sensorhub_open(const struct hw_module_t* module, char const* name, st
 {
     struct sensorhub_context_t* context = calloc(1, sizeof(struct sensorhub_context_t));
     int fd;
+
+    (void) name;
 
     if (!context) {
         ALOGE("%s: Couldn't allocate context.", __func__);
