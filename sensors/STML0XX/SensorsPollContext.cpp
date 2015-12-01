@@ -85,9 +85,6 @@ SensorsPollContext::SensorsPollContext()
 
 SensorsPollContext::~SensorsPollContext()
 {
-	for (int i=0 ; i<numSensorDrivers ; i++) {
-		delete mSensors[i];
-	}
 #ifdef _ENABLE_MAGNETOMETER
 	close(mPollFds[wake].fd);
 	close(mWritePipeFd);

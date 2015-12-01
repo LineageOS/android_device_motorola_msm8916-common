@@ -85,9 +85,6 @@ AkmSensor::AkmSensor()
 
 AkmSensor::~AkmSensor()
 {
-	for (int i=0; i<numSensors; i++) {
-		setEnable(i, 0);
-	}
 }
 
 AkmSensor *AkmSensor::getInstance()
