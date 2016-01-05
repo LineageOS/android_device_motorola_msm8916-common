@@ -63,6 +63,7 @@ typedef enum sensor_handle {
 	ID_LF, 	/* Lift Gesture */
 #endif
 	ID_GLANCE_GESTURE, /* Glance Gesture */
+	ID_MOTO_GLANCE_GESTURE, /* Moto Glance Gesture */
 	MAX_SENSOR_ID
 } sensor_handle_t;
 

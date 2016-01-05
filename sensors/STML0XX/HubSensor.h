@@ -77,6 +77,7 @@ public:
 	virtual ~HubSensor();
 
 	static HubSensor* getInstance();
+	virtual bool isHandleEnabled(uint64_t handle);
 	virtual int setEnable(int32_t handle, int enabled);
 	virtual int setDelay(int32_t handle, int64_t ns);
 	virtual int readEvents(sensors_event_t* data, int count);
@@ -101,6 +102,7 @@ private:
 	uint32_t mWakeEnabled;
 	uint32_t mPendingMask;
 	uint32_t mFlushEnabled;
+	uint64_t mEnabledHandles;
 
 	uint8_t mErrorCnt[ERROR_TYPES];
 	gzFile open_dropbox_file(const char* timestamp, const char* dst, const int flags);

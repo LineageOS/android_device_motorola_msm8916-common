@@ -18,6 +18,7 @@
  * Copyright (C) 2011-2015 Motorola Mobility LLC
  */
 
+#include <assert.h>
 #include <fcntl.h>
 #include <errno.h>
 #include <math.h>
@@ -45,7 +46,8 @@ HubSensor::HubSensor()
 : SensorBase(SENSORHUB_DEVICE_NAME, NULL, SENSORHUB_AS_DATA_NAME),
       mEnabled(0),
       mWakeEnabled(0),
-      mPendingMask(0)
+      mPendingMask(0),
+      mEnabledHandles(0)
 {
     // read the actual value of all sensors if they're enabled already
     struct input_absinfo absinfo;
@@ -53,6 +55,9 @@ HubSensor::HubSensor()
     FILE *fp;
     int i;
     int err = 0;
+
+    static_assert(MAX_SENSOR_ID < (sizeof(mEnabledHandles) * CHAR_BIT),
+        "enabled handlers bit mask can NOT hold all the handles");
 
     memset(mErrorCnt, 0, sizeof(mErrorCnt));
 
@@ -81,6 +86,11 @@ HubSensor::~HubSensor()
 HubSensor *HubSensor::getInstance()
 {
 	return &self;
+}
+
+bool HubSensor::isHandleEnabled(uint64_t handle)
+{
+    return (mEnabledHandles & ((decltype(mEnabledHandles))1 << handle)) != 0;
 }
 
 int HubSensor::setEnable(int32_t handle, int en)
@@ -213,10 +223,24 @@ int HubSensor::setEnable(int32_t handle, int en)
             break;
 #endif
         case ID_GLANCE_GESTURE:
-            new_enabled &= ~M_GLANCE;
-            if (newState)
-                new_enabled |= M_GLANCE;
-            found = 1;
+            // enable only if moto_glance not enabled
+            // disable only if moto_glance not enabled
+            if (!isHandleEnabled(ID_MOTO_GLANCE_GESTURE)) {
+                new_enabled &= ~M_GLANCE;
+                if (newState)
+                    new_enabled |= M_GLANCE;
+                found = 1;
+            }
+            break;
+        case ID_MOTO_GLANCE_GESTURE:
+            // enable only if glance not enabled
+            // disable only if glance not enabled
+            if (!isHandleEnabled(ID_GLANCE_GESTURE)) {
+                new_enabled &= ~M_GLANCE;
+                if (newState)
+                    new_enabled |= M_GLANCE;
+                found = 1;
+            }
             break;
     }
 
@@ -229,6 +253,12 @@ int HubSensor::setEnable(int32_t handle, int en)
         err = 0;
         mWakeEnabled = new_enabled;
     }
+
+
+    if (newState)
+        mEnabledHandles |= ((decltype(mEnabledHandles))1 << handle);
+    else
+        mEnabledHandles &= ~((decltype(mEnabledHandles))1 << handle);
 
     return err;
 }
@@ -262,6 +292,7 @@ int HubSensor::setDelay(int32_t handle, int64_t ns)
         case ID_S:
         case ID_CA:
         case ID_GLANCE_GESTURE:
+        case ID_MOTO_GLANCE_GESTURE:
 #ifdef _ENABLE_LIFT
         case ID_LF:
 #endif
@@ -325,7 +356,10 @@ int HubSensor::readEvents(sensors_event_t* d, int dLen)
     struct timeval timeutc;
     static long int sent_bug2go_sec = 0;
     sensors_event_t* data = d;
-    sensors_event_t const* const dataEnd = d + dLen;
+
+    // Ensure there are at least 2 slots free in the buffer
+    // because we can send 2 events at once below.
+    sensors_event_t const* const dataEnd = d + dLen - 1;
 
     if (!data) {
         ALOGE("HubSensor::readEvents - null data buffer");
@@ -488,17 +522,34 @@ int HubSensor::readEvents(sensors_event_t* d, int dLen)
                 break;
 #endif
             case DT_GLANCE:
-                data->version = SENSORS_EVENT_T_SIZE;
-                data->sensor = ID_GLANCE_GESTURE;
-                data->type = SENSOR_TYPE_GLANCE_GESTURE;
-                data->data[0] = 1;                   /* set to 1 for Android compatibility */
-                data->data[1] = STM16TOH(buff.data); /* Currently blocked by Android FW */
-                data->data[2] = 0;
-                data->timestamp = buff.timestamp;
-                data++;
+                if (isHandleEnabled(ID_MOTO_GLANCE_GESTURE)) {
+                    data->version = SENSORS_EVENT_T_SIZE;
+                    data->sensor = ID_MOTO_GLANCE_GESTURE;
+                    data->type = SENSOR_TYPE_MOTO_GLANCE_GESTURE;
+                    data->data[0] = STM16TOH(buff.data); /* Gesture that triggered glance */
+                    data->data[1] = 0;
+                    data->data[2] = 0;
+                    data->timestamp = buff.timestamp;
+                    data++;
 
-                /* Disable, because this is a one shot sensor */
-                setEnable(ID_GLANCE_GESTURE, 0);
+                    /* Disable, because this is a one shot sensor */
+                    setEnable(ID_MOTO_GLANCE_GESTURE, 0);
+                }
+
+                if (isHandleEnabled(ID_GLANCE_GESTURE)) {
+                    data->version = SENSORS_EVENT_T_SIZE;
+                    data->sensor = ID_GLANCE_GESTURE;
+                    data->type = SENSOR_TYPE_GLANCE_GESTURE;
+                    data->data[0] = 1.0;                   /* set to 1 for Android compatibility */
+                    data->data[1] = STM16TOH(buff.data);   /* Currently blocked by Android FW */
+                    data->data[2] = 0;
+                    data->timestamp = buff.timestamp;
+                    data++;
+
+                    /* Disable, because this is a one shot sensor */
+                    setEnable(ID_GLANCE_GESTURE, 0);
+                }
+
                 break;
             default:
                 break;
