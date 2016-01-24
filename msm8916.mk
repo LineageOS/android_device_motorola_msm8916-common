@@ -162,11 +162,6 @@ PRODUCT_PACKAGES += \
     librmnetctl \
     libxml2
 
-# Shim libraries
-PRODUCT_PACKAGES += \
-    libshim_log \
-    libshim_ril
-
 # Stlport
 PRODUCT_PACKAGES += \
     libstlport
