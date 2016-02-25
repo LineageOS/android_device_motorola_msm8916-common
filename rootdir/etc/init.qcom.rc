@@ -80,6 +80,9 @@ on init
     write /sys/class/devfreq/qcom,cpubw.30/governor "performance"
 
 on fs
+    wait /dev/block/platform/soc.0/${ro.boot.bootdevice}
+    symlink /dev/block/platform/soc.0/${ro.boot.bootdevice} /dev/block/bootdevice
+
     mount_all fstab.qcom
 
     # set up a symbolic link so the many references to the old location still work and the java code can remain platform agnostic.
