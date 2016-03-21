@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7faddb67_dc50cad7",
+        "filename": "rootdir/etc/init.mmi.boot.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 7230
+      },
+      "writtenOn": "2016-03-21T12:22:40Z",
+      "side": 0,
+      "message": "Not sure if we need 81-90",
+      "revId": "8bc722e89cd13bf2adea18a71ac6b962788a0bf6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
