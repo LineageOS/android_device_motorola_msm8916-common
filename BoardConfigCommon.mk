@@ -124,5 +124,6 @@ TW_INCLUDE_CRYPTO := true
 # TWRP
 TW_THEME := portrait_hdpi
 TW_SCREEN_BLANK_ON_BOOT := true
+TW_BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness
 TARGET_USES_LOGD := true
 TWRP_INCLUDE_LOGCAT := true
