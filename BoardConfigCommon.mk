@@ -116,3 +116,13 @@ BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_qcwcn
 WIFI_DRIVER_MODULE_PATH := "/system/lib/modules/wlan.ko"
 WIFI_DRIVER_MODULE_NAME := "wlan"
 WPA_SUPPLICANT_VERSION := VER_0_8_X
+
+# Crypto
+TARGET_HW_DISK_ENCRYPTION := true
+TW_INCLUDE_CRYPTO := true
+
+# TWRP
+TW_THEME := portrait_hdpi
+TW_SCREEN_BLANK_ON_BOOT := true
+TARGET_USES_LOGD := true
+TWRP_INCLUDE_LOGCAT := true
