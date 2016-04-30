@@ -153,7 +153,9 @@ PRODUCT_PACKAGES += \
     init.mmi.touch.sh \
     init.mmi.usb.rc \
     init.qcom.rc \
-    ueventd.qcom.rc
+    ueventd.qcom.rc \
+    twrp.fstab \
+    init.recovery.qcom.rc \
 
 # RIL
 PRODUCT_PACKAGES += \

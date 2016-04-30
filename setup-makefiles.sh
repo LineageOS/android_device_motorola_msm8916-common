@@ -143,7 +143,18 @@ PRODUCT_PACKAGES += \\
     qcrilmsgtunnel \\
     qcnvitems \\
     qcrilhook \\
-    libHevcSwDecoder
+    libHevcSwDecoder \\
+    keystore.msm8916.so
+
+# TWRP
+TW_RECOVERY_ADDITIONAL_RELINK_FILES += \$(OUT)/system/bin/qseecomd
+PRODUCT_COPY_FILES += \\
+    $OUTDIR/proprietary/vendor/lib/libdiag.so:recovery/root/vendor/lib/libdiag.so \\
+    $OUTDIR/proprietary/vendor/lib/libdrmfs.so:recovery/root/vendor/lib/libdrmfs.so \\
+    $OUTDIR/proprietary/vendor/lib/libdrmtime.so:recovery/root/vendor/lib/libdrmtime.so \\
+    $OUTDIR/proprietary/vendor/lib/libQSEEComAPI.so:recovery/root/vendor/lib/libQSEEComAPI.so \\
+    $OUTDIR/proprietary/vendor/lib/librpmb.so:recovery/root/vendor/lib/librpmb.so \\
+    $OUTDIR/proprietary/vendor/lib/libssd.so:recovery/root/vendor/lib/libssd.so
 
 \$(call inherit-product, vendor/$VENDOR/$DEVICE/$DEVICE-vendor-blobs.mk)
 EOF
@@ -232,6 +243,16 @@ LOCAL_MODULE_PATH := \$(TARGET_OUT_VENDOR_SHARED_LIBRARIES)
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_SUFFIX := .so
 LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+include \$(BUILD_PREBUILT)
+
+# TWRP
+include \$(CLEAR_VARS)
+LOCAL_MODULE := keystore.msm8916.so
+LOCAL_MODULE_OWNER := motorola
+LOCAL_PREBUILT_MODULE_FILE := \$(TARGET_OUT_SHARED_LIBRARIES)/hw/\$(LOCAL_MODULE)
+LOCAL_MODULE_PATH := \$(TARGET_RECOVERY_ROOT_OUT)/vendor/lib/hw
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := ETC
 include \$(BUILD_PREBUILT)
 
 endif
