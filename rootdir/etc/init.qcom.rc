@@ -229,6 +229,8 @@ on boot
     chmod 0664 /sys/class/leds/rgb/control
 
     # Change the ownership of the charging LED interface
+    chown system system /sys/class/leds/charging/blink
+    chmod 0664 /sys/class/leds/charging/blink
     chown system system /sys/class/leds/charging/brightness
     chmod 0664 /sys/class/leds/charging/brightness
     chown system system /sys/class/leds/charging/trigger

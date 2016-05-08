@@ -25,15 +25,11 @@
 
 /******************************************************************************/
 
-#define LED_LIGHT_OFF 0
-#define LED_LIGHT_ON 255
-
 static pthread_once_t g_init = PTHREAD_ONCE_INIT;
 static pthread_mutex_t g_lock = PTHREAD_MUTEX_INITIALIZER;
-static struct light_state_t g_battery;
 
-char const*const CHARGING_LED_FILE
-        = "/sys/class/leds/charging/brightness";
+char const*const CHARGING_LED_BLINK
+        = "/sys/class/leds/charging/blink";
 
 char const*const LCD_FILE
         = "/sys/class/leds/lcd-backlight/brightness";
@@ -71,6 +67,28 @@ write_int(char const* path, int value)
 }
 
 static int
+write_str(char const* path, char *value)
+{
+    int fd;
+    static int already_warned = 0;
+
+    fd = open(path, O_RDWR);
+    if (fd >= 0) {
+        char buffer[PAGE_SIZE];
+        int bytes = sprintf(buffer, "%s\n", value);
+        int amt = write(fd, buffer, bytes);
+        close(fd);
+        return amt == -1 ? -errno : 0;
+    } else {
+        if (already_warned == 0) {
+            ALOGE("write_str failed to open %s\n", path);
+            already_warned = 1;
+        }
+        return -errno;
+    }
+}
+
+static int
 is_lit(struct light_state_t const* state)
 {
     return state->color & 0x00ffffff;
@@ -97,32 +115,44 @@ set_light_backlight(__attribute__((unused)) struct light_device_t* dev,
 }
 
 static int
-set_speaker_light_locked(struct light_state_t const* state)
-{
-    int brightness_level;
-
-    if (is_lit(state))
-        brightness_level = LED_LIGHT_ON;
-    else
-        brightness_level = LED_LIGHT_OFF;
-
-    return write_int(CHARGING_LED_FILE, brightness_level);
-}
-
-static int
-handle_speaker_battery_locked()
-{
-    return set_speaker_light_locked(&g_battery);
-}
-
-static int
-set_light_battery(__attribute__((unused)) struct light_device_t* dev,
-        struct light_state_t const* state)
+set_light_battery(struct light_device_t* dev, struct light_state_t const* state)
 {
     int err = 0;
+
+    if (!dev)
+        return -1;
+
     pthread_mutex_lock(&g_lock);
-    g_battery = *state;
-    err = handle_speaker_battery_locked();
+
+    // framework sends the level as the lower 8 bits of color
+    int level = (state->color & 0xFF000000) >> 24;
+    ALOGD("%s: color=%x level=%d", __func__, state->color, level);
+
+    // sanity check
+    if (level < 0)
+        level = 0;
+    else if (level > 100)
+        level = 100;
+
+    if (is_lit(state)) {
+        // Set blinking time
+        if (level < 15)
+            err = write_str(CHARGING_LED_BLINK, "1000,5000");
+        else if (level >= 15 && level < 50)
+            err = write_str(CHARGING_LED_BLINK, "1000,2000");
+        else if (level >= 50 && level < 98)
+            err = write_str(CHARGING_LED_BLINK, "1000,500");
+        else /*if (level >= 98)*/
+            err = write_str(CHARGING_LED_BLINK, "1000,0");
+    } else {
+        // Switch off the LED
+        err = write_str(CHARGING_LED_BLINK, "0,0");
+    }
+
+    if(err < 0){
+       ALOGE("%s: failed to write LED blinking time err=%d", __func__, err);
+    }
+
     pthread_mutex_unlock(&g_lock);
     return err;
 }
