@@ -655,6 +655,8 @@ service qmuxd /system/bin/qmuxd
 
 service netmgrd /system/bin/netmgrd
     class main
+    user root
+    group root wifi wakelock radio inet
 
 on property:ro.use_data_netmgrd=false
     # netmgr not supported on specific target
