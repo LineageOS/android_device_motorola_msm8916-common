@@ -151,7 +151,7 @@ static const struct sensor_t sSensorList[] = {
 		0,
 		0,
 		0,
-		"com.motorola.sensor.display_rotate",
+		SENSOR_STRING_TYPE_DISPLAY_ROTATE,
 		"",
 		0,
 		SENSOR_FLAG_ON_CHANGE_MODE,
