@@ -29,6 +29,18 @@ LOCAL_MODULE_PATH  := $(TARGET_OUT_ETC)/wifi
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
+LOCAL_MODULE       := WCNSS_qcom_cfg.ini
+LOCAL_MODULE_TAGS  := optional
+LOCAL_MODULE_CLASS := ETC
+ifeq ($(TARGET_DEVICE), lux)
+LOCAL_SRC_FILES    := WCNSS_qcom_cfg_lux.ini
+else
+LOCAL_SRC_FILES    := $(LOCAL_MODULE)
+endif
+LOCAL_MODULE_PATH  := $(TARGET_OUT)/etc/firmware/wlan/prima
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
 LOCAL_MODULE := WCNSS_wlan_dictionary.dat
 LOCAL_MODULE_CLASS := FAKE
 LOCAL_MODULE_TAGS := optional
