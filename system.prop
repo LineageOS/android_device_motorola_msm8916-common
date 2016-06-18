@@ -4,7 +4,6 @@
 ro.sys.fw.dex2oat_thread_count=4
 
 # Audio
-audio.dolby.ds2.enabled=true
 audio.offload.24bit.enable=false
 audio.offload.buffer.size.kb=64
 audio.offload.gapless.enabled=true
