@@ -16,9 +16,15 @@
 
 package com.cyanogenmod.settings.device;
 
+import android.app.AlertDialog;
 import android.app.ActionBar;
+import android.app.NotificationManager;
 import android.os.Bundle;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.res.Resources;
+import android.preference.Preference;
 import android.preference.PreferenceActivity;
 import android.preference.PreferenceCategory;
 import android.preference.SwitchPreference;
@@ -29,6 +35,8 @@ import org.cyanogenmod.internal.util.ScreenType;
 
 public class TouchscreenGestureSettings extends PreferenceActivity {
     private static final String CATEGORY_AMBIENT_DISPLAY = "ambient_display_key";
+    private SwitchPreference flipPref;
+    private NotificationManager mNotificationManager;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -49,6 +57,32 @@ public class TouchscreenGestureSettings extends PreferenceActivity {
             PreferenceCategory mCategory = (PreferenceCategory) findPreference("actions_key");
             mCategory.removePreference(chopChopPref);
         }
+
+        mNotificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+        flipPref = (SwitchPreference) findPreference("gesture_flip_to_mute");
+        flipPref.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+            public boolean onPreferenceClick(Preference preference) {
+                if (!mNotificationManager.isNotificationPolicyAccessGranted()) {
+                    flipPref.setChecked(false);
+                    new AlertDialog.Builder(TouchscreenGestureSettings.this)
+                        .setTitle(getString(R.string.flip_to_mute_title))
+                        .setMessage(getString(R.string.dnd_access))
+                        .setNegativeButton(android.R.string.cancel, null)
+                        .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                startActivity(new Intent(
+                                   android.provider.Settings.ACTION_NOTIFICATION_POLICY_ACCESS_SETTINGS));
+                            }
+                        }).show();
+                }
+                return true;
+            }
+        });
+
+        //Users may disallow DND access after giving it
+        if (!mNotificationManager.isNotificationPolicyAccessGranted()) {
+	    flipPref.setChecked(false);
+        }
     }
 
     @Override
@@ -58,6 +92,11 @@ public class TouchscreenGestureSettings extends PreferenceActivity {
         // If running on a phone, remove padding around the listview
         if (!ScreenType.isTablet(this)) {
             getListView().setPadding(0, 0, 0, 0);
+        }
+
+        //Turn on FTM automatically once users give DND access.
+        if (mNotificationManager.isNotificationPolicyAccessGranted()) {
+	    flipPref.setChecked(true);
         }
     }
 
