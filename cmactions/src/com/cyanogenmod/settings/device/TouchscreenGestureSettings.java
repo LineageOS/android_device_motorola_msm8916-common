@@ -25,7 +25,6 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
-import android.content.res.Resources;
 import android.preference.Preference;
 import android.preference.PreferenceActivity;
 import android.preference.PreferenceCategory;
@@ -52,9 +51,7 @@ public class TouchscreenGestureSettings extends PreferenceActivity {
         }
         final ActionBar actionBar = getActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
-        Resources res = getResources();
-        boolean hasChopChop = res.getBoolean(R.bool.config_hasChopChop);
-        if (!hasChopChop){
+        if (Device.isSurnia()){
             //Check if we have to hide the chop chop entry
             SwitchPreference chopChopPref = (SwitchPreference) findPreference("gesture_chop_chop");
             PreferenceCategory mCategory = (PreferenceCategory) findPreference("actions_key");
