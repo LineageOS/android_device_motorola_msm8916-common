@@ -55,6 +55,24 @@
     },
     {
       "key": {
+        "uuid": "3fa7e38b_0e706c72",
+        "filename": "cmactions/src/com/cyanogenmod/settings/device/CMActionsSettings.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 7230
+      },
+      "writtenOn": "2016-06-30T20:52:42Z",
+      "side": 1,
+      "message": "Sorry, I didn\u0027t mean to be harsh",
+      "parentUuid": "3fa7e38b_2e59a8fd",
+      "revId": "3439960a0f32deb8ad79e068a438a73033294b89",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "3fa7e38b_4ef744f7",
         "filename": "cmactions/src/com/cyanogenmod/settings/device/FlipToMute.java",
         "patchSetId": 3
@@ -137,6 +155,24 @@
       "side": 1,
       "message": "i thought of adding a helper var which is set in the else hereand checked before disabling dn dhere.",
       "parentUuid": "3fa7e38b_4e450417",
+      "revId": "3439960a0f32deb8ad79e068a438a73033294b89",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3fa7e38b_eef710d4",
+        "filename": "cmactions/src/com/cyanogenmod/settings/device/FlipToMute.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 90,
+      "author": {
+        "id": 7230
+      },
+      "writtenOn": "2016-06-30T20:52:42Z",
+      "side": 1,
+      "message": "Yeah, I though that too but if someone just want to be sure to avoid getting any notification can use this gesture. Not sure how Motorola handles this anyway and at this point, I\u0027m wondering if making this behaviour configurable is a better way.",
+      "parentUuid": "3fa7e38b_6e5fa0e5",
       "revId": "3439960a0f32deb8ad79e068a438a73033294b89",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
