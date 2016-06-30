@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3fa7e38b_aee5983a",
+        "filename": "cmactions/src/com/cyanogenmod/settings/device/CMActionsSettings.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 13028
+      },
+      "writtenOn": "2016-06-30T19:59:03Z",
+      "side": 1,
+      "message": "why moving it?",
+      "revId": "3439960a0f32deb8ad79e068a438a73033294b89",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3fa7e38b_4ef744f7",
+        "filename": "cmactions/src/com/cyanogenmod/settings/device/FlipToMute.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 13028
+      },
+      "writtenOn": "2016-06-30T19:59:03Z",
+      "side": 1,
+      "message": "maybe too long tag?",
+      "revId": "3439960a0f32deb8ad79e068a438a73033294b89",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3fa7e38b_cee25430",
+        "filename": "cmactions/src/com/cyanogenmod/settings/device/FlipToMute.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 90,
+      "author": {
+        "id": 13028
+      },
+      "writtenOn": "2016-06-30T19:59:03Z",
+      "side": 1,
+      "message": "wont this also disable dnd if applied manually and then turning the phone twice?",
+      "revId": "3439960a0f32deb8ad79e068a438a73033294b89",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3fa7e38b_6ee80016",
+        "filename": "cmactions/src/com/cyanogenmod/settings/device/TouchscreenGestureSettings.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 13028
+      },
+      "writtenOn": "2016-06-30T19:59:03Z",
+      "side": 1,
+      "message": "mFlipPref",
+      "revId": "3439960a0f32deb8ad79e068a438a73033294b89",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3fa7e38b_2ef20808",
+        "filename": "cmactions/src/com/cyanogenmod/settings/device/TouchscreenGestureSettings.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 13028
+      },
+      "writtenOn": "2016-06-30T19:59:03Z",
+      "side": 1,
+      "message": "mFlipClick",
+      "revId": "3439960a0f32deb8ad79e068a438a73033294b89",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
