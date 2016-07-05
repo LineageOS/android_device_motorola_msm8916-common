@@ -69,6 +69,7 @@ public class CMActionsService extends IntentService implements ScreenStateNotifi
 
         mUpdatedStateNotifiers.add(new ProximitySilencer(cmActionsSettings, context, mSensorHelper));
         mUpdatedStateNotifiers.add(new FlipToMute(cmActionsSettings, context, mSensorHelper));
+        mUpdatedStateNotifiers.add(new LiftToSilence(cmActionsSettings, context, mSensorHelper));
 
         mPowerManager = (PowerManager) context.getSystemService(Context.POWER_SERVICE);
         updateState();
