@@ -33,5 +33,6 @@
   <string name="flip_to_mute_title">Umdrehen für \"Nicht Stören\"</string>
   <string name="flip_to_mute_summary">Das Telefon mit dem Display nach unten ablegen, um Benachrichtigungen und Anrufe stumm zu schalten</string>
   <string name="dnd_access">Bitte geben Sie CMActions Zugriff auf \"Nicht Stören\", um diese Funktion zu nutzen.</string>
+  <string name="lift_to_silence_title">Aufheben, um das Klingeln zu beenden</string>
   <string name="lift_to_silence_summary">Eingehende Anrufe durch das Aufheben des Telefons stummschalten. Funktioniert nur, wenn Ihr Telefon zuvor flach auflag</string>
 </resources>
