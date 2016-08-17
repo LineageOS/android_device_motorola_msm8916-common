@@ -80,6 +80,9 @@ USE_OPENGL_RENDERER := true
 BOARD_HAVE_QCOM_FM := true
 TARGET_QCOM_NO_FM_FIRMWARE := true
 
+# Filesystem
+TARGET_ANDROID_FILESYSTEM_CONFIG_H := $(VENDOR_PATH)/android_filesystem_config.h
+
 # Init
 TARGET_UNIFIED_DEVICE := true
 
