@@ -1,0 +1,17 @@
+type mmi_boot_sh, domain, domain_deprecated;
+type mmi_boot_sh_exec, exec_type, file_type;
+init_daemon_domain(mmi_boot_sh)
+
+allow mmi_boot_sh init:unix_stream_socket connectto;
+allow mmi_boot_sh proc:file write;
+allow mmi_boot_sh property_socket:sock_file write;
+allow mmi_boot_sh self:capability dac_override;
+allow mmi_boot_sh shell_exec:file { entrypoint getattr read };
+allow mmi_boot_sh sysfs_socinfo:file write;
+allow mmi_boot_sh system_prop:property_service set;
+allow mmi_boot_sh toolbox_exec:file { execute execute_no_trans getattr open read };
+allow mmi_boot_sh utags_block_device:blk_file r_file_perms;
+
+allow mmi_boot_sh rild_data_file:file rw_file_perms;
+set_prop(mmi_boot_sh, hw_rev_prop)
+set_prop(mmi_boot_sh, manufacturedate_prop)

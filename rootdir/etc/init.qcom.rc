@@ -496,12 +496,14 @@ service mmi-boot-sh /system/bin/sh /init.mmi.boot.sh
     class core
     user root
     oneshot
+    seclabel u:r:mmi_boot_sh:s0
 
 service mmi-touch-sh /system/bin/sh /init.mmi.touch.sh synaptics
     class core
     user root
     group root system mot_tcmd
     oneshot
+    seclabel u:r:mmi_touch_sh:s0
 
 on property:ro.secure=0
     # disable dmesg restrict for insecure builds
@@ -519,6 +521,7 @@ service hw_revs /system/bin/sh /system/bin/hardware_revisions.sh
     user system
     group system
     oneshot
+    seclabel u:r:hw_revs:s0
 
 service wcnss-service /system/bin/wcnss_service
     class main

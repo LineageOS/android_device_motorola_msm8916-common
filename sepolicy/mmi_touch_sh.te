@@ -1,0 +1,9 @@
+type mmi_touch_sh, domain, domain_deprecated;
+type mmi_touch_sh_exec, exec_type, file_type;
+init_daemon_domain(mmi_touch_sh)
+
+allow mmi_touch_sh hw_rev_prop:file r_file_perms;
+allow mmi_touch_sh kmsg_device:chr_file { write open };
+allow mmi_touch_sh shell_exec:file { entrypoint getattr read };
+allow mmi_touch_sh sysfs:file setattr;
+allow mmi_touch_sh toolbox_exec:file { execute execute_no_trans getattr open read };
