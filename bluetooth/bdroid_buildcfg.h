@@ -33,6 +33,8 @@ inline const char* BtmGetDefaultName()
 		return "Moto G Turbo";
 	} else if (!strcmp("lux", device)) {
 		return "Moto X Play";
+	} else if (!strcmp("harpia", device)) {
+		return "Moto G Play";
 	}
 
 	return "Motorola";

@@ -84,9 +84,11 @@ PRODUCT_PACKAGES += \
     libbson \
     Snap
 
-# CMActions
+# CMActions (not for harpia)
+ifeq ($(filter harpia,$(TARGET_DEVICE)),)
 PRODUCT_PACKAGES += \
     CMActions
+endif
 
 # Display
 PRODUCT_PACKAGES += \
