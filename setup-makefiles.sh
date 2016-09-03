@@ -34,7 +34,7 @@ fi
 setup_vendor "$DEVICE_COMMON" "$VENDOR" "$CM_ROOT" "true"
 
 # Copyright headers and guards
-write_headers "lux merlin osprey surnia"
+write_headers "harpia lux merlin osprey surnia"
 
 # The standard common blobs
 write_makefiles "$MY_DIR"/proprietary-files.txt

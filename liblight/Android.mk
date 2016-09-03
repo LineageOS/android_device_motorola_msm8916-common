@@ -20,7 +20,7 @@ include $(CLEAR_VARS)
 
 ifneq ($(filter lux surnia, $(TARGET_DEVICE)),)
 LOCAL_SRC_FILES := lights.c
-else ifneq ($(filter merlin osprey, $(TARGET_DEVICE)),)
+else ifneq ($(filter harpia merlin osprey, $(TARGET_DEVICE)),)
 LOCAL_SRC_FILES := lights_osprey.c
 endif
 

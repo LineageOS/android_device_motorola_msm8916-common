@@ -21,6 +21,10 @@ import android.os.SystemProperties;
 public class Device {
     private static final String TAG = "CMActions-Device";
 
+    public static boolean isHarpia() {
+        return checkDevice("harpia");
+    }
+
     public static boolean isLux() {
         return checkDevice("lux");
     }
