@@ -1,0 +1,1 @@
+allow healthd sysfs_power_supply:dir r_dir_perms;

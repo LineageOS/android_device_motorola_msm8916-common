@@ -32,6 +32,8 @@
 # RIL
 /data/misc/cutback(/.*)?                                    u:object_r:cutback_data_file:s0
 /dev/socket/cutback                                         u:object_r:rild_socket:s0
+/data/misc/radio/db_check_done                              u:object_r:rild_data_file:s0
+/data/misc/radio/qcril.db                                   u:object_r:rild_data_file:s0
 
 # Sensors
 /dev/akm09912                                               u:object_r:sensors_device:s0
@@ -40,3 +42,9 @@
 /dev/stml0xx_as                                             u:object_r:sensors_device:s0
 /dev/stml0xx_ms                                             u:object_r:sensors_device:s0
 /data/misc/akmd/akmd_set.txt                                u:object_r:sensors_data_file:s0
+
+# batt_health
+/sys/class/power_supply                                                         u:object_r:sysfs_power_supply:s0
+/sys/devices/soc.0/78d9000.usb/power_supply/usb(/.*)?                           u:object_r:sysfs_usb_supply:s0
+/sys/devices/soc.0/78b5000.i2c/i2c-1/1-006b/power_supply/battery(/.*)?          u:object_r:sysfs_battery_supply:s0
+/sys/devices/soc.0/78b5000.i2c/i2c-1/1-0036/power_supply/max170xx_battery(/.*)? u:object_r:sysfs_battery_supply:s0

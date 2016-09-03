@@ -10,9 +10,13 @@ type chargeonly_data_file, file_type, data_file_type;
 
 # Cutback socket (RILD)
 type cutback_data_file, file_type, data_file_type;
+type rild_data_file, file_type, data_file_type;
 
 # CMHW
 type vibeamp_sysfs, fs_type, sysfs_type;
 
 #fsg
 type fsg_file, fs_type, contextmount_type;
+
+# Power Supply
+type sysfs_power_supply, sysfs_type, fs_type;
