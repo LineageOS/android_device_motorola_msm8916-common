@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1fa4df85_3badf987",
+        "filename": "rootdir/etc/init.qcom.rc",
+        "patchSetId": 1
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 7230
+      },
+      "writtenOn": "2016-09-21T18:22:43Z",
+      "side": 1,
+      "message": "Since surnia doesn\u0027t use libjscore and libjustshoot I\u0027m not sure if this causes a bootloop there.",
+      "range": {
+        "startLine": 49,
+        "startChar": 4,
+        "endLine": 49,
+        "endChar": 112
+      },
+      "revId": "58bc5eb66a0e0e6d92af01443bcc1941ddc27ccc",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
