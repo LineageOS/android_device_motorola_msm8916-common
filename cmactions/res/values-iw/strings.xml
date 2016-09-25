@@ -34,4 +34,5 @@
   <string name="flip_to_mute_summary">הנח את המכשיר על פניו על מנת להשתיק התראות ושיחות</string>
   <string name="dnd_access">אנא תן ל\"נא לא להפריע\" גישה ל-CMActions על מנת להשתמש באפשרות זו.</string>
   <string name="lift_to_silence_title">הרם על מנת להפסיק את הצלצול</string>
+  <string name="lift_to_silence_summary">הרם את המכשיר כדי להשתיק שיחות נכנסות. אפשרות זו עובדת רק כאשר הטלפון הונח תחילה</string>
 </resources>
