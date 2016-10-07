@@ -89,6 +89,7 @@
 #define AID_DEBUGGERD     1045  /* debuggerd unprivileged user */
 #define AID_MEDIA_CODEC   1046  /* mediacodec process */
 #define AID_CAMERASERVER  1047  /* cameraserver process */
+#define AID_SMARTCARD     1128  /* smart card subsystem */
 
 #define AID_SHELL         2000  /* adb and debug shell user */
 #define AID_CACHE         2001  /* cache access */
@@ -97,11 +98,6 @@
 /* The range 2900-2999 is reserved for OEM, and must never be
  * used here */
 #define AID_OEM_RESERVED_START 2900
-
-#define AID_QCOM_DIAG          2950  /* access to QTI diagnostic resources */
-#define AID_RFS                2951  /* Remote Filesystem for peripheral processors */
-#define AID_RFS_SHARED         2952  /* Shared files for Remote Filesystem for peripheral processors  */
-
 #define AID_OEM_RESERVED_END   2999
 
 /* The 3000 series are intended for use as supplemental group id's only.
@@ -114,16 +110,15 @@
 #define AID_NET_BW_STATS  3006  /* read bandwidth statistics */
 #define AID_NET_BW_ACCT   3007  /* change bandwidth statistics accounting */
 #define AID_NET_BT_STACK  3008  /* bluetooth: access config files */
-#define AID_READPROC      3009  /* Allow /proc read access */
-#define AID_WAKELOCK      3010  /* Allow system wakelock read/write access */
-
-#define AID_SENSORS       3011 /* access to /dev/socket/sensor_ctl_socket & QCCI/QCSI */
-#define AID_RFS_OLD          3012  /* DEPRECATED OLD ID FOR RFS, DO NOT USE */
-#define AID_RFS_SHARED_OLD   3013  /* DEPRECATED OLD ID FOR RFS-SHARED  */
+#define AID_QCOM_DIAG     3009  /* can read/write /dev/diag */
+#define AID_IMS           3010  /* can read/write /dev/socket/imsrtp */
+#define AID_RFS           3012  /* Remote Filesystem for peripheral processors */
+#define AID_RFS_SHARED    3013  /* Shared files for Remote Filesystem for peripheral processors  */
 
 /* The range 5000-5999 is also reserved for OEM, and must never be used here. */
 #define AID_OEM_RESERVED_2_START 5000
 #define AID_OEM_RESERVED_2_END   5999
+  { "rfs_shared_old",    AID_RFS_SHARED_OLD, },
 
 /* Motorola IDs */
 #define AID_MOT_ACCY      9000  /* access to accessory */
@@ -137,7 +132,7 @@
 #define AID_MOT_SECCLKD   9008  /* mot_secclkd */
 #define AID_MOT_WHISPER   9009  /* Whisper Protocol access */
 #define AID_MOT_CAIF      9010  /* can create CAIF sockets */
-#define AID_MOT_DLNA      9011  /* DLNA native */
+#define AID_MOT_DLNA      9011  /*DLNA native */
 #define AID_MOT_ATVC      9012  /* mot_atvc - This is for use of the ATVC service ONLY */
 #define AID_SPRINT_EXTENSION 9013  /* IKASANTISPRINT-149 sprint extension service */
 #define AID_MOT_DBVC      9014  /* mot_dbvc - This group is used to access DataBlock feature related data */
@@ -146,18 +141,21 @@
 #define AID_POWER         9017  /* power management */
 #define AID_ITSON         9018  /* itson permission  */
 #define AID_MOT_DTV       9019  /* dtv */
-/* Motorola IDs */
+#define AID_MOT_MOD       9020  /* can interact with motorola mod HW */
+
+#define AID_MOT_SHARED    9323  /* motorola shared uid, IKSWM-342 */
+#define AID_MOT_COMMON    9341  /* motorola common uid, IKSWM-342 */
 
 #define AID_EVERYBODY     9997  /* shared between all apps in the same profile */
 #define AID_MISC          9998  /* access to misc storage */
 #define AID_NOBODY        9999
 
-#define AID_APP          10000  /* first app user */
+#define AID_APP              10000 /* first app user */
 
-#define AID_ISOLATED_START 99000 /* start of uids for fully isolated sandboxed processes */
-#define AID_ISOLATED_END   99999 /* end of uids for fully isolated sandboxed processes */
+#define AID_ISOLATED_START   99000 /* start of uids for fully isolated sandboxed processes */
+#define AID_ISOLATED_END     99999 /* end of uids for fully isolated sandboxed processes */
 
-#define AID_USER        100000  /* offset for uid ranges for each user */
+#define AID_USER            100000 /* offset for uid ranges for each user */
 
 #define AID_SHARED_GID_START 50000 /* start of gids for apps in each user to share */
 #define AID_SHARED_GID_END   59999 /* start of gids for apps in each user to share */
@@ -219,24 +217,21 @@ static const struct android_id_info android_ids[] = {
     { "logd",          AID_LOGD, },
     { "shared_relro",  AID_SHARED_RELRO, },
     { "dbus",          AID_DBUS, },
+
     { "tlsdate",       AID_TLSDATE, },
     { "mediaex",       AID_MEDIA_EX, },
     { "audioserver",   AID_AUDIOSERVER, },
-    { "metrics_coll",  AID_METRICS_COLL },
-    { "metricsd",      AID_METRICSD },
-    { "webserv",       AID_WEBSERV },
+    { "metrics_coll",  AID_METRICS_COLL, },
+    { "metricsd",      AID_METRICSD, },
+    { "webserv",       AID_WEBSERV, },
     { "debuggerd",     AID_DEBUGGERD, },
     { "mediacodec",    AID_MEDIA_CODEC, },
     { "cameraserver",  AID_CAMERASERVER, },
+    { "smartcard",     AID_SMARTCARD, },
 
     { "shell",         AID_SHELL, },
     { "cache",         AID_CACHE, },
     { "diag",          AID_DIAG, },
-
-    { "qcom_diag",     AID_QCOM_DIAG, },
-
-    { "rfs",           AID_RFS, },
-    { "rfs_shared",    AID_RFS_SHARED, },
 
     { "net_bt_admin",  AID_NET_BT_ADMIN, },
     { "net_bt",        AID_NET_BT, },
@@ -246,19 +241,18 @@ static const struct android_id_info android_ids[] = {
     { "net_bw_stats",  AID_NET_BW_STATS, },
     { "net_bw_acct",   AID_NET_BW_ACCT, },
     { "net_bt_stack",  AID_NET_BT_STACK, },
-    { "readproc",      AID_READPROC, },
-    { "wakelock",      AID_WAKELOCK, },
-    { "sensors",       AID_SENSORS, },
+    { "qcom_diag",     AID_QCOM_DIAG, },
+    { "ims",           AID_IMS, },
+    { "rfs",           AID_RFS, },
+    { "rfs_shared",    AID_RFS_SHARED, },
 
-    { "rfs_old",           AID_RFS_OLD, },
-    { "rfs_shared_old",    AID_RFS_SHARED_OLD, },
     /* Motorola IDs */
     { "mot_accy",      AID_MOT_ACCY, },
     { "mot_pwric",     AID_MOT_PWRIC, },
     { "mot_usb",       AID_MOT_USB, },
     { "mot_drm",       AID_MOT_DRM, },
     { "mot_tcmd",      AID_MOT_TCMD, },
-    { "mot_sec_rtc",   AID_MOT_SEC_RTC, },
+    { "mot_sec_rtc"    AID_MOT_SEC_RTC, },
     { "mot_tombstone", AID_MOT_TOMBSTONE, },
     { "mot_tpapi",     AID_MOT_TPAPI, },
     { "mot_secclkd",   AID_MOT_SECCLKD, },
@@ -273,8 +267,12 @@ static const struct android_id_info android_ids[] = {
     { "power",         AID_POWER, },
     { "itson",         AID_ITSON, },
     { "mot_dtv",       AID_MOT_DTV, },
-    /* Motorola IDs */
-    { "everybody",     AID_EVERYBODY, },
+    { "mot_mod",       AID_MOT_MOD, },
+
+    { "mot_shared",    AID_MOT_SHARED, },
+    { "mot_common",    AID_MOT_COMMON, },
+
+  { "everybody",       AID_EVERYBODY, },
     { "misc",          AID_MISC, },
     { "nobody",        AID_NOBODY, },
 };
@@ -313,3 +311,4 @@ __END_DECLS
 
 #endif
 #endif
+
