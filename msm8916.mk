@@ -52,6 +52,10 @@ PRODUCT_COPY_FILES += \
 # Screen density
 PRODUCT_AAPT_CONFIG := normal
 
+# Android_filesystem_config.h
+PRODUCT_PACKAGES += \
+    fs_config_files
+
 # Audio
 PRODUCT_PACKAGES += \
     audiod \
