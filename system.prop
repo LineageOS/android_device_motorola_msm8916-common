@@ -55,6 +55,7 @@ ro.pip.gated=0
 sys.usb.rps_mask=10
 
 # Media
+media.stagefright.legacyencoder=true
 vidc.enc.narrow.searchrange=1
 
 # NITZ
