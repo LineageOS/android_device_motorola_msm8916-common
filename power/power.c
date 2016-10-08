@@ -220,10 +220,6 @@ static void power_hint(__attribute__((unused)) struct power_module *module,
     }
 }
 
-static struct hw_module_methods_t power_module_methods = {
-    .open = NULL,
-};
-
 static int get_feature(__attribute__((unused)) struct power_module *module,
                        feature_t feature)
 {
@@ -232,6 +228,42 @@ static int get_feature(__attribute__((unused)) struct power_module *module,
     }
     return -1;
 }
+
+static int power_open(const hw_module_t* module __unused, const char* name,
+                    hw_device_t** device)
+{
+    ALOGD("%s: enter; name=%s", __FUNCTION__, name);
+    int retval = 0; /* 0 is ok; -1 is error */
+
+    if (strcmp(name, POWER_HARDWARE_MODULE_ID) == 0) {
+        power_module_t *dev = (power_module_t *)calloc(1,
+                sizeof(power_module_t));
+
+        if (dev) {
+            /* Common hw_device_t fields */
+            dev->common.tag = HARDWARE_MODULE_TAG;
+            dev->common.module_api_version = POWER_MODULE_API_VERSION_0_2;
+            dev->common.hal_api_version = HARDWARE_HAL_API_VERSION;
+
+            dev->init = power_init;
+            dev->powerHint = power_hint;
+            dev->setInteractive = power_set_interactive;
+            dev->getFeature = get_feature;
+
+            *device = (hw_device_t*)dev;
+        } else
+            retval = -ENOMEM;
+    } else {
+        retval = -EINVAL;
+    }
+
+    ALOGD("%s: exit %d", __FUNCTION__, retval);
+    return retval;
+}
+
+static struct hw_module_methods_t power_module_methods = {
+    .open = power_open,
+};
 
 struct power_module HAL_MODULE_INFO_SYM = {
     .common = {
@@ -245,7 +277,7 @@ struct power_module HAL_MODULE_INFO_SYM = {
     },
 
     .init = power_init,
-    .setInteractive = power_set_interactive,
     .powerHint = power_hint,
-    .getFeature = get_feature
+    .setInteractive = power_set_interactive,
+    .getFeature = get_feature,
 };
