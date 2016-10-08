@@ -20,7 +20,6 @@ persist.audio.calfile5=/etc/acdbdata/Headset_cal.acdb
 persist.audio.calfile6=/etc/acdbdata/Speaker_cal.acdb
 
 ro.qc.sdk.audio.ssr=false
-
 use.voice.path.for.pcm.voip=true
 
 # Bluetooth
@@ -28,6 +27,7 @@ bluetooth.hfp.client=1
 ro.bluetooth.dun=true
 ro.bluetooth.hfp.ver=1.6
 ro.bluetooth.sap=true
+
 ro.qualcomm.bluetooth.ftp=true
 ro.qualcomm.bluetooth.hfp=true
 ro.qualcomm.bluetooth.hsp=true
@@ -55,6 +55,7 @@ ro.pip.gated=0
 sys.usb.rps_mask=10
 
 # Media
+media.stagefright.legacyencoder=true
 vidc.enc.narrow.searchrange=1
 
 # NITZ
