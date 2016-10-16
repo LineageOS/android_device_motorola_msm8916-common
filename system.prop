@@ -41,6 +41,8 @@ ro.qualcomm.bluetooth.pbap=true
 
 # Camera
 camera2.portability.force_api=1
+media.stagefright.legacyencoder=true
+media.stagefright.less-secure=true
 
 # Display
 ro.opengles.version=196608
