@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ff2e2bb8_2b651b46",
+        "filename": "cmactions/src/com/cyanogenmod/settings/device/TouchscreenGesturePreferenceFragment.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 6938
+      },
+      "writtenOn": "2016-11-02T15:20:46Z",
+      "side": 1,
+      "message": "getActivity().getSystemService(Context.NOTIFICATION_SERVICE);",
+      "revId": "d7c0351baf3876394de0a9b1303fd9f189678a49",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ff2e2bb8_4bc7bf13",
+        "filename": "cmactions/src/com/cyanogenmod/settings/device/TouchscreenGesturePreferenceFragment.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 6938
+      },
+      "writtenOn": "2016-11-02T15:20:46Z",
+      "side": 1,
+      "message": "new AlertDialog.Builder(preference.getContext())\n\nonly way I got it to build...not saying it\u0027s right. :)",
+      "revId": "d7c0351baf3876394de0a9b1303fd9f189678a49",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
