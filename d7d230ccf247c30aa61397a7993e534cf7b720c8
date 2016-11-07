@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ff2e2bb8_360d7437",
+        "filename": "cmactions/src/com/cyanogenmod/settings/device/BootCompletedReceiver.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2016-11-07T17:29:49Z",
+      "side": 1,
+      "message": "This is wrong, as PackagrManager doednt know about fragments. You need to enable/disable the activity if anything. Whats the point of enabling in the first place though?",
+      "revId": "d7d230ccf247c30aa61397a7993e534cf7b720c8",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
