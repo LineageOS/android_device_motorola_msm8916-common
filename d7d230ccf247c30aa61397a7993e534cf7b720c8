@@ -16,6 +16,24 @@
       "revId": "d7d230ccf247c30aa61397a7993e534cf7b720c8",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ff2e2bb8_160670cf",
+        "filename": "cmactions/src/com/cyanogenmod/settings/device/BootCompletedReceiver.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 7230
+      },
+      "writtenOn": "2016-11-07T19:11:51Z",
+      "side": 1,
+      "message": "Good to know. I guess this is a workaround to prevent users from disabling CMActions, see lines 58-62. Anyway for some reason the \"Disable\" button in CMActions app settings is already disabled. At this point I think this is just useless and should be removed.\nOriginal implementation if needed: https://github.com/CyanogenMod/android_device_motorola_msm8960dt-common/commit/3a19ea4d9994761d46a79ee37988c299d4fbacf6",
+      "parentUuid": "ff2e2bb8_360d7437",
+      "revId": "d7d230ccf247c30aa61397a7993e534cf7b720c8",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
