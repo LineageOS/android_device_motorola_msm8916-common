@@ -2,7 +2,9 @@ type hw_revs, domain, domain_deprecated;
 type hw_revs_exec, exec_type, file_type;
 init_daemon_domain(hw_revs)
 
-allow hw_revs shell_exec:file read;
+# shell scripts need to execute /system/bin/sh and toolbox
+allow hw_revs shell_exec:file rx_file_perms;
+allow hw_revs toolbox_exec:file rx_file_perms;
 
 allow hw_revs hw_revs_data_file:dir create_dir_perms;
 allow hw_revs hw_revs_data_file:file create_file_perms;
