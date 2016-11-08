@@ -490,12 +490,12 @@ service stml0xx /system/bin/stml0xx_wrapper.sh
     group compass misc input
     oneshot
 
-service mmi-boot-sh /system/bin/sh /init.mmi.boot.sh
+service mmi-boot-sh /system/bin/init.mmi.boot.sh
     class core
     user root
     oneshot
 
-service mmi-touch-sh /system/bin/sh /init.mmi.touch.sh synaptics
+service mmi-touch-sh /system/bin/init.mmi.touch.sh synaptics
     class core
     user root
     group root system mot_tcmd

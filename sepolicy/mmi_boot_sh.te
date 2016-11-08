@@ -1,0 +1,14 @@
+type mmi_boot_sh, domain, domain_deprecated;
+type mmi_boot_sh_exec, exec_type, file_type;
+
+# Started by init
+init_daemon_domain(mmi_boot_sh)
+
+# shell scripts need to execute /system/bin/sh and toolbox
+allow mmi_boot_sh shell_exec:file rx_file_perms;
+allow mmi_boot_sh toolbox_exec:file rx_file_perms;
+
+# Logs to /dev/kmsg
+allow mmi_boot_sh kmsg_device:chr_file w_file_perms;
+
+set_prop(mmi_boot_sh, manufacturedate_prop)

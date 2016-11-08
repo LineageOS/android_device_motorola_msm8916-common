@@ -1,3 +1,5 @@
+allow ueventd sysfs_mmi_touch:file w_file_perms;
+allow ueventd sysfs_mmi_touch:dir search;
 allow ueventd unlabeled:dir search;
 allow ueventd unlabeled:file { read getattr open };
 allow ueventd vfat:file { read open getattr };

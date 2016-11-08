@@ -13,3 +13,6 @@ type vibeamp_sysfs, fs_type, sysfs_type;
 
 #fsg
 type fsg_file, fs_type, contextmount_type;
+
+# Touch script
+type sysfs_mmi_touch, fs_type, sysfs_type;
