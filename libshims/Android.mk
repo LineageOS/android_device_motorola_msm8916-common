@@ -15,17 +15,6 @@
 
 LOCAL_PATH := $(call my-dir)
 
-# Camera
-include $(CLEAR_VARS)
-LOCAL_SRC_FILES := \
-    SensorManager.cpp \
-    moto_camera_misc.c
-
-LOCAL_SHARED_LIBRARIES := libutils libgui liblog libbinder
-LOCAL_MODULE := libshim_camera
-LOCAL_MODULE_TAGS := optional
-include $(BUILD_SHARED_LIBRARY)
-
 include $(CLEAR_VARS)
 
 LOCAL_SRC_FILES := wvm.c
