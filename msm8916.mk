@@ -82,7 +82,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     camera.msm8916 \
     libbson \
-    libshim_camera \
     Snap
 
 # CMActions
@@ -101,10 +100,6 @@ PRODUCT_PACKAGES += \
     ebtables \
     ethertypes \
     libebtc
-
-# DRM
-PRODUCT_PACKAGES += \
-    libshims_wvm
 
 # FM
 PRODUCT_PACKAGES += \
