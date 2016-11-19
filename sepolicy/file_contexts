@@ -28,6 +28,7 @@
 /dev/block/bootdevice/by-name/dhob                          u:object_r:hob_block_device:s0
 /dev/block/bootdevice/by-name/hob                           u:object_r:hob_block_device:s0
 /dev/block/bootdevice/by-name/logs                          u:object_r:logs_block_device:s0
+/dev/block/bootdevice/by-name/metadata                      u:object_r:metadata_block_device:s0
 /dev/block/bootdevice/by-name/persist                       u:object_r:persist_block_device:s0
 
 # RIL
