@@ -5,8 +5,7 @@
   },
   {
     "repository": "android_external_bson",
-    "target_path": "external/bson",
-    "branch": "cm-13.0"
+    "target_path": "external/bson"
   },
   {
     "repository": "android_device_qcom_common",
