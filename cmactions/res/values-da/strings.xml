@@ -30,4 +30,9 @@
   <string name="chop_chop_gesture_summary">Tænd/sluk lommelygten når du bruger hak-hak bevægelsen</string>
   <string name="ir_silencer_title">Vink for lydløs</string>
   <string name="ir_silencer_summary">Gør indgående opkald lydløse ved at vinke med din hånd over skærmen</string>
+  <string name="flip_to_mute_title">Vend for \'Forstyr ikke\'</string>
+  <string name="flip_to_mute_summary">Placér telefonen med skærmen nedad for at gøre notifikationer og opkald lydløse</string>
+  <string name="dnd_access">Venligst giv \'Forstyr ikke\' adgang til CMActions for at bruge denne funktion.</string>
+  <string name="lift_to_silence_title">Løft for lydløs</string>
+  <string name="lift_to_silence_summary">Løft telefonen for at sætte indgående opkald på lydløs. Virker kun hvis telefonen ligger på en flad overflade</string>
 </resources>
