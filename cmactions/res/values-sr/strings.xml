@@ -30,4 +30,9 @@
   <string name="chop_chop_gesture_summary">Укључи/Искључи лампу користећи гест пожури</string>
   <string name="ir_silencer_title">Махни за тишину</string>
   <string name="ir_silencer_summary">Утишај долазеће позиве махањем руком преко екрана</string>
+  <string name="flip_to_mute_title">Окрени за \'\'Не узнемиравај\'\'</string>
+  <string name="flip_to_mute_summary">Постави телефон лицем на доле да утишаш обавештавање и позиве</string>
+  <string name="dnd_access">Да би користио ову функцију дај приступ \'\'Не Узнемиравај\'\' за CM налоге.</string>
+  <string name="lift_to_silence_title">Подигни да зауставиш звоњење</string>
+  <string name="lift_to_silence_summary">Подигни телефон да утишаш долазеће позиве. Ради само ако је телефон стартовао на равном</string>
 </resources>
