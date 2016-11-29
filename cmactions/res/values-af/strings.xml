@@ -30,4 +30,9 @@
   <string name="chop_chop_gesture_summary">Skakel flitslig aan/af met die gebruik van die kap-kap gebaar</string>
   <string name="ir_silencer_title">Waai vir stilte</string>
   <string name="ir_silencer_summary">Maak inkomende oproepe stil met die waai van jou hand bo-oor jou skerm</string>
+  <string name="flip_to_mute_title">Flip vir steur nie</string>
+  <string name="flip_to_mute_summary">Plaas die foon gesig af om kennisgewings en oproepe te deaktiveer</string>
+  <string name="dnd_access">Asseblief, gee Moet Nie Steur toegang tot CMActions om hierdie funksie te gebruik.</string>
+  <string name="lift_to_silence_title">Tel op om luitoon te stop</string>
+  <string name="lift_to_silence_summary">Tel die foon op om inkomende oproep stil te maak. Dit werk net wanneer jou foon plat lê</string>
 </resources>
