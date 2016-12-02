@@ -15,7 +15,6 @@ vendor/lib/libadiertac.so
 vendor/lib/libaudcal.so
 vendor/lib/libhwdaphal.so
 vendor/lib/libqct_resampler.so
-vendor/lib/libvoice-svc.so
 
 # Bluetooth
 bin/btnvtool
@@ -112,6 +111,40 @@ vendor/lib/libwfdcommonutils.so
 bin/batt_health
 bin/dbvc_atvc_property_set
 bin/hardware_revisions.sh
+
+# IMS
+-vendor/app/ims/ims.apk|4c6218b87fca78a8c21e42750d4b7694
+-vendor/app/imssettings/imssettings.apk|bd330550364c03083f42cb6930505749
+-framework/imscmlibrary.jar|3347393b41caa283c7b0401250a89f71
+bin/ims_rtp_daemon|feb431637d128ed10b03659c0acdc1f3
+bin/imscmservice|ec4dd1408a5db32b3f525db6e4635e33
+bin/imsdatadaemon|ef1085c45ed1ea697e8b7de37441ca70
+bin/imsqmidaemon|5545acdb5b952f3a170451c22af6ab8b
+etc/permissions/ims.xml|c758509018b2052f13879b64aa1725ad
+etc/permissions/imscm.xml|19d845ccdd11b3c48e04c39b3b5824c0
+etc/permissions/qti_permissions.xml|9ce495a885f80dc3bb016e47510db6b8
+vendor/lib/lib-dplmedia.so|ed7cfc746a7d315138bde5deb806890d
+vendor/lib/lib-ims-rcscmjni.so|065be4413e9c39921c2b95b726d57aa4
+vendor/lib/lib-imsSDP.so|0eb57ab3eb52a2e1340d0fdeb3e4f2ce
+vendor/lib/lib-imsdpl.so|582b35119d0825b4b30d1f4e9723f11c
+vendor/lib/lib-imsqimf.so|7fc4d3117c39e21c127788d078f5f61d
+vendor/lib/lib-imsrcs.so|68afaad49485073b8dbc81bbd6737c58
+vendor/lib/lib-imsrcscm.so|1e4becc2bcdbf619092d7da67b21f19d
+vendor/lib/lib-imsrcscmclient.so|cdf982c052962a2aa5a0482b08f9b86f
+vendor/lib/lib-imsrcscmservice.so|763a7e015081425a1d14266d36ac1937
+vendor/lib/lib-imss.so|d6edd9305b5ba7c83584db432781cba3
+vendor/lib/lib-imsvt.so|e02a34304fe39f3f5c1b330c752157d8
+vendor/lib/lib-imsxml.so|d412494b5385290c20560443e6997be5
+vendor/lib/lib-rcsimssjni.so|d83e5d7dde2238c91217688b7fbddcfa
+vendor/lib/lib-rcsjni.so|dfb3845b8a02cc8acb9b77c93034fab5
+vendor/lib/lib-rtpcommon.so|80a845a48cc1078e1e2e8286401fd07c
+vendor/lib/lib-rtpcore.so|e86feda41a6248f4060160d9b521fcf1
+vendor/lib/lib-rtpdaemoninterface.so|4fed10b2c5bde31d4c3de15c2c7283b1
+vendor/lib/lib-rtpsl.so|80881f66abee792cca3c336fa2c9eaef
+vendor/lib/libimscamera_jni.so|f2e6e1b00fec2310d6b194cd8ea810ac
+vendor/lib/libimsmedia_jni.so|bb367a1638b224a5dfcfbb13b9af282d
+vendor/lib/librcc.so|e01890afaf9723eeceeb9834ba8e86c6
+vendor/lib/libvoice-svc.so|bcf32b26ebb9d838aecc43551391b6f4
 
 # Qualcomm framework
 bin/irsc_util
