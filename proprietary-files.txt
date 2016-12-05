@@ -42,8 +42,6 @@ vendor/lib/libmm-qdcm.so
 
 # DRM
 bin/qseecomd
-lib/libdrmdecrypt.so
-vendor/lib/drm/libdrmwvmplugin.so
 vendor/lib/mediadrm/libwvdrmengine.so
 vendor/lib/libdrmfs.so
 vendor/lib/libdrmtime.so
@@ -53,9 +51,7 @@ vendor/lib/libmmQSM.so
 vendor/lib/liboemcrypto.so
 vendor/lib/librpmb.so
 vendor/lib/libssd.so
-vendor/lib/libtzdrmgenprov.so
 vendor/lib/libwvdrm_L1.so
-vendor/lib/libwvm.so
 vendor/lib/libWVStreamControlAPI_L1.so
 
 # GPS
@@ -103,9 +99,7 @@ etc/firmware/a300_pfp.fw
 etc/firmware/a300_pm4.fw
 
 # Media
-lib/libdivxdrmdecrypt.so
 lib/libOmxVdecHevc.so
-vendor/lib/libDivxDrm.so
 -vendor/lib/libHevcSwDecoder.so
 vendor/lib/libI420colorconvert.so
 vendor/lib/libmmosal.so
@@ -113,7 +107,6 @@ vendor/lib/libmm-color-convertor.so
 vendor/lib/libOmxAacDec.so
 vendor/lib/libOmxEvrcDec.so
 vendor/lib/libOmxQcelp13Dec.so
-vendor/lib/libSHIMDivxDrm.so
 vendor/lib/libwfdcommonutils.so
 
 # Moto
