@@ -30,4 +30,9 @@
   <string name="chop_chop_gesture_summary">Aktifkan/nonaktifkan senter ketika menggunakan gerakan dwiguncang</string>
   <string name="ir_silencer_title">Lambai untuk senyap</string>
   <string name="ir_silencer_summary">Senyapkan panggilan masuk dengan melambaikan tangan di depan layar</string>
+  <string name="flip_to_mute_title">Membalik untuk Jangan Ganggu</string>
+  <string name="flip_to_mute_summary">Balik layar telepon ke bawah untuk mengabaikan notifikasi dan panggilan</string>
+  <string name="dnd_access">Silahkan berikan akses Jangan Ganggu ke CMActions untuk menggunakan fitur ini.</string>
+  <string name="lift_to_silence_title">Angkat untuk menghentikan dering</string>
+  <string name="lift_to_silence_summary">Mengangkat telepon untuk menghentikan nada panggilan masuk. Ini hanya bekerja saat telepon dalam posisi datar</string>
 </resources>
