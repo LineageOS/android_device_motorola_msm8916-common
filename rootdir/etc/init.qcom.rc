@@ -266,6 +266,9 @@ on boot
     # Create moodle directory that MOT_MOODLE can write to
     mkdir /data/local/moodle 0770 graphics mot_tcmd
 
+    # Wifi firmware reload path
+    chown wifi wifi /sys/module/wlan/parameters/fwpath
+
 on post-fs
     mkdir /persist/camera 0755 mot_tcmd mot_tcmd
     mkdir /persist/camera/ledcal 0755 camera mot_tcmd
