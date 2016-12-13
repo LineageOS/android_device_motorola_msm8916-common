@@ -152,6 +152,7 @@ PRODUCT_PACKAGES += \
 
 # Ramdisk
 PRODUCT_PACKAGES += \
+    ims_perms.sh \
     init.qcom.bt.sh \
     init.qcom.ril.sh \
     stml0xx_wrapper.sh

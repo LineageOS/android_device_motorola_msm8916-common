@@ -766,6 +766,16 @@ service imsqmidaemon /system/bin/imsqmidaemon
     socket ims_qmid stream 0660 system radio
     group radio net_raw log diag
 
+service ims_perms /system/bin/sh /system/bin/ims_perms.sh
+    class main
+    user root
+    group root
+    oneshot
+    disabled
+
+on property:service.bootanim.exit=1
+    start ims_perms
+
 on charger
     trigger early-fs
     trigger fs
