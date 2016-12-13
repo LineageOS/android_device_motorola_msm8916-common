@@ -19,9 +19,26 @@ def IncrementalOTA_VerifyBegin(info):
 def IncrementalOTA_InstallEnd(info):
   ReplaceApnList(info)
 
+def FullOTA_InstallBegin(info):
+  IMSWorkaround(info)
+
 def FullOTA_InstallEnd(info):
   ReplaceApnList(info)
   ExtractFirmwares(info)
+
+def IMSWorkaround(info):
+  info.script.Mount("/system")
+  # 1481155200 = 08 Dec 2016 00:00:00 GMT
+  info.script.AppendExtra('if less_than_int(file_getprop("/system/build.prop", "ro.build.date.utc"), 1481155200) ||'
+    + ' is_substring("13.0", file_getprop("/system/build.prop", "ro.cm.version")) then')
+  info.script.AppendExtra("if is_mounted(\"/data\") then")
+  info.script.AppendExtra('delete("/data/system/packages.xml");')
+  info.script.AppendExtra("else")
+  info.script.Mount("/data")
+  info.script.AppendExtra('delete("/data/system/packages.xml");')
+  info.script.Unmount("/data")
+  info.script.AppendExtra("endif;")
+  info.script.Unmount("/system")
 
 def ExtractFirmwares(info):
   info.script.Mount("/system")
