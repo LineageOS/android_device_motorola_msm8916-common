@@ -22,6 +22,30 @@
       "revId": "f3a95cdc2509068cfdabd520ec7e9ed1fa0f20f7",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5f681702_2ae510a9",
+        "filename": "releasetools.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 7230
+      },
+      "writtenOn": "2016-12-16T20:58:27Z",
+      "side": 1,
+      "message": "I was going to say that. I don\u0027t like this at all but that\u0027s the only apparently working way to force phone permissions to IMS",
+      "parentUuid": "5f681702_eadaf8e6",
+      "range": {
+        "startLine": 35,
+        "startChar": 0,
+        "endLine": 35,
+        "endChar": 65
+      },
+      "revId": "f3a95cdc2509068cfdabd520ec7e9ed1fa0f20f7",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
