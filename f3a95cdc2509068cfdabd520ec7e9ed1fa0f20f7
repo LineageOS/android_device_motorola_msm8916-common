@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5f681702_eadaf8e6",
+        "filename": "releasetools.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2016-12-16T20:57:24Z",
+      "side": 1,
+      "message": ":/",
+      "range": {
+        "startLine": 35,
+        "startChar": 0,
+        "endLine": 35,
+        "endChar": 65
+      },
+      "revId": "f3a95cdc2509068cfdabd520ec7e9ed1fa0f20f7",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
