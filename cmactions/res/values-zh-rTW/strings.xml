@@ -17,4 +17,22 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Gesture shortcuts -->
+  <string name="screen_gestures_panel_title">手勢捷徑</string>
+  <string name="ambient_display_title">環境顯示</string>
+  <string name="pick_up_gesture_title">拿起</string>
+  <string name="pick_up_gesture_summary">拿起或放下時發出震動</string>
+  <string name="ir_wake_up_title">揮動</string>
+  <string name="ir_wake_up_summary">在螢幕前揮手時發出震動</string>
+  <string name="actions_title">操作</string>
+  <string name="camera_gesture_title">雙重扭動</string>
+  <string name="camera_gesture_summary">雙重扭動手勢時啟動相機</string>
+  <string name="chop_chop_gesture_title">搖動兩次</string>
+  <string name="chop_chop_gesture_summary">當左右搖動時切換至手電筒</string>
+  <string name="ir_silencer_title">揮動即可靜音</string>
+  <string name="ir_silencer_summary">在螢幕前揮動即可靜音來電</string>
+  <string name="flip_to_mute_title">翻轉即可為勿干擾</string>
+  <string name="flip_to_mute_summary">將電話朝下即可靜音通知和來電</string>
+  <string name="dnd_access">請為 CMActions 授予「勿干擾」存取權限即可使用此功能。</string>
+  <string name="lift_to_silence_title">拿起即可停止響鈴</string>
+  <string name="lift_to_silence_summary">提起電話令來電靜音。這只會在您的電話平放時才生效</string>
 </resources>
