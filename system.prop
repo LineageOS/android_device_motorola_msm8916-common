@@ -58,13 +58,6 @@ ro.pip.gated=0
 # Hotspot WiFi
 sys.usb.rps_mask=10
 
-# IMS
-persist.radio.jbims=1
-persist.radio.ROTATION_ENABLE=1
-persist.radio.VT_ENABLE=1
-persist.radio.VT_HYBRID_ENABLE=1
-persist.radio.VT_USE_MDM_TIME=0
-
 # Media
 vidc.enc.narrow.searchrange=1
 
