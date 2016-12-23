@@ -20,9 +20,9 @@
   <string name="screen_gestures_panel_title">手勢捷徑</string>
   <string name="ambient_display_title">環境顯示</string>
   <string name="pick_up_gesture_title">拿起</string>
-  <string name="pick_up_gesture_summary">拿起或放下時發出震動</string>
+  <string name="pick_up_gesture_summary">拿起或放下時發出震動通知</string>
   <string name="ir_wake_up_title">揮動</string>
-  <string name="ir_wake_up_summary">在螢幕前揮手時發出震動</string>
+  <string name="ir_wake_up_summary">在螢幕前揮手時發出震動通知</string>
   <string name="actions_title">操作</string>
   <string name="camera_gesture_title">雙重扭動</string>
   <string name="camera_gesture_summary">雙重扭動手勢時啟動相機</string>
