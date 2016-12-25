@@ -29,7 +29,7 @@
   <string name="chop_chop_gesture_title">搖動兩次</string>
   <string name="chop_chop_gesture_summary">當左右搖動時切換至手電筒</string>
   <string name="ir_silencer_title">揮動即可靜音</string>
-  <string name="ir_silencer_summary">在螢幕前揮動即可靜音來電</string>
+  <string name="ir_silencer_summary">在螢幕前揮手即可靜音來電</string>
   <string name="flip_to_mute_title">翻轉即可為勿干擾</string>
   <string name="flip_to_mute_summary">將電話朝下即可靜音通知和來電</string>
   <string name="dnd_access">請為 CMActions 授予「勿干擾」存取權限即可使用此功能。</string>
