@@ -23,7 +23,6 @@ bin/hci_qcomm_init
 vendor/lib/libbtnv.so
 
 # Camera
-lib/libmot-qc-fd-offline.so
 lib/libmot_sensorlistener.so
 vendor/lib/libfastcvopt.so
 vendor/lib/libmmipl.so
