@@ -165,6 +165,7 @@ vendor/lib/libmmrtpencoder.so
 vendor/lib/libnetmgr.so
 vendor/lib/libperipheral_client.so
 vendor/lib/libril-qc-qmi-1.so
+vendor/lib/libril-qc-radioconfig.so
 vendor/lib/libril-qcril-hook-oem.so
 vendor/lib/libsystem_health_mon.so
 vendor/lib/libxml.so
