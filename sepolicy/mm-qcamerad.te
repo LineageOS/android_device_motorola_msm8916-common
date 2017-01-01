@@ -3,3 +3,15 @@ allow mm-qcamerad persist_file:file r_file_perms;
 allow mm-qcamerad system_data_file:dir w_dir_perms;
 allow mm-qcamerad system_data_file:file open;
 set_prop(mm-qcamerad, debug_prop)
+
+allow mm-qcamerad camera_data_file:file create_file_perms;
+allow mm-qcamerad self:tcp_socket create_stream_socket_perms;
+allow mm-qcamerad node:tcp_socket node_bind;
+
+# IMS use camera daemon to make VT call
+allow mm-qcamerad port:tcp_socket name_bind;
+allow mm-qcamerad self:tcp_socket { accept listen };
+allow mm-qcamerad camera_data_file:file create_file_perms;
+
+# mm-qcamerad needs to set persist.camera. property
+set_prop(mm-qcamerad, camera_prop)
