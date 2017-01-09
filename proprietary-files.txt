@@ -13,7 +13,6 @@ vendor/lib/libacdbloader.so
 vendor/lib/libacdbrtac.so
 vendor/lib/libadiertac.so
 vendor/lib/libaudcal.so
-vendor/lib/libhwdaphal.so
 vendor/lib/libqct_resampler.so
 
 # Bluetooth
@@ -105,7 +104,6 @@ vendor/lib/libmm-color-convertor.so
 vendor/lib/libOmxAacDec.so
 vendor/lib/libOmxEvrcDec.so
 vendor/lib/libOmxQcelp13Dec.so
-vendor/lib/libwfdcommonutils.so
 
 # Moto
 bin/batt_health
@@ -187,14 +185,12 @@ lib/libadropbox.so
 lib/libmdmcutback.so
 lib/libmotext_inf.so
 lib/libqmimotext.so
-lib/libril.so
+-lib/libril.so
 vendor/qcril.db
 vendor/lib/libcneapiclient.so
 vendor/lib/libconfigdb.so
 vendor/lib/liblqe.so
 vendor/lib/libmdmdetect.so
-vendor/lib/libmmrtpdecoder.so
-vendor/lib/libmmrtpencoder.so
 vendor/lib/libnetmgr.so
 vendor/lib/libperipheral_client.so
 vendor/lib/libril-qc-qmi-1.so
