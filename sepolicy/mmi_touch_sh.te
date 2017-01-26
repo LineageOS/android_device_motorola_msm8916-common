@@ -20,3 +20,6 @@ allow mmi_touch_sh sysfs_mmi_touch:dir r_dir_perms;
 
 get_prop(mmi_touch_sh, hw_rev_prop);
 allow mmi_touch_sh sysfs:dir read;
+allow mmi_touch_sh sysfs:dir { open read };
+allow mmi_touch_sh sysfs:file { read open setattr getattr };
+allow mmi_touch_sh sysfs_mmi_touch:file { setattr  };
