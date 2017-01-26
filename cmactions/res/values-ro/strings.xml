@@ -27,6 +27,12 @@
   <string name="camera_gesture_title">Dublu-răsucire</string>
   <string name="camera_gesture_summary">Deschide camera prin răsucirea dublă a mâinii</string>
   <string name="chop_chop_gesture_title">Chop-Chop</string>
+  <string name="chop_chop_gesture_summary">Pornește lanterna când utilizați gestul chop-chop</string>
   <string name="ir_silencer_title">Unduire pentru silențios</string>
   <string name="ir_silencer_summary">Pune pe mut apelurile de intrare mișcând mâna desupra ecranului</string>
+  <string name="flip_to_mute_title">Flip pentru Nu Deranjați</string>
+  <string name="flip_to_mute_summary">Puneți telefonul cu fața în jos pentru a face notificările și apelurile silențioase</string>
+  <string name="dnd_access">Vă rugăm acordați modului Nu Deranjați acces la CMActions pentru a utiliza această caracteristică.</string>
+  <string name="lift_to_silence_title">Ridicați pentru a opri apelarea</string>
+  <string name="lift_to_silence_summary">Ridicați telefonul pentru a face apelurile de intrare silențioase. Funcționează doar când telefonul începe din poziție plană orizontală</string>
 </resources>
