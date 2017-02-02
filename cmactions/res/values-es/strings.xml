@@ -30,4 +30,9 @@
   <string name="chop_chop_gesture_summary">Alternar linterna cuando se usa el gesto de doble sacudida (chop-chop)</string>
   <string name="ir_silencer_title">Pasar la mano para silenciar</string>
   <string name="ir_silencer_summary">Silenciar llamada al pasar la mano por la pantalla</string>
+  <string name="flip_to_mute_title">Tirón para no molestar</string>
+  <string name="flip_to_mute_summary">Colocar teléfono boca abajo para silenciar notificaciones y llamadas</string>
+  <string name="dnd_access">Por favor, dar acceso de no molestar a CMActions para poder utilizar esta función.</string>
+  <string name="lift_to_silence_title">Recoger para dejar de sonar</string>
+  <string name="lift_to_silence_summary">Levantar el teléfono para silenciar las llamadas entrantes. Sólo funciona cuando el teléfono inicia sobre una superficie plana</string>
 </resources>
