@@ -30,4 +30,9 @@
   <string name="chop_chop_gesture_summary">Bật/tắt đèn pin khi sử dụng cử chỉ lắc 2 lần</string>
   <string name="ir_silencer_title">Vẫy để im lặng</string>
   <string name="ir_silencer_summary">Ngắt tiếng cuộc gọi đến bằng cách vẫy tay qua màn hình</string>
+  <string name="flip_to_mute_title">Lật để bật Không làm phiền</string>
+  <string name="flip_to_mute_summary">Đặt mặt điện thoại xuống để tắt tiếng các thông báo và cuộc gọi</string>
+  <string name="dnd_access">Vui lòng, truy cập vào Không làm phiền qua CMActions để sử dụng tính năng này.</string>
+  <string name="lift_to_silence_title">Nhấc lên để tắt chuông</string>
+  <string name="lift_to_silence_summary">Nhấc điện thoại để tắt tiếng cuộc gọi đến. Nó chỉ hoạt động khi điện thoại của bạn nằm trên mặt phẳng</string>
 </resources>
