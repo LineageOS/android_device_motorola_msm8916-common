@@ -20,9 +20,9 @@
   <string name="screen_gestures_panel_title">手勢捷徑</string>
   <string name="ambient_display_title">環境顯示</string>
   <string name="pick_up_gesture_title">拿起</string>
-  <string name="pick_up_gesture_summary">拿起或放下時閃爍呼吸燈</string>
+  <string name="pick_up_gesture_summary">拿起或放下時顯示通知</string>
   <string name="ir_wake_up_title">揮動</string>
-  <string name="ir_wake_up_summary">在螢幕前揮手時閃爍呼吸燈</string>
+  <string name="ir_wake_up_summary">在螢幕前揮手時顯示通知</string>
   <string name="actions_title">操作</string>
   <string name="camera_gesture_title">雙重扭動</string>
   <string name="camera_gesture_summary">雙重扭動手勢時啟動相機</string>
@@ -32,7 +32,7 @@
   <string name="ir_silencer_summary">在螢幕前揮手即可靜音來電</string>
   <string name="flip_to_mute_title">翻轉即可為勿干擾</string>
   <string name="flip_to_mute_summary">將電話朝下即可靜音通知和來電</string>
-  <string name="dnd_access">請為 CMActions 授予「零打擾」存取權限即可使用此功能。</string>
+  <string name="dnd_access">請為 CMActions 授予「勿干擾」存取權限即可使用此功能。</string>
   <string name="lift_to_silence_title">拿起即可停止響鈴</string>
   <string name="lift_to_silence_summary">拿起電話即可來電靜音。這只會在您的電話平放時才生效</string>
 </resources>

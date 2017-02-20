@@ -17,4 +17,22 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Gesture shortcuts -->
+  <string name="screen_gestures_panel_title">Ярлики жестів</string>
+  <string name="ambient_display_title">Індикація подій</string>
+  <string name="pick_up_gesture_title">Підняти</string>
+  <string name="pick_up_gesture_summary">Пульсуючі сповіщення при підніманні або перевертанні пристрою</string>
+  <string name="ir_wake_up_title">Помах рукою</string>
+  <string name="ir_wake_up_summary">Перегляд сповіщень, при проведенні рукою над екраном</string>
+  <string name="actions_title">Дії</string>
+  <string name="camera_gesture_title">Подвійний поворот</string>
+  <string name="camera_gesture_summary">Запустити камеру при подвійному повороті пристрою</string>
+  <string name="chop_chop_gesture_title">Струс</string>
+  <string name="chop_chop_gesture_summary">Увімкнути або вимкнути ліхтарик при струсі</string>
+  <string name="ir_silencer_title">Помах рукою для вимикання звуку</string>
+  <string name="ir_silencer_summary">Приглушити звук виклику, провівши рукою над екраном</string>
+  <string name="flip_to_mute_title">Перегорнути та не турбувати</string>
+  <string name="flip_to_mute_summary">Покладіть пристрій екраном донизу, щоб приглушити звуки сповіщень і виклику</string>
+  <string name="dnd_access">Будь ласка, надайте CMActions доступ до функції «Не турбувати».</string>
+  <string name="lift_to_silence_title">Підняти та приглушити</string>
+  <string name="lift_to_silence_summary">Підніміть телефон, аби приглушити звук виклику. Ця дія спрацює, якщо телефон лежав горизонтально</string>
 </resources>
