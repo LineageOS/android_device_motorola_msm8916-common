@@ -39,6 +39,8 @@ on early-init
     # Create modem FSG mount point
     mkdir /fsg 755 root root
 
+    # Mount debugfs
+    mount debugfs debugfs /sys/kernel/debug
     chown system system /sys/kernel/debug
     chmod 0775 /sys/kernel/debug
 
