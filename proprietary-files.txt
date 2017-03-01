@@ -149,7 +149,7 @@ bin/irsc_util
 vendor/lib/libdiag.so
 vendor/lib/libDiagService.so
 vendor/lib/libdsi_netctrl.so
-vendor/lib/libdsutils.so
+vendor/lib/libdsutils.so|47858b3770d5aff6da89180ea34bb37c810adc54
 vendor/lib/libidl.so
 vendor/lib/libFileMux.so
 vendor/lib/libqcci_legacy.so
@@ -167,14 +167,14 @@ vendor/lib/libsmemlog.so
 
 # Radio
 -priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
-bin/netmgrd
+bin/netmgrd|d8d34a71f387865efc2b8b39ad230b92f08045e0
 bin/qmuxd
 bin/radish
-bin/rild
+bin/rild|c8993981f142b4a13c84848aabce75c07980f089
 bin/rmt_storage
 bin/qmi_motext_hook
 etc/data/dsi_config.xml
-etc/data/netmgr_config.xml
+etc/data/netmgr_config.xml|f8e458bf1ffe710999823acf3bcfb07282eac2b7
 etc/data/qmi_config.xml
 etc/permissions/qcnvitems.xml
 etc/permissions/qcrilhook.xml
@@ -184,13 +184,13 @@ lib/libadropbox.so
 lib/libmdmcutback.so
 lib/libmotext_inf.so
 lib/libqmimotext.so
--lib/libril.so
+-lib/libril.so|0f8c751a80f5c6833a65952604584cb620ed4c62
 vendor/qcril.db
 vendor/lib/libcneapiclient.so
-vendor/lib/libconfigdb.so
+vendor/lib/libconfigdb.so|3589193fc9c65977fd27453cc7cfe8185fdabfbc
 vendor/lib/liblqe.so
 vendor/lib/libmdmdetect.so
-vendor/lib/libnetmgr.so
+vendor/lib/libnetmgr.so|05beca2a8e79a91baf603a08ad2b15927ff39a19
 vendor/lib/libperipheral_client.so
 vendor/lib/libril-qc-qmi-1.so
 vendor/lib/libril-qc-radioconfig.so
