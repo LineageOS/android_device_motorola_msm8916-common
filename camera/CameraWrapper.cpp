@@ -1,5 +1,6 @@
 /*
- * Copyright (C) 2016, The CyanogenMod Project
+ * Copyright (C) 2016 The CyanogenMod Project
+ * Copyright (C) 2017 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -137,12 +138,7 @@ static char *camera_fixup_setparams(int id, const char *settings)
     params.dump();
 #endif
 
-    const char *sceneMode = params.get(CameraParameters::KEY_SCENE_MODE);
-    if (sceneMode != NULL) {
-        if (!strcmp(sceneMode, CameraParameters::SCENE_MODE_HDR)) {
-            params.remove("zsl");
-        }
-    }
+    params.set("zsl", "on");
 
 #if !LOG_NDEBUG
     ALOGV("%s: fixed parameters:", __FUNCTION__);
