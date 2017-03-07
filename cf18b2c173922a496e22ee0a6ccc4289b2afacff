@@ -16,6 +16,52 @@
       "revId": "cf18b2c173922a496e22ee0a6ccc4289b2afacff",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da6255ed_494f6193",
+        "filename": "msm8916.mk",
+        "patchSetId": 2
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 7230
+      },
+      "writtenOn": "2017-03-07T14:33:38Z",
+      "side": 1,
+      "message": "Whitespace",
+      "range": {
+        "startLine": 44,
+        "startChar": 0,
+        "endLine": 44,
+        "endChar": 1
+      },
+      "revId": "cf18b2c173922a496e22ee0a6ccc4289b2afacff",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da6255ed_e95df549",
+        "filename": "msm8916.mk",
+        "patchSetId": 2
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 7230
+      },
+      "writtenOn": "2017-03-07T14:33:38Z",
+      "side": 1,
+      "message": "With \"filter\" you have to use ifneq or invert if-else contents.",
+      "range": {
+        "startLine": 46,
+        "startChar": 0,
+        "endLine": 46,
+        "endChar": 41
+      },
+      "revId": "cf18b2c173922a496e22ee0a6ccc4289b2afacff",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
