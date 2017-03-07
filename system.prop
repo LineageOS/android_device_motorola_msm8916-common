@@ -86,5 +86,8 @@ persist.radio.aosp_usr_pref_sel=true
 # Security patch level
 ro.lineage.build.vendor_security_patch=2018-06-01
 
+# Timeout failed shutdowns
+ro.build.shutdown_timeout=5
+
 # WiFi
 wifi.interface=wlan0
