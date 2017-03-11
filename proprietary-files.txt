@@ -45,7 +45,7 @@ vendor/lib/libdrmtime.so
 vendor/lib/libQSEEComAPI.so
 vendor/lib/libmm-hdcpmgr.so
 vendor/lib/libmmQSM.so
-vendor/lib/liboemcrypto.so
+vendor/lib/liboemcrypto.so|e06a048164adce566c73d4f48da3051744b67fb9
 vendor/lib/librpmb.so
 vendor/lib/libssd.so
 vendor/lib/libwvdrm_L1.so
