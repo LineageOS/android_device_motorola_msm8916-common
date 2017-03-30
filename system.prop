@@ -57,6 +57,7 @@ persist.radio.VT_USE_MDM_TIME=0
 
 # Media
 vidc.enc.narrow.searchrange=1
+persist.media.treble_omx=false
 
 # NITZ
 persist.rild.nitz_plmn=
