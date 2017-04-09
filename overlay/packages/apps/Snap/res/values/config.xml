@@ -1,5 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?>
- <!-- Copyright (C) 2016 The CyanogenMod Project
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+     Copyright (C) 2017 The LineageOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -15,7 +16,8 @@
 -->
 <resources>
 
-    <!-- Denoise -->
-    <string name="pref_camera_denoise_default" translatable="false">denoise-on</string>
+    <!-- This value may be tweaked to save memory on low RAM devices. The value
+         is the percentage of camera preview height/width to scale to. -->
+    <integer name="panorama_frame_size_reduction">50</integer>
 
 </resources>
