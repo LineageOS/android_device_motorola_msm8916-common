@@ -1,5 +1,5 @@
 type stml0xx, domain;
-type stml0xx_exec, exec_type, file_type;
+type stml0xx_exec, exec_type, vendor_file_type, file_type;
 init_daemon_domain(stml0xx);
 
 # shell scripts need to execute /system/bin/sh and toolbox

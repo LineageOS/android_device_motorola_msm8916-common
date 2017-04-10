@@ -1,5 +1,5 @@
 type mmi_boot_sh, domain;
-type mmi_boot_sh_exec, exec_type, file_type;
+type mmi_boot_sh_exec, exec_type, vendor_file_type, file_type;
 
 # Started by init
 init_daemon_domain(mmi_boot_sh)
