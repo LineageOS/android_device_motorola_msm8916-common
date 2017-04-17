@@ -50,6 +50,9 @@ vendor/lib/libssd.so
 vendor/lib/libwvdrm_L1.so
 vendor/lib/libWVStreamControlAPI_L1.so
 
+# Face unlock
+vendor/lib/libfrsdk.so|14121b983d6a3da622717d772a2321a6e95eca9e
+
 # GPS
 etc/flp.conf
 etc/gps.conf
