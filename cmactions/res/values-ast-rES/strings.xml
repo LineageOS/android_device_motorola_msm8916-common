@@ -19,15 +19,20 @@
   <!-- Gesture shortcuts -->
   <string name="screen_gestures_panel_title">Atayos xestuales</string>
   <string name="ambient_display_title">Pantalla ambiente</string>
-  <string name="pick_up_gesture_title">Contestar</string>
+  <string name="pick_up_gesture_title">Coyer</string>
   <string name="pick_up_gesture_summary">Amosar notificaciones al contestar o colgar</string>
   <string name="ir_wake_up_title">Pasar la mano</string>
-  <string name="ir_wake_up_summary">Amosar avisos al pasar la mano pela pantalla</string>
+  <string name="ir_wake_up_summary">Avisos llatentes al pasar la to mano pela pantalla</string>
   <string name="actions_title">Aiciones</string>
   <string name="camera_gesture_title">Xiru doblu</string>
-  <string name="camera_gesture_summary">Aición al usar el xestu de xiru doblu</string>
+  <string name="camera_gesture_summary">Abre la cámara al usar xestu de xiru doblu</string>
   <string name="chop_chop_gesture_title">Chop-chop</string>
   <string name="chop_chop_gesture_summary">Alternar llinterna cuando s\'usa\'l xestu de doble sacudida (chop-chop)</string>
   <string name="ir_silencer_title">Pasar la mano pa silenciar</string>
   <string name="ir_silencer_summary">Silenciar llamaes y posponer alarmes al pasar la mano pela pantalla</string>
+  <string name="flip_to_mute_title">Voltiar pa Nun molestar</string>
+  <string name="flip_to_mute_summary">Pon el teléfonu boca abaxo pa silenciar avisos y llamaes</string>
+  <string name="dnd_access">Nun-y deas permisu de Nun molestar a CMActions pa usar esta carauterística, por favor.</string>
+  <string name="lift_to_silence_title">Coyer pa parar de sonar</string>
+  <string name="lift_to_silence_summary">Garra\'l teléfonu pa silenciar llamaes entrantes. Namái furrula cuando\'l teléfonu ta planu</string>
 </resources>

@@ -17,4 +17,22 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Gesture shortcuts -->
+  <string name="screen_gestures_panel_title">Shkurtore për gjestet</string>
+  <string name="ambient_display_title">Drita e ekranit sipas ambientit</string>
+  <string name="pick_up_gesture_title">Ngritja</string>
+  <string name="pick_up_gesture_summary">Shfaq njoftimet kur e ngre ose e zhvendos</string>
+  <string name="ir_wake_up_title">Kalimi sipër i dorës</string>
+  <string name="ir_wake_up_summary">Shfaq njoftimet kur i kalon dorën sipër ekranit</string>
+  <string name="actions_title">Veprimet</string>
+  <string name="camera_gesture_title">Kthim i dyfishtë</string>
+  <string name="camera_gesture_summary">Hap kamerën kur bën gjestin e kthimit të dyfishtë</string>
+  <string name="chop_chop_gesture_title">Chop-chop</string>
+  <string name="chop_chop_gesture_summary">Ndiz/fik elektrikun e dorës kur përdor gjestin \"chop-chop\"</string>
+  <string name="ir_silencer_title">Kalo dorën sipër për ta heshtur</string>
+  <string name="ir_silencer_summary">Hesht thirrjet hyrëse duke kaluar dorën mbi ekran</string>
+  <string name="flip_to_mute_title">Ktheje për të aktivizuar \'Mos më shqetëso\'</string>
+  <string name="flip_to_mute_summary">Ktheje telefonin përmbys për të heshtur njoftimet dhe zilet</string>
+  <string name="dnd_access">Jepi opsionit \"Mos më shtetëso\" akses të CMActions që të mund të përdorësh këtë funksion.</string>
+  <string name="lift_to_silence_title">Ngrije për të ndaluar zilen</string>
+  <string name="lift_to_silence_summary">Ngri telefonin për të heshtur thirrjet hyrëse. Kjo punon vetëm kur telefoni ndodhet në një sipërfaqe të sheshtë</string>
 </resources>

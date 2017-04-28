@@ -17,17 +17,22 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Gesture shortcuts -->
-  <string name="screen_gestures_panel_title">바로가기 제스처</string>
+  <string name="screen_gestures_panel_title">바로 가기 제스처</string>
   <string name="ambient_display_title">절전 모드 자동 해제</string>
   <string name="pick_up_gesture_title">기기 들기</string>
-  <string name="pick_up_gesture_summary">기기를 들거나 꺼낼 때 알림 표시</string>
-  <string name="ir_wake_up_title">흔들기</string>
-  <string name="ir_wake_up_summary">화면 위에서 손을 흔들어서 알림 표시</string>
+  <string name="pick_up_gesture_summary">기기를 들거나 꺼내면 알림 표시</string>
+  <string name="ir_wake_up_title">손 흔들기</string>
+  <string name="ir_wake_up_summary">화면 위에서 손을 좌우로 흔들면 알림 표시</string>
   <string name="actions_title">동작</string>
   <string name="camera_gesture_title">두 번 비틀기</string>
   <string name="camera_gesture_summary">두 번 비틀기 제스처를 사용할 때 카메라 실행</string>
   <string name="chop_chop_gesture_title">위 아래로 흔들기</string>
   <string name="chop_chop_gesture_summary">위 아래로 흔들기 제스처를 사용할 때 손전등 토글</string>
-  <string name="ir_silencer_title">흔들어서 무음으로 전환</string>
+  <string name="ir_silencer_title">손 흔들어서 음소거</string>
   <string name="ir_silencer_summary">화면 위에서 손을 흔들어 전화 벨소리 끄기</string>
+  <string name="flip_to_mute_title">뒤집어서 알림 일시중지</string>
+  <string name="flip_to_mute_summary">휴대전화의 화면을 아래로 향하게 들어 알림 및 벨소리를 조용하게 함</string>
+  <string name="dnd_access">이 기능을 사용하려면 CMActions에 알림 일시중지 접근 권한을 허용해 주세요.</string>
+  <string name="lift_to_silence_title">기기를 들면 벨소리 멈춤</string>
+  <string name="lift_to_silence_summary">휴대전화를 들면 수신 벨소리가 들리지 않도록 합니다. 평평한 곳에 두었을 경우에만 작동합니다</string>
 </resources>

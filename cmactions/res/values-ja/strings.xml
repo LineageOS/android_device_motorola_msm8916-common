@@ -31,8 +31,8 @@
   <string name="ir_silencer_title">手を振ってサイレント</string>
   <string name="ir_silencer_summary">画面上で手を振って着信をサイレントにする</string>
   <string name="flip_to_mute_title">裏返してミュート</string>
-  <string name="flip_to_mute_summary">携帯電話を裏向きにして通知と通話をサイレントにする</string>
+  <string name="flip_to_mute_summary">端末を裏向きにして通知と通話をサイレントにする</string>
   <string name="dnd_access">この機能を使用するにはCMActionsにミュートへのアクセスを許可してください。</string>
   <string name="lift_to_silence_title">持ち上げて着信音停止</string>
-  <string name="lift_to_silence_summary">携帯電話を持ち上げたときに着信音をサイレントにします。携帯電話が水平面にあった場合にのみ動作します。</string>
+  <string name="lift_to_silence_summary">端末を持ち上げたときに着信音をサイレントにします。端末が水平面にあった場合にのみ動作します。</string>
 </resources>
