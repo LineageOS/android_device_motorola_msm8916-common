@@ -204,7 +204,7 @@ ifeq ($(BOARD_USES_MOT_SENSOR_HUB), true)
         LOCAL_C_INCLUDES += bionic/libc/kernel/common
     endif # SH_MODULE == "motosh"/"stml0xx"
 
-    LOCAL_SHARED_LIBRARIES := libcutils libc libutils
+    LOCAL_SHARED_LIBRARIES := libcutils libc libutils liblog
     LOCAL_MODULE := sensorhub.$(TARGET_BOARD_PLATFORM)
     LOCAL_MODULE_TAGS := optional
 
@@ -249,7 +249,7 @@ ifeq ($(BOARD_USES_MOT_SENSOR_HUB), true)
         LOCAL_STATIC_LIBRARIES := AK09912
 
         LOCAL_FORCE_STATIC_EXECUTABLE := false
-        LOCAL_SHARED_LIBRARIES := libc libm libutils libcutils
+        LOCAL_SHARED_LIBRARIES := libc libm libutils libcutils liblog
 
         include $(BUILD_EXECUTABLE)
 
@@ -279,7 +279,7 @@ ifeq ($(BOARD_USES_MOT_SENSOR_HUB), true)
     LOCAL_MODULE:= $(SH_MODULE)
     #LOCAL_CFLAGS+= -D_DEBUG
     LOCAL_CFLAGS += -Wall -Wextra -Weffc++
-    LOCAL_SHARED_LIBRARIES := libcutils libc
+    LOCAL_SHARED_LIBRARIES := libcutils libc liblog
     ifeq ($(SH_MODULE),motosh)
         LOCAL_SRC_FILES += $(SH_PATH)/CRC32.c
         LOCAL_REQUIRED_MODULES += sensorhub-blacklist.txt

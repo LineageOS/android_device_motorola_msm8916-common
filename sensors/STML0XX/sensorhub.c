@@ -28,7 +28,6 @@
 #include <string.h>
 #include <unistd.h>
 
-#include <linux/android_alarm.h>
 #include <linux/input.h>
 #include <linux/stml0xx.h>
 
