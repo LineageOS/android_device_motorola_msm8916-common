@@ -172,6 +172,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libcnefeatureconfig \
     librmnetctl \
+    libshim_ril \
     libxml2
 
 # Thermal
