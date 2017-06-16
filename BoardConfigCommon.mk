@@ -1,5 +1,6 @@
 #
 # Copyright (C) 2015 The CyanogenMod Project
+# Copyright (C) 2017 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -84,9 +85,6 @@ TARGET_QCOM_NO_FM_FIRMWARE := true
 
 # Filesystem
 TARGET_ANDROID_FILESYSTEM_CONFIG_H := $(VENDOR_PATH)/android_filesystem_config.h
-
-# Init
-TARGET_UNIFIED_DEVICE := true
 
 # Keymaster
 TARGET_KEYMASTER_WAIT_FOR_QSEE := true
