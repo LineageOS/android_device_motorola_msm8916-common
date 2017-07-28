@@ -29,7 +29,7 @@
   <string name="chop_chop_gesture_title">Tak-tak</string>
   <string name="chop_chop_gesture_summary">Tak-tak hareketi kullanıldığında flaşı aç/kapat</string>
   <string name="ir_silencer_title">Sessize almak için sallayın</string>
-  <string name="ir_silencer_summary">Elinizi ekranın üstünde sallayarak gelen çağrıları sessize alın</string>
+  <string name="ir_silencer_summary">Elinizi ekranın üstünde sallayarak gelen aramaları sessize alın</string>
   <string name="flip_to_mute_title">Rahatsız Etmeyin Modu için döndür</string>
   <string name="flip_to_mute_summary">Bildirimleri ve aramaları sessize almak için telefonu ters döndür</string>
   <string name="dnd_access">Bu özelliği kullanmak CMActions\'a izin ver.</string>
