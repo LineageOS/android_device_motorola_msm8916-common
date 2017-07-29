@@ -1,1 +1,1 @@
-allow qmuxd diag_device:chr_file { ioctl open read write };
+allow qmuxd diag_device:chr_file rw_file_perms;

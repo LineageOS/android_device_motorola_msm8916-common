@@ -13,8 +13,7 @@ allow mmi_boot_sh kmsg_device:chr_file w_file_perms;
 
 allow mmi_boot_sh proc:file write;
 allow mmi_boot_sh radio_data_file:dir rw_dir_perms;
-allow mmi_boot_sh radio_data_file:file rw_file_perms;
-allow mmi_boot_sh radio_data_file:file { create setattr };
+allow mmi_boot_sh radio_data_file:file create_file_perms;
 allow mmi_boot_sh self:capability chown;
 allow mmi_boot_sh sysfs_socinfo:file write;
 
