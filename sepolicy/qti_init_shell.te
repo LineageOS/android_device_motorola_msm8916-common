@@ -1,8 +1,5 @@
 allow qti_init_shell bluetooth_data_file:file r_file_perms;
 allow qti_init_shell bluetooth_loader_exec:file r_file_perms;
 allow qti_init_shell hci_attach_dev:chr_file rw_file_perms;
-allow qti_init_shell hw_revs_data_file:dir { add_name getattr open read remove_name search setattr write };
-allow qti_init_shell hw_revs_data_file:file { append create getattr open setattr unlink write };
-allow qti_init_shell hw_revs_exec:file r_file_perms;
 allow qti_init_shell sysfs_mmi_touch:dir search;
 allow qti_init_shell sysfs_mmi_touch:file rw_file_perms;

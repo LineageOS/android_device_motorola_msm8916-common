@@ -16,5 +16,3 @@ allow mmi_touch_sh kmsg_device:chr_file w_file_perms;
 allow mmi_touch_sh sysfs_mmi_touch:file rw_file_perms;
 allow mmi_touch_sh sysfs_mmi_touch:file { setattr };
 allow mmi_touch_sh sysfs_mmi_touch:dir search;
-
-allow mmi_touch_sh hw_rev_prop:file { getattr open read };
