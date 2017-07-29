@@ -8,4 +8,4 @@ allow stml0xx toolbox_exec:file rx_file_perms;
 
 allow stml0xx shell_exec:file read;
 allow stml0xx system_file:file execute_no_trans;
-allow stml0xx sensors_device:chr_file { w_file_perms ioctl };
+allow stml0xx sensors_device:chr_file rw_file_perms;
