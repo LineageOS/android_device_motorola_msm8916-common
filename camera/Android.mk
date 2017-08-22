@@ -9,7 +9,7 @@ LOCAL_SRC_FILES := \
     CameraWrapper.cpp
 
 LOCAL_SHARED_LIBRARIES := \
-    libhardware liblog libcamera_client libutils libcutils
+    libhardware liblog libcamera_client libutils libcutils libgui
 
 ifneq ($(filter harpia lux, $(TARGET_DEVICE)),)
 LOCAL_CFLAGS += -DCLOSE_NATIVE_HANDLE
