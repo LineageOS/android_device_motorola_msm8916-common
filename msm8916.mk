@@ -329,7 +329,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     android.hardware.wifi@1.0-service \
-    libqsap_sdk \
     libwpa_client \
     wifilogd \
     wcnss_service
