@@ -164,7 +164,6 @@ vendor/lib/libsmemlog.so
 bin/netmgrd|d8d34a71f387865efc2b8b39ad230b92f08045e0
 bin/qmuxd
 bin/radish
-bin/rild|c8993981f142b4a13c84848aabce75c07980f089
 bin/rmt_storage
 bin/qmi_motext_hook
 etc/data/dsi_config.xml
@@ -178,7 +177,6 @@ lib/libadropbox.so
 lib/libmdmcutback.so
 lib/libmotext_inf.so
 lib/libqmimotext.so
--lib/libril.so|0f8c751a80f5c6833a65952604584cb620ed4c62
 vendor/qcril.db
 vendor/lib/libcneapiclient.so
 vendor/lib/libconfigdb.so|3589193fc9c65977fd27453cc7cfe8185fdabfbc
