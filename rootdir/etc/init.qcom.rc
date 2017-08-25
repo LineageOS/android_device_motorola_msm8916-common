@@ -659,7 +659,7 @@ on property:bluetooth.hciattach=false
 service qmuxd /system/bin/qmuxd
     class main
     user root
-    group radio audio bluetooth gps qcom_diag
+    group radio audio bluetooth gps diag
 
 service netmgrd /system/bin/netmgrd
     class main
@@ -702,7 +702,7 @@ service ril-daemon /system/bin/rild
     socket rild-debug stream 660 radio system
     socket cutback stream 660 media radio
     user root
-    group radio cache inet misc audio sdcard_rw sensors qcom_diag log net_raw diag
+    group radio cache inet misc audio sdcard_rw sensors log net_raw diag
 
 service ril-daemon2 /system/bin/rild -c 2
     class main
@@ -710,7 +710,7 @@ service ril-daemon2 /system/bin/rild -c 2
     socket rild-debug2 stream 660 radio system
     user root
     disabled
-    group radio cache inet misc audio sdcard_rw sensors qcom_diag log net_raw diag
+    group radio cache inet misc audio sdcard_rw sensors log net_raw diag
 
 service rild2-wrapper /system/bin/sh /system/etc/init.qcom.ril.sh
     class late_start
