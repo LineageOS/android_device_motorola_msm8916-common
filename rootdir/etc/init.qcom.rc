@@ -472,24 +472,6 @@ on post-fs-data
     setprop ro.hw.hwrev ${ro.boot.hwrev}
     setprop ro.hw.radio ${ro.boot.radio}
 
-service batt_health /system/bin/batt_health
-    class late_start
-    user mot_pwric
-    group mot_pwric cache net_admin log
-    disabled
-
-service atvc_core /system/bin/dbvc_atvc_property_set
-    class core
-    user mot_atvc
-    group mot_tpapi
-    oneshot
-
-service atvc /system/bin/dbvc_atvc_property_set
-    class late_start
-    user mot_atvc
-    group mot_tpapi
-    oneshot
-
 # Start Sensor daemon
 service stml0xx /system/bin/stml0xx_wrapper.sh
     class late_start
@@ -503,11 +485,11 @@ service mmi-boot-sh /system/bin/init.mmi.boot.sh
     group root radio
     oneshot
 
-service mmi-touch-sh /system/bin/init.mmi.touch.sh synaptics
-    class core
-    user root
-    group root system mot_tcmd
-    oneshot
+#service mmi-touch-sh /system/bin/init.mmi.touch.sh synaptics
+#    class core
+#    user root
+#    group root system mot_tcmd
+#    oneshot
 
 on property:ro.secure=0
     # disable dmesg restrict for insecure builds
@@ -789,6 +771,5 @@ on moto-charger
     # Set Battery LED behavior
     write /sys/class/leds/charging/trigger "battery-full"
 
-    start batt_health
     start thermal-com
     write /sys/module/lpm_levels/parameters/sleep_disabled 0
