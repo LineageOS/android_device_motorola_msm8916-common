@@ -47,8 +47,6 @@ vendor/lib/libmm-hdcpmgr.so
 vendor/lib/libmmQSM.so
 vendor/lib/librpmb.so
 vendor/lib/libssd.so
-vendor/lib/libwvdrm_L1.so
-vendor/lib/libWVStreamControlAPI_L1.so
 
 # GPS
 etc/flp.conf
