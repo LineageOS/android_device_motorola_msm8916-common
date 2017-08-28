@@ -1,4 +1,4 @@
-/* Copyright (c) 2011,2014 The Linux Foundation. All rights reserved.
+/* Copyright (c) 2011-2013,2015 The Linux Foundation. All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are
@@ -26,43 +26,42 @@
  * IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
  */
+#ifndef __MSG_TASK__
+#define __MSG_TASK__
 
-#ifndef __LOC_H__
-#define __LOC_H__
+#include <LocThread.h>
 
-#ifdef __cplusplus
-extern "C" {
-#endif /* __cplusplus */
+struct LocMsg {
+    inline LocMsg() {}
+    inline virtual ~LocMsg() {}
+    virtual void proc() const = 0;
+    inline virtual void log() const {}
+};
 
-#include <ctype.h>
-#include <cutils/properties.h>
-#include <hardware/gps.h>
-#include <gps_extended.h>
+class MsgTask : public LocRunnable {
+    const void* mQ;
+    LocThread* mThread;
+    friend class LocThreadDelegate;
+protected:
+    virtual ~MsgTask();
+public:
+    MsgTask(LocThread::tCreate tCreator, const char* threadName = NULL, bool joinable = true);
+    MsgTask(const char* threadName = NULL, bool joinable = true);
+    // this obj will be deleted once thread is deleted
+    void destroy();
+    void sendMsg(const LocMsg* msg) const;
+    // Overrides of LocRunnable methods
+    // This method will be repeated called until it returns false; or
+    // until thread is stopped.
+    virtual bool run();
 
-#define XTRA_DATA_MAX_SIZE 100000 /*bytes*/
+    // The method to be run before thread loop (conditionally repeatedly)
+    // calls run()
+    virtual void prerun();
 
-typedef void (*loc_location_cb_ext) (UlpLocation* location, void* locExt);
-typedef void (*loc_sv_status_cb_ext) (GpsSvStatus* sv_status, void* svExt);
-typedef void* (*loc_ext_parser)(void* data);
+    // The method to be run after thread loop (conditionally repeatedly)
+    // calls run()
+    inline virtual void postrun() {}
+};
 
-typedef struct {
-    loc_location_cb_ext location_cb;
-    gps_status_callback status_cb;
-    loc_sv_status_cb_ext sv_status_cb;
-    gps_nmea_callback nmea_cb;
-    gps_set_capabilities set_capabilities_cb;
-    gps_acquire_wakelock acquire_wakelock_cb;
-    gps_release_wakelock release_wakelock_cb;
-    gps_create_thread create_thread_cb;
-    loc_ext_parser location_ext_parser;
-    loc_ext_parser sv_ext_parser;
-    gps_request_utc_time request_utc_time_cb;
-    gnss_set_system_info set_system_info_cb;
-    gnss_sv_status_callback gnss_sv_status_cb;
-} LocCallbacks;
-
-#ifdef __cplusplus
-}
-#endif /* __cplusplus */
-
-#endif //__LOC_H__
+#endif //__MSG_TASK__
