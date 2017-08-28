@@ -23,9 +23,6 @@ vendor/lib/libbtnv.so
 # Camera
 lib/libmot_sensorlistener.so
 vendor/lib/libfastcvopt.so
-vendor/lib/libmmipl.so
-vendor/lib/libscve.so
-vendor/lib/libscve_mv.so
 
 # Camera firmware
 etc/firmware/cpp_firmware_v1_1_1.fw
@@ -54,6 +51,7 @@ etc/sap.conf
 lib/libloc_api_v02.so
 lib/libloc_ds_api.so
 vendor/lib/hw/flp.default.so
+vendor/lib/libflp.so
 vendor/lib/libgeofence.so
 vendor/lib/libizat_core.so
 vendor/lib/liblbs_core.so
@@ -186,9 +184,12 @@ vendor/lib/liblqe.so
 vendor/lib/libmdmdetect.so
 vendor/lib/libnetmgr.so|05beca2a8e79a91baf603a08ad2b15927ff39a19
 vendor/lib/libperipheral_client.so
+vendor/lib/libril-qc-ltedirectdisc.so
 vendor/lib/libril-qc-qmi-1.so
 vendor/lib/libril-qc-radioconfig.so
 vendor/lib/libril-qcril-hook-oem.so
+vendor/lib/librilqmiservices.so
+vendor/lib/libsettings.so
 vendor/lib/libsystem_health_mon.so
 vendor/lib/libxml.so
 vendor/lib/libsubsystem_control.so
@@ -203,7 +204,7 @@ bin/stml0xx
 lib/hw/sensorhub.msm8916.so
 
 # Thermal
-bin/thermal-engine
+vendor/bin/thermal-engine
 vendor/lib/libthermalclient.so
 vendor/lib/libthermalioctl.so
 
