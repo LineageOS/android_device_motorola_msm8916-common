@@ -88,6 +88,7 @@ PRODUCT_PACKAGES += \
     libbson \
     libc_util \
     libshims_camera \
+    libshims_atomic \
     Snap
 
 # CMActions
