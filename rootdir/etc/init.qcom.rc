@@ -47,7 +47,7 @@ on early-init
     symlink /data/tombstones /tombstones
 
 on init
-    export LD_SHIM_LIBS /system/vendor/lib/lib-imsvt.so|libshims_ims.so:/system/lib/libmot_sensorlistener.so|libsensor.so:/system/lib/libjustshoot.so|libshims_camera.so
+    export LD_SHIM_LIBS /system/lib/libmot_sensorlistener.so|libsensor.so:/system/lib/libjustshoot.so|libshims_camera.so
 
     # Set permissions for persist partition
     mkdir /persist 0771 system system
