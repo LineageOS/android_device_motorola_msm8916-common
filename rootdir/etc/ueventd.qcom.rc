@@ -189,11 +189,11 @@
 # Block devices
 /dev/block/bootdevice/by-name/hob          0660 root radio
 /dev/block/bootdevice/by-name/dhob         0660 root radio
-/dev/block/bootdevice/by-name/clogo        0660 root mot_tcmd
-/dev/block/bootdevice/by-name/cid          0660 root mot_dbvc
+/dev/block/bootdevice/by-name/clogo        0660 root oem_5004
+/dev/block/bootdevice/by-name/cid          0660 root oem_5014
 /dev/block/bootdevice/by-name/logs         0640 root system
-/dev/block/bootdevice/by-name/utags        0660 mot_tcmd system
-/dev/block/bootdevice/by-name/utagsBackup  0660 mot_tcmd system
+/dev/block/bootdevice/by-name/utags        0660 oem_5004 system
+/dev/block/bootdevice/by-name/utagsBackup  0660 oem_5004 system
 
 # Broadcast devices
 /dev/tsc_mux0             0660   media       media
