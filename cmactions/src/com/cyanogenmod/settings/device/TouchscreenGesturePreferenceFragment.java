@@ -17,6 +17,7 @@
 
 package com.cyanogenmod.settings.device;
 
+import android.app.ActionBar;
 import android.app.AlertDialog;
 import android.app.NotificationManager;
 import android.os.Bundle;
@@ -27,6 +28,8 @@ import android.support.v7.preference.PreferenceCategory;
 import android.support.v14.preference.PreferenceFragment;
 import android.support.v7.preference.Preference;
 import android.support.v14.preference.SwitchPreference;
+import android.view.Menu;
+import android.view.MenuItem;
 
 public class TouchscreenGesturePreferenceFragment extends PreferenceFragment {
     private SwitchPreference mFlipPref;
@@ -36,6 +39,8 @@ public class TouchscreenGesturePreferenceFragment extends PreferenceFragment {
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
         addPreferencesFromResource(R.xml.gesture_panel);
+        final ActionBar actionBar = getActivity().getActionBar();
+        actionBar.setDisplayHomeAsUpEnabled(true);
         if (Device.isSurnia()){
             //Check if we have to hide the chop chop entry
             SwitchPreference chopChopPref = (SwitchPreference) findPreference("gesture_chop_chop");
@@ -77,5 +82,14 @@ public class TouchscreenGesturePreferenceFragment extends PreferenceFragment {
         if (mNotificationManager.isNotificationPolicyAccessGranted() && mFlipClick) {
             mFlipPref.setChecked(true);
         }
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+            getActivity().onBackPressed();
+            return true;
+        }
+        return false;
     }
 }
