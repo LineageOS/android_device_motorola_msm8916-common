@@ -106,7 +106,7 @@ set_speaker_light_locked(struct light_state_t const* state)
     else
         brightness_level = LED_LIGHT_OFF;
 
-    return write_int(CHARGING_LED_FILE, brightness_level);
+    return write_int(CHARGING_LED_FILE, LED_LIGHT_OFF);
 }
 
 static int
