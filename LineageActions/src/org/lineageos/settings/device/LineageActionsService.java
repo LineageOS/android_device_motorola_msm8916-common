@@ -77,7 +77,7 @@ public class LineageActionsService extends IntentService implements ScreenStateN
 
         // Other actions that are always enabled
         mUpdatedStateNotifiers.add(new CameraActivationSensor(lineageActionsSettings, mSensorHelper));
-        if (!Device.isSurnia()){
+        if (mSensorHelper.hasChopChopSensor()){
             mUpdatedStateNotifiers.add(new ChopChopSensor(lineageActionsSettings, mSensorHelper));
         } else {
             Log.d(TAG, "No ChopChop");

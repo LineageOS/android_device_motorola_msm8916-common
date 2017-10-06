@@ -88,6 +88,10 @@ public class SensorHelper {
         return mSensorManager.getDefaultSensor(SENSOR_TYPE_MMI_STOW, true);
     }
 
+    public boolean hasChopChopSensor() {
+        return mSensorManager.getDefaultSensor(SENSOR_TYPE_MMI_CHOP_CHOP, true) != null;
+    }
+
     public void registerListener(Sensor sensor, SensorEventListener listener) {
         if (!mSensorManager.registerListener(listener, sensor,
             SensorManager.SENSOR_DELAY_NORMAL, BATCH_LATENCY_IN_MS * 1000)) {
