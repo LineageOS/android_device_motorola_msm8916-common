@@ -89,10 +89,6 @@ PRODUCT_PACKAGES += \
     libbson \
     Snap
 
-# CMActions
-PRODUCT_PACKAGES += \
-    CMActions
-
 # Display
 PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@2.0-impl \
@@ -145,6 +141,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.light@2.0-impl \
     lights.msm8916
+
+# LineageActions
+PRODUCT_PACKAGES += \
+    LineageActions
 
 # Media
 PRODUCT_COPY_FILES += \
