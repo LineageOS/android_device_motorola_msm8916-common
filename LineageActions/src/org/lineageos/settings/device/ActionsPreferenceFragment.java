@@ -41,7 +41,8 @@ public class ActionsPreferenceFragment extends PreferenceFragment {
         addPreferencesFromResource(R.xml.actions_panel);
         final ActionBar actionBar = getActivity().getActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
-        if (Device.isSurnia()){
+        SensorHelper sensorHelper = new SensorHelper(getActivity());
+        if (sensorHelper.hasChopChopSensor()) {
             //Check if we have to hide the chop chop entry
             SwitchPreference chopChopPref = (SwitchPreference) findPreference("gesture_chop_chop");
             PreferenceCategory mCategory = (PreferenceCategory) findPreference("actions_key");
