@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a32e2ac9_500e8fd1",
+        "filename": "msm8916.mk",
+        "patchSetId": 3
+      },
+      "lineNbr": 92,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2017-10-19T15:52:30Z",
+      "side": 1,
+      "message": "Here too.",
+      "range": {
+        "startLine": 92,
+        "startChar": 2,
+        "endLine": 92,
+        "endChar": 11
+      },
+      "revId": "df2d706403989883c183aac6c0fec9ae4ad45275",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
