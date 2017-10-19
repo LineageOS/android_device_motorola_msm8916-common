@@ -1,4 +1,4 @@
-type stml0xx, domain, domain_deprecated;
+type stml0xx, domain;
 type stml0xx_exec, exec_type, file_type;
 init_daemon_domain(stml0xx);
 
