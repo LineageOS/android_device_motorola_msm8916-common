@@ -22,6 +22,7 @@ BOARD_VENDOR := motorola-qcom
 
 TARGET_FS_CONFIG_GEN += \
     $(VENDOR_PATH)/fs_config/file_caps.fs \
+    $(VENDOR_PATH)/fs_config/qcom_aids.fs \
     $(VENDOR_PATH)/fs_config/mot_aids.fs
 
 # Platform
