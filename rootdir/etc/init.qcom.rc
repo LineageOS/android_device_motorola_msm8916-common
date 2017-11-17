@@ -641,7 +641,7 @@ on property:hw.fm.init=1
 service qmuxd /system/bin/qmuxd
     class main
     user root
-    group radio audio bluetooth gps nfc qcom_diag
+    group radio audio bluetooth gps nfc oem_2950
 
 service netmgrd /system/bin/netmgrd
     class main
