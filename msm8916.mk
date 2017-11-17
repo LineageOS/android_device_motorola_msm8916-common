@@ -101,6 +101,10 @@ PRODUCT_PACKAGES += \
     hwcomposer.msm8916 \
     memtrack.msm8916
 
+# DRM
+PRODUCT_PACKAGES += \
+    android.hardware.drm@1.0-impl
+
 # Ebtables
 PRODUCT_PACKAGES += \
     ebtables \
