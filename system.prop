@@ -45,10 +45,14 @@ ro.pip.gated=0
 sys.usb.rps_mask=10
 
 # IMS
+persist.dbg.volte_avail_ovr=1
 persist.radio.ROTATION_ENABLE=1
 persist.radio.VT_ENABLE=1
 persist.radio.VT_HYBRID_ENABLE=1
 persist.radio.VT_USE_MDM_TIME=0
+persist.dbg.vt_avail_ovr=1
+persist.volte_enabled_by_hw=1
+persist.data.iwlan.enable=true
 
 # Media
 vidc.enc.narrow.searchrange=1
