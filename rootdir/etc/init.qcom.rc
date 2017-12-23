@@ -723,6 +723,9 @@ service imsqmidaemon /system/bin/imsqmidaemon
     socket ims_qmid stream 0660 system radio
     group radio log diag
 
+on property:ro.hw.revision=*
+    setprop ro.boot.hardware.revision ${ro.hw.revision}
+
 on charger
     trigger early-fs
     trigger fs
