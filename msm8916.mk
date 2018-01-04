@@ -50,6 +50,15 @@ PRODUCT_COPY_FILES += \
 # Screen density
 PRODUCT_AAPT_CONFIG := normal
 
+# ANT+
+PRODUCT_PACKAGES += \
+        com.dsi.ant.antradio_library \
+        AntHalService \
+        libantradio \
+        
+PRODUCT_COPY_FILES += \
+        external/ant-wireless/antradio-library/com.dsi.ant.antradio_library.xml:system/etc/permissions/com.dsi.ant.antradio_library.xml \
+
 # Audio
 PRODUCT_PACKAGES += \
     audiod \
