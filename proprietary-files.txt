@@ -200,7 +200,7 @@ etc/firmware/sensorhubfw.bin
 etc/firmware/sensorhubver.txt
 
 # Sensors
-bin/stml0xx
+bin/stml0xx|93bbcf642bdf0916181a42bf04b1adc47103bf90
 lib/hw/sensorhub.msm8916.so
 
 # Thermal
