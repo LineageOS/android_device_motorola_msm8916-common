@@ -544,11 +544,6 @@ service time_daemon /system/bin/time_daemon
    user root
    group root
 
-service audiod /system/bin/audiod
-   class late_start
-   user system
-   group system
-
 # corefile limit and ETB enabling
 on property:persist.debug.trace=1
     mkdir /data/core 0777 root root
