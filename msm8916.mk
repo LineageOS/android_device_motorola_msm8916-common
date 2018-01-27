@@ -47,6 +47,7 @@ PRODUCT_COPY_FILES += \
 # Motorola Camera permissions
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/com.motorola.camera.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.motorola.camera.xml \
+    $(LOCAL_PATH)/configs/com.motorola.cameraone.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.motorola.cameraone.xml \
     $(LOCAL_PATH)/configs/com.motorola.motosignature.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.motorola.motosignature.xml
 
 # Screen density
