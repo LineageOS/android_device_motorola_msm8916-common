@@ -21,6 +21,7 @@ cc_binary {
         "libhidlbase",
         "libhidltransport",
         "android.hardware.power@1.0",
+        "vendor.lineage.power@1.0",
     ],
     proprietary: true,
 }
