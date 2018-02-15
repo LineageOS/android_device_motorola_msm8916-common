@@ -119,6 +119,14 @@ TARGET_RELEASETOOLS_EXTENSIONS := $(VENDOR_PATH)
 include device/qcom/sepolicy/sepolicy.mk
 BOARD_SEPOLICY_DIRS += $(VENDOR_PATH)/sepolicy
 
+# Shims
+TARGET_LD_SHIM_LIBS := \
+    /system/lib/libandroid.so|libshim_ril.so \
+    /system/lib/libmot_sensorlistener.so|libsensor.so \
+    /system/lib/libjustshoot.so|libshims_camera.so \
+    /system/vendor/lib/libmmcamera_wavelet_lib.so|libc_util.so \
+    /system/vendor/lib/libizat_core.so|libshims_get_process_name.so
+
 # Wifi
 BOARD_HAS_QCOM_WLAN := true
 BOARD_WLAN_DEVICE := qcwcn
