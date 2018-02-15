@@ -80,6 +80,8 @@ BOARD_HARDWARE_CLASS += hardware/cyanogen/cmhw
 TARGET_HW_DISK_ENCRYPTION := true
 
 # Display
+MAX_EGL_CACHE_KEY_SIZE := 12*1024
+MAX_EGL_CACHE_SIZE := 2048*1024
 NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
 OVERRIDE_RS_DRIVER := libRSDriver_adreno.so
 TARGET_USES_C2D_COMPOSITION := true
@@ -118,6 +120,14 @@ TARGET_RELEASETOOLS_EXTENSIONS := $(VENDOR_PATH)
 # SELinux
 include device/qcom/sepolicy/sepolicy.mk
 BOARD_SEPOLICY_DIRS += $(VENDOR_PATH)/sepolicy
+
+# Shims
+TARGET_LD_SHIM_LIBS := \
+    /system/lib/libandroid.so|libshim_ril.so \
+    /system/lib/libmot_sensorlistener.so|libsensor.so \
+    /system/lib/libjustshoot.so|libshims_camera.so \
+    /system/vendor/lib/libmmcamera_wavelet_lib.so|libc_util.so \
+    /system/vendor/lib/libizat_core.so|libshims_get_process_name.so
 
 # Wifi
 BOARD_HAS_QCOM_WLAN := true
