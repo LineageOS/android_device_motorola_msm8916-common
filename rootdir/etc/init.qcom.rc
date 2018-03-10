@@ -25,8 +25,8 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 
-import init.mmi.usb.rc
-import init.target.rc
+import /vendor/etc/init/hw/init.mmi.usb.rc
+import /vendor/etc/init/hw/init.target.rc
 
 on early-init
     chown system graphics /sys/devices/virtual/graphics/fb0/idle_time
@@ -77,7 +77,7 @@ on fs
     wait /dev/block/platform/soc.0/${ro.boot.bootdevice}
     symlink /dev/block/platform/soc.0/${ro.boot.bootdevice} /dev/block/bootdevice
 
-    mount_all fstab.qcom
+    mount_all /vendor/etc/fstab.qcom
 
     # set up a symbolic link so the many references to the old location still work and the java code can remain platform agnostic.
     symlink /dev/block/bootdevice /dev/block/platform/msm_sdcc.1
@@ -469,19 +469,19 @@ on post-fs-data
     setprop ro.hw.radio ${ro.boot.radio}
 
 # Start Sensor daemon
-service stml0xx /system/bin/stml0xx_wrapper.sh
+service stml0xx /vendor/bin/stml0xx_wrapper.sh
     class late_start
     user compass
     group compass misc input
     oneshot
 
-service mmi-boot-sh /system/bin/init.mmi.boot.sh
+service mmi-boot-sh /vendor/bin/init.mmi.boot.sh
     class core
     user root
     group root radio
     oneshot
 
-service mmi-touch-sh /system/bin/init.mmi.touch.sh synaptics
+service mmi-touch-sh /vendor/bin/init.mmi.touch.sh synaptics
     class core
     user root
     group root system oem_5004
@@ -644,7 +644,7 @@ service ril-daemon2 /vendor/bin/hw/rild -c 2
     group radio cache inet misc audio log readproc wakelock
     capabilities BLOCK_SUSPEND NET_ADMIN NET_RAW
 
-service rild2-wrapper /system/bin/sh /system/etc/init.qcom.ril.sh
+service rild2-wrapper /vendor/bin/sh /vendor/etc/init.qcom.ril.sh
     class late_start
     user root
     group root
@@ -729,4 +729,4 @@ on moto-charger
 
 on property:sys.boot_completed=1
     # Enable ZRAM on boot_complete
-    swapon_all fstab.qcom
+    swapon_all /vendor/etc/fstab.qcom
