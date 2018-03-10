@@ -179,16 +179,14 @@ PRODUCT_PACKAGES += \
 
 # Ramdisk
 PRODUCT_PACKAGES += \
-    init.qcom.ril.sh \
-    stml0xx_wrapper.sh
-
-PRODUCT_PACKAGES += \
     fstab.qcom \
     init.mmi.boot.sh \
     init.mmi.touch.sh \
     init.mmi.usb.rc \
+    init.qcom.ril.sh \
     init.qcom.rc \
-    ueventd.qcom.rc
+    stml0xx_wrapper.sh \
+    ueventd.rc
 
 # RIL
 PRODUCT_PACKAGES += \
