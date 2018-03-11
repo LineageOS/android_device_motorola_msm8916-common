@@ -85,6 +85,7 @@ ifeq ($(BOARD_USES_STML0XX_SENSOR_HUB), true)
     LOCAL_MODULE_RELATIVE_PATH := hw
     LOCAL_MODULE_TAGS := optional
     LOCAL_SHARED_LIBRARIES := liblog libcutils libz libdl libutils
+    LOCAL_PROPRIETARY_MODULE := true
     LOCAL_MODULE := sensors.$(TARGET_BOARD_PLATFORM)
 
     include $(BUILD_SHARED_LIBRARY)
@@ -104,6 +105,7 @@ ifeq ($(BOARD_USES_STML0XX_SENSOR_HUB), true)
     LOCAL_ADDITIONAL_DEPENDENCIES := $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr
 
     LOCAL_SHARED_LIBRARIES := libcutils libc libutils liblog
+    LOCAL_PROPRIETARY_MODULE := true
     LOCAL_MODULE := sensorhub.$(TARGET_BOARD_PLATFORM)
     LOCAL_MODULE_TAGS := optional
 
@@ -122,6 +124,7 @@ ifeq ($(BOARD_USES_STML0XX_SENSOR_HUB), true)
         LOCAL_MODULE_TAGS := optional
 
         LOCAL_MODULE  := akmd09912
+        LOCAL_PROPRIETARY_MODULE := true
 
         LOCAL_C_INCLUDES := \
             $(LOCAL_PATH)/$(AKM_PATH) \
@@ -179,6 +182,7 @@ ifeq ($(BOARD_USES_STML0XX_SENSOR_HUB), true)
     LOCAL_CFLAGS := -DLOG_TAG=$(SH_LOGTAG)
     LOCAL_SRC_FILES := $(SH_PATH)/$(SH_MODULE).cpp
     LOCAL_MODULE:= $(SH_MODULE)
+    LOCAL_PROPRIETARY_MODULE := true
     #LOCAL_CFLAGS+= -D_DEBUG
     LOCAL_CFLAGS += -Wall -Wextra -Weffc++
     LOCAL_SHARED_LIBRARIES := libcutils libc liblog
