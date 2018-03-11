@@ -132,6 +132,12 @@ static int sensors__get_sensors_list(struct sensors_module_t* module,
 	return ARRAY_SIZE(sSensorList);
 }
 
+static int sensors__set_operation_mode(unsigned int mode)
+{
+	// We only support normal operation. No loopback mode.
+	return mode == 0 ? 0 : -EINVAL;
+}
+
 static struct hw_module_methods_t sensors_module_methods = {
 	open: open_sensors
 };
@@ -148,5 +154,6 @@ struct sensors_module_t HAL_MODULE_INFO_SYM = {
 		dso: NULL,
 		reserved: {0},
 	},
-	get_sensors_list: sensors__get_sensors_list
+	get_sensors_list: sensors__get_sensors_list,
+	set_operation_mode: sensors__set_operation_mode
 };
