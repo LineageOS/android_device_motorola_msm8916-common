@@ -164,15 +164,11 @@ ifeq ($(BOARD_USES_MOT_SENSOR_HUB), true)
         LOCAL_C_INCLUDES := $(LOCAL_PATH)/$(SH_PATH)
         LOCAL_C_INCLUDES += external/zlib
 
-        ifneq (,$(filter motosh stml0xx,$(SH_MODULE)))
-            LOCAL_C_INCLUDES += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include
-            # Need the UAPI output directory to be populated with motosh.h/stml0xx.h
-            LOCAL_ADDITIONAL_DEPENDENCIES := $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr
-            # This is only needed for 8x10
-            LOCAL_C_INCLUDES += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include/uapi
-        else
-            LOCAL_C_INCLUDES += bionic/libc/kernel/common
-        endif # SH_MODULE == "motosh"/"stml0xx"
+        LOCAL_C_INCLUDES += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include
+        # Need the UAPI output directory to be populated with motosh.h/stml0xx.h
+        LOCAL_ADDITIONAL_DEPENDENCIES := $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr
+        # This is only needed for 8x10
+        LOCAL_C_INCLUDES += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include/uapi
 
         LOCAL_PRELINK_MODULE := false
         LOCAL_MODULE_RELATIVE_PATH := hw
@@ -194,15 +190,11 @@ ifeq ($(BOARD_USES_MOT_SENSOR_HUB), true)
     LOCAL_SRC_FILES := $(SH_PATH)/sensorhub.c
     LOCAL_SRC_FILES += $(UTILS_PATH)/sensor_time.cpp
 
-    ifneq (,$(filter motosh stml0xx,$(SH_MODULE)))
-        LOCAL_C_INCLUDES += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include
-        # Need the UAPI output directory to be populated with motosh.h/stml0xx.h
-        LOCAL_ADDITIONAL_DEPENDENCIES := $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr
-        # This is only needed for 8x10
-        LOCAL_C_INCLUDES += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include/uapi
-    else
-        LOCAL_C_INCLUDES += bionic/libc/kernel/common
-    endif # SH_MODULE == "motosh"/"stml0xx"
+    LOCAL_C_INCLUDES += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include
+    # Need the UAPI output directory to be populated with motosh.h/stml0xx.h
+    LOCAL_ADDITIONAL_DEPENDENCIES := $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr
+    # This is only needed for 8x10
+    LOCAL_C_INCLUDES += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include/uapi
 
     LOCAL_SHARED_LIBRARIES := libcutils libc libutils liblog
     LOCAL_MODULE := sensorhub.$(TARGET_BOARD_PLATFORM)
@@ -225,7 +217,6 @@ ifeq ($(BOARD_USES_MOT_SENSOR_HUB), true)
         LOCAL_MODULE  := akmd09912
 
         LOCAL_C_INCLUDES := \
-            bionic/libc/kernel/uapi \
             $(LOCAL_PATH)/$(AKM_PATH) \
             $(LOCAL_PATH)/$(AKM_PATH)/$(SMARTCOMPASS_LIB)
 
@@ -288,16 +279,11 @@ ifeq ($(BOARD_USES_MOT_SENSOR_HUB), true)
         LOCAL_SRC_FILES += $(SH_PATH)/CRC32.c
         LOCAL_REQUIRED_MODULES += sensorhub-blacklist.txt
     endif
-    ifneq (,$(filter motosh stml0xx,$(SH_MODULE)))
-        LOCAL_C_INCLUDES := $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include
-        # Need the UAPI output directory to be populated with motosh.h/stml0xx.h
-        LOCAL_ADDITIONAL_DEPENDENCIES := $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr
-        # This is only needed for 8x10
-        LOCAL_C_INCLUDES += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include/uapi
-    else
-        # For other flash loaders still relying on bionic
-        LOCAL_C_INCLUDES += bionic/libc/kernel/common
-    endif # SH_MODULE == "motosh"/"stml0xx.h"
+    LOCAL_C_INCLUDES := $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include
+    # Need the UAPI output directory to be populated with motosh.h/stml0xx.h
+    LOCAL_ADDITIONAL_DEPENDENCIES := $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr
+    # This is only needed for 8x10
+    LOCAL_C_INCLUDES += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include/uapi
 
     include $(BUILD_EXECUTABLE)
 
