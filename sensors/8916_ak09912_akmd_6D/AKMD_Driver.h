@@ -25,7 +25,7 @@
 #define AKMD_INC_AKMD_DRIVER_H
 
 /* Device driver */
-#include "linux/akm09912.h"
+#include <linux/akm09912.h>
 
 #include <stdint.h>			/* int8_t, int16_t etc. */
 

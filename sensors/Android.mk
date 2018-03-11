@@ -229,6 +229,10 @@ ifeq ($(BOARD_USES_MOT_SENSOR_HUB), true)
             $(LOCAL_PATH)/$(AKM_PATH) \
             $(LOCAL_PATH)/$(AKM_PATH)/$(SMARTCOMPASS_LIB)
 
+        LOCAL_C_INCLUDES += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include
+        # Need the UAPI output directory to be populated with akm09912.h
+        LOCAL_ADDITIONAL_DEPENDENCIES := $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr
+
         LOCAL_SRC_FILES := \
             $(AKM_PATH)/AKMD_Driver.c \
             $(AKM_PATH)/DispMessage.c \
