@@ -43,6 +43,9 @@ ifeq ($(BOARD_USES_MOT_SENSOR_HUB), true)
         SH_CFLAGS += -D_ENABLE_MAGNETOMETER
         SH_CFLAGS += -D_ENABLE_CHOPCHOP
     endif
+    ifneq ($(filter merlin, $(TARGET_DEVICE)),)
+        SH_CFLAGS += -D_ENABLE_CHOPCHOP
+    endif
 
     ######################
     # Sensors HAL module #
@@ -52,7 +55,7 @@ ifeq ($(BOARD_USES_MOT_SENSOR_HUB), true)
     LOCAL_CFLAGS := -DLOG_TAG=\"MotoSensors\"
     LOCAL_CFLAGS += $(SH_CFLAGS)
 
-    ifneq ($(filter surnia lux osprey, $(TARGET_DEVICE)),)
+    ifneq ($(filter surnia lux merlin osprey, $(TARGET_DEVICE)),)
         # Sensor HAL file for M0 hub (low-tier) products
         LOCAL_SRC_FILES :=              \
             $(SH_PATH)/SensorBase.cpp   \
@@ -69,7 +72,7 @@ ifeq ($(BOARD_USES_MOT_SENSOR_HUB), true)
         # This file must be last
         LOCAL_SRC_FILES += \
             $(SH_PATH)/SensorsPollContext.cpp
-    endif # surnia || lux || osprey
+    endif # surnia || lux || merlin || osprey
 
     LOCAL_C_INCLUDES := $(LOCAL_PATH)/$(SH_PATH)
     LOCAL_C_INCLUDES += external/zlib
