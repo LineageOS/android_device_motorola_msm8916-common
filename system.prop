@@ -68,11 +68,6 @@ persist.rild.nitz_short_ons_1=
 persist.rild.nitz_short_ons_2=
 persist.rild.nitz_short_ons_3=
 
-# Qualcomm
-com.qc.hardware=true
-debug.qc.hardware=true
-persist.timed.enable=true
-
 # Radio
 persist.data.qmi.adb_logmask=0
 persist.radio.apn_delay=5000
