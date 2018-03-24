@@ -128,6 +128,9 @@ TARGET_LD_SHIM_LIBS := \
     /system/vendor/lib/libmmcamera_wavelet_lib.so|libc_util.so \
     /system/vendor/lib/libizat_core.so|libshims_get_process_name.so
 
+# Vendor Interface Manifest
+DEVICE_MANIFEST_FILE := $(VENDOR_PATH)/manifest.xml
+
 # Wifi
 BOARD_HAS_QCOM_WLAN := true
 BOARD_WLAN_DEVICE := qcwcn
