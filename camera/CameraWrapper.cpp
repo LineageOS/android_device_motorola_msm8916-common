@@ -340,16 +340,20 @@ static void camera_release_recording_frame(struct camera_device *device,
     if (!device)
         return;
 
+#ifdef CLOSE_NATIVE_HANDLE
     VideoNativeHandleMetadata* md = (VideoNativeHandleMetadata*) opaque;
     native_handle_t* nh = md->pHandle;
+#endif
 
     ALOGV("%s->%08X->%08X", __FUNCTION__, (uintptr_t)device,
             (uintptr_t)(((wrapper_camera_device_t*)device)->vendor));
 
     VENDOR_CALL(device, release_recording_frame, opaque);
 
+#ifdef CLOSE_NATIVE_HANDLE
     native_handle_close(nh);
     native_handle_delete(nh);
+#endif
 }
 
 static int camera_auto_focus(struct camera_device *device)
