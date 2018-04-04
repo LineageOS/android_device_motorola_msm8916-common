@@ -28,7 +28,7 @@ LOCAL_PATH := $(LOCAL_TOP_DIR)
 # Sensors are connected to motorola       #
 # internal sensorhub like STM401          #
 ###########################################
-ifeq ($(BOARD_USES_MOT_SENSOR_HUB), true)
+ifeq ($(BOARD_USES_STML0XX_SENSOR_HUB), true)
 
     UTILS_PATH := utils
 
@@ -189,4 +189,4 @@ ifeq ($(BOARD_USES_MOT_SENSOR_HUB), true)
 
     include $(BUILD_EXECUTABLE)
 
-endif # BOARD_USES_MOT_SENSOR_HUB
+endif # BOARD_USES_STML0XX_SENSOR_HUB
