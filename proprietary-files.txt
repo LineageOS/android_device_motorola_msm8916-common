@@ -179,7 +179,7 @@ vendor/firmware/sensorhubfw.bin
 vendor/firmware/sensorhubver.txt
 
 # Thermal
-vendor/bin/thermal-engine
+vendor/bin/thermal-engine|c75c2d2a7c341cb6e03a27315c2f5dc1f67aadfb
 vendor/lib/libthermalclient.so
 vendor/lib/libthermalioctl.so
 
