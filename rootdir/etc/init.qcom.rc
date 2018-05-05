@@ -512,7 +512,7 @@ service qcamerasvr /system/bin/mm-qcamera-daemon
 service charger /charger
     class charger
     group log
-    seclabel u:r:healthd:s0
+    seclabel u:r:charger:s0
 
 # Allow usb charging to be disabled peristently
 on property:persist.usb.chgdisabled=1
@@ -690,13 +690,7 @@ on property:ro.hw.revision=*
     setprop ro.boot.hardware.revision ${ro.hw.revision}
 
 on charger
-    trigger early-fs
-    trigger fs
-    trigger post-fs
-    trigger post-fs-data
     trigger moto-charger
-    class_stop main
-    class_stop late_start
 
 on moto-charger
     setprop ro.board.platform msm8916
