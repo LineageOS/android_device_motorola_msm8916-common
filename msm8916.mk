@@ -102,6 +102,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     charger_res_images
 
+# HIDL
+PRODUCT_PACKAGES += \
+    android.hidl.base@1.0 \
+    android.hidl.manager@1.0
+
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.0-impl \
