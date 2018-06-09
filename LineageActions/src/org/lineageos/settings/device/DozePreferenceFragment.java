@@ -1,6 +1,5 @@
 /*
- * Copyright (C) 2015-2016 The CyanogenMod Project
- * Copyright (C) 2017 The LineageOS Project
+ * Copyright (c) 2017 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,21 +17,26 @@
 package org.lineageos.settings.device;
 
 import android.os.Bundle;
+import android.os.UserHandle;
 import android.support.v7.preference.PreferenceCategory;
 import android.support.v14.preference.PreferenceFragment;
-import android.support.v14.preference.SwitchPreference;
 
-public class ActionsPreferenceFragment extends PreferenceFragment {
+import com.android.internal.hardware.AmbientDisplayConfiguration;
+
+public class DozePreferenceFragment extends PreferenceFragment {
+    private final String CATEGORY_AMBIENT_DISPLAY = "ambient_display_key";
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
-        addPreferencesFromResource(R.xml.actions_panel);
+        addPreferencesFromResource(R.xml.doze_panel);
 
-        if (Device.isSurnia()){
-            //Check if we have to hide the chop chop entry
-            SwitchPreference chopChopPref = (SwitchPreference) findPreference("gesture_chop_chop");
-            PreferenceCategory mCategory = (PreferenceCategory) findPreference("actions_key");
-            mCategory.removePreference(chopChopPref);
+        AmbientDisplayConfiguration adConfig = new AmbientDisplayConfiguration(getActivity());
+        boolean dozeEnabled = adConfig.pulseOnNotificationEnabled(UserHandle.USER_CURRENT);
+
+        PreferenceCategory ambientDisplayCat = (PreferenceCategory)
+                findPreference(CATEGORY_AMBIENT_DISPLAY);
+        if (ambientDisplayCat != null) {
+            ambientDisplayCat.setEnabled(dozeEnabled);
         }
     }
 }
