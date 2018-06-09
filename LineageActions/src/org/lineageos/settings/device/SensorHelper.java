@@ -26,7 +26,6 @@ import android.content.Context;
 import android.hardware.Sensor;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
-import android.util.Log;
 
 public class SensorHelper {
     private static final String TAG = "LineageActions";
