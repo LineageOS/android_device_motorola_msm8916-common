@@ -17,10 +17,13 @@
 package org.lineageos.settings.device;
 
 import android.os.Bundle;
+import android.os.UserHandle;
 import android.preference.PreferenceActivity;
 import android.support.v7.preference.PreferenceCategory;
 import android.support.v14.preference.PreferenceFragment;
 import android.view.MenuItem;
+
+import com.android.internal.hardware.AmbientDisplayConfiguration;
 
 public class DozePreferenceActivity extends PreferenceActivity {
 
@@ -38,7 +41,8 @@ public class DozePreferenceActivity extends PreferenceActivity {
         @Override
         public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
             addPreferencesFromResource(R.xml.doze_panel);
-            boolean dozeEnabled = LineageActionsSettings.isDozeEnabled(getActivity());
+            AmbientDisplayConfiguration adConfig = new AmbientDisplayConfiguration(getActivity());
+            boolean dozeEnabled = adConfig.pulseOnNotificationEnabled(UserHandle.USER_CURRENT);
             PreferenceCategory ambientDisplayCat = (PreferenceCategory)
                     findPreference(CATEGORY_AMBIENT_DISPLAY);
             if (ambientDisplayCat != null) {

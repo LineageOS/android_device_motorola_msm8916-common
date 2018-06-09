@@ -41,6 +41,7 @@ public class LineageActionsSettings {
 
     private final Context mContext;
     private final UpdatedStateNotifier mUpdatedStateNotifier;
+    private AmbientDisplayConfiguration mAmbientDisplayConfiguration;
 
     private boolean mCameraGestureEnabled;
     private boolean mChopChopEnabled;
@@ -56,6 +57,7 @@ public class LineageActionsSettings {
         sharedPrefs.registerOnSharedPreferenceChangeListener(mPrefListener);
         mContext = context;
         mUpdatedStateNotifier = updatedStateNotifier;
+        mAmbientDisplayConfiguration = new AmbientDisplayConfiguration(context);
     }
 
     public boolean isCameraGestureEnabled() {
@@ -66,12 +68,8 @@ public class LineageActionsSettings {
         return mChopChopEnabled;
     }
 
-    public static boolean isDozeEnabled(Context context) {
-        return new AmbientDisplayConfiguration(context).pulseOnNotificationEnabled(UserHandle.USER_CURRENT);
-    }
-
     public boolean isDozeEnabled() {
-        return isDozeEnabled(mContext);
+        return mAmbientDisplayConfiguration.pulseOnNotificationEnabled(UserHandle.USER_CURRENT);
     }
 
     public boolean isIrWakeupEnabled() {
