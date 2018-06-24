@@ -1,9 +1,8 @@
 # Binaries
-/system/bin/akmd09912                                       u:object_r:akmd09912_exec:s0
-/system/bin/init\.mmi\.boot\.sh                             u:object_r:mmi_boot_sh_exec:s0
-/system/bin/init\.mmi\.touch\.sh                            u:object_r:mmi_touch_sh_exec:s0
-/system/bin/stml0xx_wrapper\.sh                             u:object_r:stml0xx_exec:s0
-/system/bin/thermal-engine                                  u:object_r:thermal-engine_exec:s0
+/(vendor|system/vendor)/bin/akmd09912                       u:object_r:akmd09912_exec:s0
+/(vendor|system/vendor)/bin/init\.mmi\.boot\.sh             u:object_r:mmi_boot_sh_exec:s0
+/(vendor|system/vendor)/bin/init\.mmi\.touch\.sh            u:object_r:mmi_touch_sh_exec:s0
+/(vendor|system/vendor)/bin/stml0xx_wrapper\.sh             u:object_r:stml0xx_exec:s0
 
 # Camera
 /data/cam_socket[12]                                        u:object_r:camera_socket:s0
