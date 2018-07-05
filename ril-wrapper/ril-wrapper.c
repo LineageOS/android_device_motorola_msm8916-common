@@ -63,6 +63,23 @@ static void onRequestCompleteShim(RIL_Token t, RIL_Errno e, void* response, size
 
     int request = requestInfo->pCI->requestNumber;
     switch (request) {
+        /*
+         * Our RIL returns a bigger response than the expected one for RIL_REQUEST_OPERATOR.
+         * Trim it down to allow libril to handle it properly.
+         */
+        case RIL_REQUEST_OPERATOR:
+            if (response == NULL) {
+                ALOGE("%s: invalid response length", __func__);
+                goto do_not_handle;
+            }
+
+            int numStrings = responselen / sizeof(char *);
+
+            // Returned length is 6 but libril now wants 3
+            int hackedLength = numStrings / 2;
+
+            responselen = hackedLength * sizeof(char *);
+            break;
     }
 
 do_not_handle:
