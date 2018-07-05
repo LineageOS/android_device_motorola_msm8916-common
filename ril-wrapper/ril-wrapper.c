@@ -27,7 +27,6 @@
 #include <dlfcn.h>
 
 #define RIL_LIB_NAME "libril-qc-qmi-1.so"
-#define RADIO_TECH_DC_HSPAP 20
 
 /*
  * These structs are only avaiable in ril_internal.h
@@ -64,25 +63,6 @@ static void onRequestCompleteShim(RIL_Token t, RIL_Errno e, void* response, size
 
     int request = requestInfo->pCI->requestNumber;
     switch (request) {
-        /*
-         * RIL can report a DC-HSPAP rat which is not supported by AOSP,
-         * resulting in missing mobile data icon.
-         * Remap DC-HSPAP (20) to HSPAP (15) to get a H+ mobile data icon.
-         */
-        case RIL_REQUEST_DATA_REGISTRATION_STATE:
-            if (responselen != sizeof(RIL_DataRegistrationStateResponse)) {
-                ALOGE("%s: invalid response length", __func__);
-                goto do_not_handle;
-            }
-
-            RIL_DataRegistrationStateResponse* dataRegState =
-                (RIL_DataRegistrationStateResponse*)response;
-
-            if (dataRegState->rat == RADIO_TECH_DC_HSPAP) {
-                dataRegState->rat = RADIO_TECH_HSPAP;
-                ALOGI("%s: remapping DC-HSPAP to HSPAP", __func__);
-            }
-            break;
     }
 
 do_not_handle:
