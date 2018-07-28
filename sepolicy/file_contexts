@@ -12,6 +12,7 @@
 /system/bin/time_daemon                                     u:object_r:time_daemon_exec:s0
 
 /(vendor|system/vendor)/bin/akmd09912                       u:object_r:akmd09912_exec:s0
+/(vendor|system/vendor)/bin/init\.device\.config\.sh        u:object_r:device_config_exec:s0
 /(vendor|system/vendor)/bin/init\.mmi\.boot\.sh             u:object_r:mmi_boot_sh_exec:s0
 /(vendor|system/vendor)/bin/init\.mmi\.touch\.sh            u:object_r:mmi_touch_sh_exec:s0
 /(vendor|system/vendor)/bin/stml0xx_wrapper\.sh             u:object_r:stml0xx_exec:s0
