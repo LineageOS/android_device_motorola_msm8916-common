@@ -4,9 +4,6 @@
 /(vendor|system/vendor)/bin/init\.mmi\.touch\.sh            u:object_r:mmi_touch_sh_exec:s0
 /(vendor|system/vendor)/bin/stml0xx_wrapper\.sh             u:object_r:stml0xx_exec:s0
 
-# Camera
-/data/cam_socket[12]                                        u:object_r:camera_socket:s0
-
 # CMHW
 /sys/devices/virtual/timed_output/vibrator/vtg_level        u:object_r:vibeamp_sysfs:s0
 
