@@ -11,6 +11,7 @@ allow mmi_boot_sh vendor_toolbox_exec:file rx_file_perms;
 # Logs to /dev/kmsg
 allow mmi_boot_sh kmsg_device:chr_file w_file_perms;
 
+allow mmi_boot_sh firmware_file:dir search;
 allow mmi_boot_sh proc:file rw_file_perms;
 allow mmi_boot_sh radio_data_file:dir rw_dir_perms;
 allow mmi_boot_sh radio_data_file:file create_file_perms;
