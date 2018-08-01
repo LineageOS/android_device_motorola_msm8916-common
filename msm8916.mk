@@ -197,6 +197,14 @@ PRODUCT_PACKAGES += \
     libshim_ril \
     libxml2
 
+# Telephony
+PRODUCT_PACKAGES += \
+    qti-telephony-common \
+    telephony-ext
+
+PRODUCT_BOOT_JARS += \
+    telephony-ext
+
 # Seccomp
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/seccomp/mediacodec-seccomp.policy:system/vendor/etc/seccomp_policy/mediacodec.policy \
