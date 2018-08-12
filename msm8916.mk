@@ -158,7 +158,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/extract_firmware.sh:install/bin/extract_firmware.sh
 
 # LiveDisplay
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     vendor.lineage.livedisplay@2.0-service-legacymm \
     vendor.lineage.livedisplay@2.0-service-sysfs
 endif
@@ -203,12 +203,10 @@ PRODUCT_PACKAGES += \
     qti-telephony-hidl-wrapper \
     qti_telephony_hidl_wrapper.xml \
     qti-telephony-utils \
-    qti_telephony_utils.xml \
-    telephony-ext
+    qti_telephony_utils.xml
 
 PRODUCT_BOOT_JARS += \
-    ims-ext-common_system \
-    telephony-ext
+    ims-ext-common_system
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/qti_whitelist.xml:system/etc/sysconfig/qti_whitelist.xml
