@@ -32,6 +32,7 @@
 
 #include "AkmSensor.h"
 #include <utils/SystemClock.h>
+#include <string.h>
 
 #define AKMD_DEFAULT_INTERVAL	200000000
 #define AKM_SYSFS_PATH	"/sys/class/compass/akm09912/"
