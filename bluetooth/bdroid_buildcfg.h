@@ -40,6 +40,7 @@ inline const char* BtmGetDefaultName()
 
 	return "Motorola";
 }
+#undef PROPERTY_VALUE_MAX
 
 #define BTM_DEF_LOCAL_NAME BtmGetDefaultName()
 #define BLUETOOTH_QTI_SW TRUE
