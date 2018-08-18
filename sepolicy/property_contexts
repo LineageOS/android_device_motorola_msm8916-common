@@ -1,4 +1,5 @@
 ro.device.dualsim           u:object_r:dualsim_prop:s0
+ro.device.cdma              u:object_r:dualsim_prop:s0
 
 # Motorola service properties
 ro.manufacturedate          u:object_r:manufacturedate_prop:s0
