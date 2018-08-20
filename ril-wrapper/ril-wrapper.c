@@ -57,7 +57,7 @@ static void onRequestCompleteShim(RIL_Token t, RIL_Errno e, void* response, size
 
     RequestInfo* requestInfo = (RequestInfo*)t;
     if (!requestInfo) {
-        ALOGE("%s: request info is NULL", __func__);
+        ALOGV("%s: request info is NULL", __func__);
         goto do_not_handle;
     }
 
