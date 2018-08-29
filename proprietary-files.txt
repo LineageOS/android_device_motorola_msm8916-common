@@ -16,9 +16,13 @@ vendor/lib/libaudcal.so
 vendor/lib/libqct_resampler.so
 
 # Bluetooth
+lib/vendor.qti.hardware.fm@1.0.so
+vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti
+vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc
 vendor/lib/hw/android.hardware.bluetooth@1.0-impl-qti.so
 vendor/lib/com.qualcomm.qti.bluetooth_audio@1.0_vendor.so
 vendor/lib/libbtnv.so
+vendor/lib/vendor.qti.hardware.fm@1.0_vendor.so
 
 # Camera
 lib/libmot_sensorlistener.so
