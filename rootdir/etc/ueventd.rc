@@ -276,3 +276,10 @@
 
 # haptic
 /dev/drv2605              0660   system     system
+
+# sys-fs display
+/sys/class/graphics/fb0     idle_time                0664    system  graphics
+/sys/class/graphics/fb0     dynamic_fps              0664    system  graphics
+/sys/class/graphics/fb0     dyn_pu                   0664    system  graphics
+/sys/class/graphics/fb0     modes                    0664    system  graphics
+/sys/class/graphics/fb0     mode                     0664    system  graphics
