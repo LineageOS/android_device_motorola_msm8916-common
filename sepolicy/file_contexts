@@ -22,7 +22,7 @@
 /sys/devices/w1_bus_master1(/.*)?                           u:object_r:sysfs_graphics:s0
 
 # Lights
-/sys/class/leds(/.*)?                                                   u:object_r:sysfs_leds:s0
+/sys/devices/soc\.0/leds-atc-[0-9]+/leds(/.*)?              u:object_r:sysfs_leds:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.light@2\.0-service.msm8916    u:object_r:hal_light_default_exec:s0
 
 # mmi_touch related /sys files
