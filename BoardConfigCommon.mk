@@ -171,6 +171,7 @@ TARGET_PER_MGR_ENABLED := true
 
 # Telephony
 TARGET_PROVIDES_QTI_TELEPHONY_JAR := true
+CUSTOM_APNS_FILE := $(VENDOR_PATH)/configs/sprint_apns.xml
 
 # Peripheral manager
 TARGET_PER_MGR_ENABLED := true
