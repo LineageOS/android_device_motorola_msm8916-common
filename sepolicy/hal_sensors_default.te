@@ -14,3 +14,13 @@ allow hal_sensors_default sysfs:file { open read write };
 allow hal_sensors_default system_data_file:file { getattr open read };
 
 allow hal_sensors_default proc_net:file { getattr open read };
+
+allow hal_sensors_default {
+    sysfs_batteryinfo
+    sysfs_graphics
+}:dir search;
+
+allow hal_sensors_default {
+    sysfs_batteryinfo
+    sysfs_graphics
+}:file r_file_perms;
