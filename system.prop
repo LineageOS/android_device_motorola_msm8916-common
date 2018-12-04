@@ -18,6 +18,7 @@ ro.vendor.audio.sdk.ssr=false
 
 vendor.voice.path.for.pcm.voip=true
 ro.config.media_vol_steps=25
+ro.config.vc_call_vol_steps=7
 
 # Bluetooth
 bluetooth.hfp.client=1
