@@ -17,6 +17,7 @@ persist.audio.calfile6=/etc/acdbdata/Speaker_cal.acdb
 ro.vendor.audio.sdk.ssr=false
 
 vendor.voice.path.for.pcm.voip=true
+ro.config.media_vol_steps=25
 
 # Bluetooth
 bluetooth.hfp.client=1
