@@ -48,18 +48,11 @@ on init
     # Set permissions for persist partition
     mkdir /persist 0771 system system
 
-    # Setup kernel dropbox permissions so that dropboxd can utilize it
-    chown root diag /sys/kernel/dropbox/event
-    chown root diag /sys/kernel/dropbox/data
-
     mount pstore pstore /sys/fs/pstore
     chown system log /sys/fs/pstore/console-ramoops
     chmod 0440 /sys/fs/pstore/console-ramoops
     chown system log /sys/fs/pstore/annotate-ramoops
     chmod 0640 /sys/fs/pstore/annotate-ramoops
-
-    # ESDFS
-    chown oem_5016 root /proc/fs/esdfs/packages
 
     # Full speed for bootup
     write /sys/devices/system/cpu/cpu1/online 1
@@ -92,31 +85,6 @@ on early-boot
     write /sys/kernel/boot_adsp/boot 1
 
 on boot
-    chown bluetooth bluetooth /sys/module/bluetooth_power/parameters/power
-    chown bluetooth bluetooth /sys/class/rfkill/rfkill0/type
-    chown bluetooth bluetooth /sys/class/rfkill/rfkill0/state
-    chown bluetooth bluetooth /proc/bluetooth/sleep/proto
-    chown bluetooth bluetooth /sys/module/hci_uart/parameters/ath_lpm
-    chown bluetooth bluetooth /sys/module/hci_uart/parameters/ath_btwrite
-    chown system system /sys/module/sco/parameters/disable_esco
-    chown bluetooth bluetooth /sys/module/hci_smd/parameters/hcismd_set
-    chmod 0660 /sys/module/bluetooth_power/parameters/power
-    chmod 0660 /sys/module/hci_smd/parameters/hcismd_set
-    chmod 0660 /sys/class/rfkill/rfkill0/state
-    chmod 0660 /proc/bluetooth/sleep/proto
-    chown bluetooth bluetooth /dev/ttyHS0
-    chmod 0660 /sys/module/hci_uart/parameters/ath_lpm
-    chmod 0660 /sys/module/hci_uart/parameters/ath_btwrite
-    chmod 0660 /dev/ttyHS0
-    chown bluetooth bluetooth /sys/devices/platform/msm_serial_hs.0/clock
-    chmod 0660 /sys/devices/platform/msm_serial_hs.0/clock
-
-    chmod 0660 /dev/ttyHS2
-    chown bluetooth bluetooth /dev/ttyHS2
-
-    chown bluetooth bluetooth /sys/class/rfkill/rfkill0/device/extldo
-    chmod 0660 /sys/class/rfkill/rfkill0/device/extldo
-
     #Create QMUX deamon socket area
     mkdir /dev/socket/qmux_radio 0770 radio radio
     chmod 2770 /dev/socket/qmux_radio
@@ -134,15 +102,6 @@ on boot
     chmod 0644 /proc/cmdline
 
     mkdir /persist/bluetooth 0770 bluetooth bluetooth
-
-    setprop wifi.interface wlan0
-
-    setprop ro.telephony.call_ring.multiple false
-
-    chmod 0444 /sys/devices/platform/msm_hsusb/gadget/usb_state
-
-    #For bridgemgr daemon to inform the USB driver of the correct transport
-    chown radio radio /sys/class/android_usb/f_rmnet_smd_sdio/transport
 
     # Assign TCP buffer thresholds to be ceiling value of technology maximums
     # Increased technology maximums should be reflected here.
@@ -223,13 +182,6 @@ on boot
     chown camera camera /sys/devices/w1_bus_master1/w1_master_search
     chmod 0664 /sys/devices/w1_bus_master1/w1_master_search
 
-    # create the necessary data dirs for tpapi with proper permission
-    mkdir /dev/tpapi 02770 oem_5007 oem_5007
-    mkdir /data/tpapi 02770 oem_5007 oem_5007
-    mkdir /data/tpapi/etc 02770 oem_5007 oem_5007
-    mkdir /data/tpapi/etc/tpa 02770 oem_5007 oem_5007
-    mkdir /data/tpapi/etc/tpa/persistent 02770 oem_5007 oem_5007
-
     # Quiet binder logs
     write /sys/module/binder/parameters/debug_mask 0x5
 
@@ -244,9 +196,6 @@ on boot
     # usb driver parameter permissions
     chown root oem_5004 /sys/module/phy_msm_usb/parameters/host_mode_disable
     chmod 0660 /sys/module/phy_msm_usb/parameters/host_mode_disable
-
-    # Create moodle directory that MOT_MOODLE can write to
-    mkdir /data/local/moodle 0770 graphics oem_5004
 
     # Wifi firmware reload path
     chown wifi wifi /sys/module/wlan/parameters/fwpath
@@ -309,60 +258,10 @@ on post-fs
 
 # msm specific files that need to be created on /data
 on post-fs-data
-    # Create directory for TZ Apps
-    mkdir /data/misc/qsee 0770 system system
-
     mkdir /data/misc/camera 0770 camera camera
-
-    mkdir /data/misc/ipa 0700 net_admin net_admin
-
-    mkdir /data/misc/bluetooth 0770 bluetooth bluetooth
-
-    # Create the directories used by the Wireless subsystem
-    mkdir /data/misc/wifi 0770 wifi wifi
-    mkdir /data/misc/wifi/sockets 0770 wifi wifi
-    mkdir /data/misc/wifi/wpa_supplicant 0770 wifi wifi
-    mkdir /data/misc/dhcp 0770 dhcp dhcp
-    chown dhcp dhcp /data/misc/dhcp
-
-    # Create the directories used by CnE subsystem
-    mkdir /data/connectivity 0771 system system
-    chown system system /data/connectivity
-
-    # Create the directories used by DPM subsystem
-    mkdir /data/dpm 0771 system system
-    chown system system /data/dpm
-
-    mkdir /data/dpm/fdMgr 0771 system system
-    chown system system /data/dpm/fdMgr
-
-    mkdir /data/dpm/nsrm 0771 system system
-    chown system system /data/dpm/nsrm
 
     # Create directory used by audio subsystem
     mkdir /data/misc/audio 0770 audio audio
-
-    # Create directory used by the DASH client
-    mkdir /data/misc/dash 0770 media audio
-
-    # Mounting of persist is moved to 'on emmc-fs' and 'on fs' sections
-    # We chown/chmod /persist again so because mount is run as root + defaults
-    chown system system /persist
-    chmod 0771 /persist
-    chmod 0664 /sys/devices/platform/msm_sdcc.1/polling
-    chmod 0664 /sys/devices/platform/msm_sdcc.2/polling
-    chmod 0664 /sys/devices/platform/msm_sdcc.3/polling
-    chmod 0664 /sys/devices/platform/msm_sdcc.4/polling
-
-    # Chown polling nodes as needed from UI running on system server
-    chown system system /sys/devices/platform/msm_sdcc.1/polling
-    chown system system /sys/devices/platform/msm_sdcc.2/polling
-    chown system system /sys/devices/platform/msm_sdcc.3/polling
-    chown system system /sys/devices/platform/msm_sdcc.4/polling
-
-    #Create the symlink to qcn wpa_supplicant folder for ar6000 wpa_supplicant
-    mkdir /data/system 0775 system system
-    #symlink /data/misc/wifi/wpa_supplicant /data/system/wpa_supplicant
 
     # Create directories for Location services
     mkdir /data/misc/location 0770 gps gps
@@ -372,14 +271,6 @@ on post-fs-data
     mkdir /data/misc/location/quipc 0770 gps system
     mkdir /data/misc/location/gsiff 0770 gps gps
 
-    # Create directory from IMS services
-    mkdir /data/shared 0755
-    chown system system /data/shared
-
-    # Create directory for FOTA
-    mkdir /data/fota 0771
-    chown system system /data/fota
-
     # Create /data/time folder for time-services
     mkdir /data/time/ 0700 system system
 
@@ -387,32 +278,11 @@ on post-fs-data
 
     setprop vold.post_fs_data_done 1
 
-    # Create a folder for SRS to be able to create a usercfg file
-    mkdir /data/data/media 0770 media media
-
     # Create folder for mm-qcamera-daemon
     mkdir /data/camera 0770 media camera
 
-    # Setup folder for native to transfer data to NativeDropBoxAgent
-    mkdir /data/system/dropbox-add 0730 system diag
-
     # Create directory for cutback
     mkdir /data/misc/cutback 0770 radio wifi
-
-    #setup folder for WLAN WAPI
-    mkdir /data/wapi_certificate 0750 system wifi
-    chown system wifi /data/wapi_certificate
-
-    # Create directory used by power_supply_logger
-    mkdir /data/power_supply_logger 0750 oem_5001 log
-
-    # Create panic dump dir.
-    mkdir /data/dontpanic 0750 root log
-
-    # Subsystem RAM-dumps
-    mkdir /data/ss-ram-dumps 0750 radio log
-    mkdir /data/ss-ram-dumps/bp-dumps 0750 radio log
-    mkdir /data/ss-ram-dumps/riva-dumps 0750 radio log
 
     # Permissions for Factory Test of Charging Paths
     chown oem_5001 oem_5001 /sys/class/power_supply/battery/device/force_chg_auto_enable
@@ -423,18 +293,8 @@ on post-fs-data
     chown oem_5001 oem_5001 /sys/class/power_supply/battery/device/force_chg_fail_clear
     chown oem_5001 oem_5001 /sys/class/power_supply/battery/device/force_chg_usb_otg_ctl
 
-    # Setup correct permissions for dbvc
-    mkdir /data/local/dbvc 0750 oem_5004 shell
-
-    # Permissions for phone power off log
-    mkdir /data/power_log 0750 root log
-    chmod 0660 /sys/module/power_supply_log/parameters/log_file
-    write /sys/module/power_supply_log/parameters/log_file /data/power_log/power_off.log
-
     # Setup folder for camera HAL subsystem
     mkdir /data/camera_dump 0750 media media
-
-    mkdir /data/hardware_revisions 0755 system system
 
     mkdir /tombstones/modem 0771 system system
     mkdir /tombstones/lpass 0771 system system
@@ -471,17 +331,6 @@ service mmi-touch-sh /vendor/bin/init.mmi.touch.sh synaptics
     user root
     group root system oem_5004
     oneshot
-
-on property:ro.secure=0
-    # disable dmesg restrict for insecure builds
-    write /proc/sys/kernel/dmesg_restrict 0
-
-on property:ro.debuggable=1
-    # disable dmesg restrict in eng/userdebug build
-    write /proc/sys/kernel/dmesg_restrict 0
-    # enable group read/write to /dev/log/kernel
-    chmod 0660 /dev/log/kernel
-    chmod 0664 /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq
 
 service wcnss-service /vendor/bin/wcnss_service
     class main
@@ -529,33 +378,6 @@ service time_daemon /system/bin/time_daemon
    user root
    group root
 
-# corefile limit and ETB enabling
-on property:persist.debug.trace=1
-    mkdir /data/core 0777 root root
-    write /proc/sys/kernel/core_pattern "/data/core/%E.%p.%e"
-    write /sys/devices/system/cpu/cpu1/online 1
-    write /sys/devices/system/cpu/cpu2/online 1
-    write /sys/devices/system/cpu/cpu3/online 1
-    write /sys/bus/coresight/devices/coresight-etm0/enable 0
-    write /sys/bus/coresight/devices/coresight-etm1/enable 0
-    write /sys/bus/coresight/devices/coresight-etm2/enable 0
-    write /sys/bus/coresight/devices/coresight-etm3/enable 0
-    write /sys/bus/coresight/devices/coresight-etm0/reset 1
-    write /sys/bus/coresight/devices/coresight-etm1/reset 1
-    write /sys/bus/coresight/devices/coresight-etm2/reset 1
-    write /sys/bus/coresight/devices/coresight-etm3/reset 1
-    write /sys/bus/coresight/devices/coresight-etm0/enable 1
-    write /sys/bus/coresight/devices/coresight-etm1/enable 1
-    write /sys/bus/coresight/devices/coresight-etm2/enable 1
-    write /sys/bus/coresight/devices/coresight-etm3/enable 1
-    write /sys/module/coresight_event/parameters/event_abort_enable 1
-
-on property:bluetooth.isEnabled=true
-    write /sys/class/bluetooth/hci0/idle_timeout 7000
-
-on property:persist.env.fastdorm.enabled=true
-    setprop persist.radio.data_no_toggle 1
-
 service irsc_util /system/bin/irsc_util "/vendor/etc/sec_config"
     class main
     user root
@@ -569,12 +391,6 @@ service rmt_storage /system/bin/rmt_storage
 
 on property:ro.boot.emmc=true
     start rmt_storage
-
-on property:wc_transport.start_hci=true
-    start start_hci_filter
-
-on property:wc_transport.start_hci=false
-    stop start_hci_filter
 
 # FM
 on property:hw.fm.init=0
@@ -593,15 +409,6 @@ service netmgrd /system/bin/netmgrd
     class main
     user root
     group root wifi wakelock radio inet oem_2950
-
-on property:ro.use_data_netmgrd=false
-    # netmgr not supported on specific target
-    stop netmgrd
-
-# Adjust socket buffer to enlarge TCP receive window for high bandwidth
-# but only if ro.data.large_tcp_window_size property is set.
-on property:ro.data.large_tcp_window_size=true
-    write /proc/sys/net/ipv4/tcp_adv_win_scale  2
 
 service wpa_supplicant /vendor/bin/hw/wpa_supplicant \
     -ip2p0 -Dnl80211 -c/data/misc/wifi/p2p_supplicant.conf -N \
@@ -647,8 +454,8 @@ on property:sys.ims.DATA_DAEMON_STATUS=1
     start ims_rtp_daemon
 
 service imscmservice /system/bin/imscmservice
-      class main
-      user system
+    class main
+    user system
     group radio diag diag log
     disabled
 
