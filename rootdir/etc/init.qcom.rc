@@ -338,6 +338,12 @@ service mmi-boot-sh /vendor/bin/init.mmi.boot.sh
     group root radio
     oneshot
 
+service mmi-bt-sh /vendor/bin/init.mmi.bt.sh
+    class main
+    user root
+    group root system
+    oneshot
+
 service mmi-touch-sh /vendor/bin/init.mmi.touch.sh synaptics
     class core
     user root
