@@ -3,4 +3,7 @@ allow rild cutback_data_file:sock_file create_file_perms;
 allow rild fsg_file:file r_file_perms;
 allow rild system_data_file:sock_file create_file_perms;
 
-allow rild system_file:file execute_no_trans;
+# rild needs to execute /system/bin/qmi_motext_hook
+allow rild rild_exec:file execute_no_trans;
+
+dontaudit rild vendor_file:file ioctl;

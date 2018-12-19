@@ -1,16 +1,18 @@
 # Binaries
 /system/bin/adsprpcd                                        u:object_r:adsprpcd_exec:s0
-/system/bin/imsdatadaemon                                   u:object_r:ims_exec:s0
-/system/bin/imsqmidaemon                                    u:object_r:ims_exec:s0
-/system/bin/ims_rtp_daemon                                  u:object_r:hal_imsrtp_exec:s0
-/system/bin/irsc_util                                       u:object_r:irsc_util_exec:s0
+/vendor/bin/imsdatadaemon                                   u:object_r:ims_exec:s0
+/vendor/bin/imsqmidaemon                                    u:object_r:ims_exec:s0
+/vendor/bin/ims_rtp_daemon                                  u:object_r:hal_imsrtp_exec:s0
+/vendor/bin/irsc_util                                       u:object_r:irsc_util_exec:s0
 /system/bin/mm-qcamera-daemon                               u:object_r:mm-qcamerad_exec:s0
-/system/bin/netmgrd                                         u:object_r:netmgrd_exec:s0
-/system/bin/qmuxd                                           u:object_r:qmuxd_exec:s0
+/vendor/bin/netmgrd                                         u:object_r:netmgrd_exec:s0
+/vendor/bin/qmuxd                                           u:object_r:qmuxd_exec:s0
 /system/bin/qseecomd                                        u:object_r:tee_exec:s0
-/system/bin/rmt_storage                                     u:object_r:rmt_storage_exec:s0
+/vendor/bin/rmt_storage                                     u:object_r:rmt_storage_exec:s0
 /system/bin/time_daemon                                     u:object_r:time_daemon_exec:s0
 
+/(vendor|system/vendor)/bin/stml0xx                         u:object_r:stml0xx_exec:s0
+/(vendor|system/vendor)/bin/qmi_motext_hook                 u:object_r:rild_exec:s0
 /(vendor|system/vendor)/bin/akmd09912                       u:object_r:akmd09912_exec:s0
 /(vendor|system/vendor)/bin/init\.device\.config\.sh        u:object_r:device_config_exec:s0
 /(vendor|system/vendor)/bin/init\.mmi\.boot\.sh             u:object_r:mmi_boot_sh_exec:s0
@@ -35,6 +37,7 @@
 
 # RIL
 /data/misc/cutback(/.*)?                                    u:object_r:cutback_data_file:s0
+/data/misc/netmgr(/.*)?                                     u:object_r:netmgr_data_file:s0
 /dev/socket/cutback                                         u:object_r:rild_socket:s0
 
 # Sensors
