@@ -94,6 +94,9 @@ PRODUCT_PACKAGES += \
     libshims_camera \
     Snap
 
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/hacks.prop:$(TARGET_COPY_OUT_VENDOR)/hacks.prop
+
 # Charger
 PRODUCT_PACKAGES += \
     charger_res_images
