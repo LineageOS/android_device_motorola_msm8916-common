@@ -497,6 +497,12 @@ service per_mgr /system/vendor/bin/pm-service
     user system
     group system
 
+service ppd /vendor/bin/mm-pp-daemon
+    class hal
+    user system
+    socket pps stream 0660 system system
+    group system graphics
+
 on moto-charger
     setprop ro.board.platform msm8916
 

@@ -90,6 +90,12 @@ etc/firmware/a300_pm4.fw
 etc/firmware/a420_pfp.fw
 etc/firmware/a420_pm4.fw
 
+# Graphics post-processing
+vendor/bin/mm-pp-daemon
+vendor/lib/libdisp-aba.so
+vendor/lib/libmm-abl-oem.so
+vendor/lib/libmm-abl.so
+
 # Media
 lib/libOmxVdecHevc.so
 -vendor/lib/libHevcSwDecoder.so
