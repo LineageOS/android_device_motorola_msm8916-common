@@ -125,7 +125,6 @@ BOARD_SEPOLICY_DIRS += $(VENDOR_PATH)/sepolicy
 
 # Shims
 TARGET_LD_SHIM_LIBS := \
-    /system/lib/libandroid.so|libshim_ril.so \
     /system/vendor/lib/libmdmcutback.so|libqsap_shim.so \
     /system/lib/libmot_sensorlistener.so|libsensor.so \
     /system/lib/libjustshoot.so|libshims_camera.so \
