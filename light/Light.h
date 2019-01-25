@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2018 The LineageOS Project
+ * Copyright (C) 2018-2019 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -32,22 +32,26 @@ namespace implementation {
 
 struct Light : public ILight {
     Light(std::pair<std::ofstream, uint32_t>&& lcd_backlight,
-          std::ofstream&& charging_led);
+          std::ofstream&& charging_led, std::ofstream&& blinking_led);
 
     // Methods from ::android::hardware::light::V2_0::ILight follow.
     Return<Status> setLight(Type type, const LightState& state) override;
     Return<void> getSupportedTypes(getSupportedTypes_cb _hidl_cb) override;
 
   private:
+    void setAttentionLight(const LightState& state);
     void setBatteryLight(const LightState& state);
     void setLcdBacklight(const LightState& state);
-    void setSpeakerBatteryLightLocked();
-    void setSpeakerLightLocked(const LightState& state);
+    void setNotificationLight(const LightState& state);
+    void setSpeakerLightLocked();
 
     std::pair<std::ofstream, uint32_t> mLcdBacklight;
     std::ofstream mChargingLed;
+    std::ofstream mBlinkingLed;
 
+    LightState mAttentionState;
     LightState mBatteryState;
+    LightState mNotificationState;
 
     std::unordered_map<Type, std::function<void(const LightState&)>> mLights;
     std::mutex mLock;
