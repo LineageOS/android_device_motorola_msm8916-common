@@ -639,11 +639,11 @@ service ril-daemon2 /vendor/bin/hw/rild -c 2
     group radio cache inet misc audio log readproc wakelock
     capabilities BLOCK_SUSPEND NET_ADMIN NET_RAW
 
-service rild2-wrapper /vendor/bin/sh /vendor/etc/init.qcom.ril.sh
-    class late_start
-    user root
-    group root
-    oneshot
+on property:persist.radio.multisim.config=dsds
+    enable ril-daemon2
+
+on property:persist.radio.multisim.config=dsda
+    enable ril-daemon2
 
 on property:sys.wifi.tethering=true
     write /sys/class/net/wlan0/queues/rx-0/rps_cpus ${sys.usb.rps_mask}
