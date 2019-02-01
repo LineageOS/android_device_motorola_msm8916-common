@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "395dfc2f_46ce2e72",
+        "filename": "LineageActions/src/org/lineageos/settings/device/DozePreferenceActivity.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 13028
+      },
+      "writtenOn": "2019-02-01T16:18:32Z",
+      "side": 1,
+      "message": "two options: either change this here to make an instance of LineageActionsSettings and call isDozeEnabled() on it or remove the helper function. No need to keep it when you change the only caller...",
+      "range": {
+        "startLine": 44,
+        "startChar": 12,
+        "endLine": 45,
+        "endChar": 95
+      },
+      "revId": "de3501c68b3387a1c4fff6466d4eadd096478542",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
