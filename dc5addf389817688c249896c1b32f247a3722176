@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1b8bd48c_21bcda10",
+        "filename": "LineageActions/src/org/lineageos/settings/device/ActionsPreferenceFragment.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 13028
+      },
+      "writtenOn": "2019-02-01T16:20:49Z",
+      "side": 0,
+      "message": "did you check if these are used somewhere else? If not, could also remove the strings completely",
+      "range": {
+        "startLine": 57,
+        "startChar": 0,
+        "endLine": 58,
+        "endChar": 67
+      },
+      "revId": "dc5addf389817688c249896c1b32f247a3722176",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
