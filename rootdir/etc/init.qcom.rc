@@ -443,6 +443,12 @@ on post-fs-data
     setprop ro.hw.hwrev ${ro.boot.hwrev}
     setprop ro.hw.radio ${ro.boot.radio}
 
+    #Create PERFD deamon related dirs
+    mkdir /data/vendor/perfd 0770 root system
+    chmod 2770 /data/vendor/perfd
+    rm /data/vendor/perfd/default_values
+    start perfd
+
 # Start Sensor daemon
 service stml0xx /vendor/bin/stml0xx_wrapper.sh
     class late_start
@@ -666,6 +672,12 @@ on property:ro.hw.revision=*
 
 on charger
     trigger moto-charger
+
+service perfd /system/vendor/bin/perfd
+    class main
+    user root
+    socket perfd seqpacket 0666 root system
+    disabled
 
 on moto-charger
     setprop ro.board.platform msm8916

@@ -135,6 +135,10 @@ vendor/lib/lib-rtpcore.so
 vendor/lib/lib-rtpdaemoninterface.so
 vendor/lib/lib-rtpsl.so
 
+# Perf
+vendor/bin/perfd
+vendor/lib/libqti-perfd-client.so
+
 # Qualcomm framework
 bin/irsc_util
 vendor/lib/libdiag.so
