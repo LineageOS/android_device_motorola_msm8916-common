@@ -1,0 +1,182 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "db4ebd00_d60efc5f",
+        "filename": "LineageActions/src/org/lineageos/settings/device/BootCompletedReceiver.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 13028
+      },
+      "writtenOn": "2019-02-01T16:08:47Z",
+      "side": 1,
+      "message": "make it a switch statement instead:\nswitch (intent.getAction()) {\n    case Intent.ACTION_BOOT_COMPLETED:\n        context.startService(new Intent(context, ServiceWrapper.class));\n        return;\n}\notherwise: line length!",
+      "range": {
+        "startLine": 37,
+        "startChar": 0,
+        "endLine": 42,
+        "endChar": 72
+      },
+      "revId": "5fbf673653b1abcd05c8e5908d2921ef732a9178",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "bedc7bc3_08d4afe8",
+        "filename": "LineageActions/src/org/lineageos/settings/device/LineageActionsService.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 13028
+      },
+      "writtenOn": "2019-02-01T16:08:47Z",
+      "side": 1,
+      "message": "a lot of line lengths",
+      "range": {
+        "startLine": 66,
+        "startChar": 4,
+        "endLine": 80,
+        "endChar": 101
+      },
+      "revId": "5fbf673653b1abcd05c8e5908d2921ef732a9178",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "8d12eb43_f516abe3",
+        "filename": "LineageActions/src/org/lineageos/settings/device/LineageActionsSettings.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 130,
+      "author": {
+        "id": 13028
+      },
+      "writtenOn": "2019-02-01T16:08:47Z",
+      "side": 1,
+      "message": "line length",
+      "range": {
+        "startLine": 130,
+        "startChar": 12,
+        "endLine": 130,
+        "endChar": 101
+      },
+      "revId": "5fbf673653b1abcd05c8e5908d2921ef732a9178",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "568c80ea_8e3f8cbf",
+        "filename": "LineageActions/src/org/lineageos/settings/device/actions/FlipToMute.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 130,
+      "author": {
+        "id": 13028
+      },
+      "writtenOn": "2019-02-01T16:08:47Z",
+      "side": 1,
+      "message": "shouldn\u0027t be a one-liner. maybe even give it brackets",
+      "range": {
+        "startLine": 130,
+        "startChar": 8,
+        "endLine": 130,
+        "endChar": 32
+      },
+      "revId": "5fbf673653b1abcd05c8e5908d2921ef732a9178",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e0d605c0_fd6787bd",
+        "filename": "LineageActions/src/org/lineageos/settings/device/actions/FlipToMute.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 131,
+      "author": {
+        "id": 13028
+      },
+      "writtenOn": "2019-02-01T16:08:47Z",
+      "side": 1,
+      "message": "line length",
+      "range": {
+        "startLine": 131,
+        "startChar": 84,
+        "endLine": 131,
+        "endChar": 103
+      },
+      "revId": "5fbf673653b1abcd05c8e5908d2921ef732a9178",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "c0154bf6_2a00beba",
+        "filename": "LineageActions/src/org/lineageos/settings/device/actions/FlipToMute.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 140,
+      "author": {
+        "id": 13028
+      },
+      "writtenOn": "2019-02-01T16:08:47Z",
+      "side": 1,
+      "message": "same as above",
+      "range": {
+        "startLine": 140,
+        "startChar": 16,
+        "endLine": 140,
+        "endChar": 57
+      },
+      "revId": "5fbf673653b1abcd05c8e5908d2921ef732a9178",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "fdafe1da_3f5e63b8",
+        "filename": "LineageActions/src/org/lineageos/settings/device/actions/TorchAction.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 13028
+      },
+      "writtenOn": "2019-02-01T16:08:47Z",
+      "side": 1,
+      "message": "line length",
+      "range": {
+        "startLine": 58,
+        "startChar": 8,
+        "endLine": 58,
+        "endChar": 112
+      },
+      "revId": "5fbf673653b1abcd05c8e5908d2921ef732a9178",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "26892ab7_cd748fbb",
+        "filename": "LineageActions/src/org/lineageos/settings/device/doze/ScreenReceiver.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 13028
+      },
+      "writtenOn": "2019-02-01T16:08:47Z",
+      "side": 1,
+      "message": "This is useless",
+      "revId": "5fbf673653b1abcd05c8e5908d2921ef732a9178",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
