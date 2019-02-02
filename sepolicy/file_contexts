@@ -1,8 +1,5 @@
 # Binaries
 /system/bin/adsprpcd                                        u:object_r:adsprpcd_exec:s0
-/system/bin/imsdatadaemon                                   u:object_r:ims_exec:s0
-/system/bin/imsqmidaemon                                    u:object_r:ims_exec:s0
-/system/bin/ims_rtp_daemon                                  u:object_r:hal_imsrtp_exec:s0
 /system/bin/irsc_util                                       u:object_r:irsc_util_exec:s0
 /system/bin/mm-qcamera-daemon                               u:object_r:mm-qcamerad_exec:s0
 /system/bin/netmgrd                                         u:object_r:netmgrd_exec:s0
