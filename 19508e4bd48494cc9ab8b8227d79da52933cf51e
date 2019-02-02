@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3351339f_f7d820ff",
+        "filename": "extract-files.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 18220
+      },
+      "writtenOn": "2019-02-02T18:13:36Z",
+      "side": 0,
+      "message": "lineage",
+      "revId": "19508e4bd48494cc9ab8b8227d79da52933cf51e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d65e6439_a99f71d2",
+        "filename": "setup-makefiles.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 18220
+      },
+      "writtenOn": "2019-02-02T18:13:36Z",
+      "side": 0,
+      "message": "same",
+      "revId": "19508e4bd48494cc9ab8b8227d79da52933cf51e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
