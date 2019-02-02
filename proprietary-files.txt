@@ -107,16 +107,16 @@ vendor/lib/libOmxEvrcDec.so
 vendor/lib/libOmxQcelp13Dec.so
 
 # IMS
--framework/imscmlibrary.jar
--vendor/app/ims/ims.apk|66fa3ab695d7be55a334cbee6e9c94d60089ac2a
--vendor/app/imssettings/imssettings.apk|63c44e1961546bd90f1675da696f194ae8f8506d
-bin/imscmservice
-bin/imsdatadaemon
-bin/imsqmidaemon
-bin/ims_rtp_daemon
-etc/permissions/imscm.xml
-etc/permissions/ims.xml
-etc/permissions/qti_permissions.xml
+-vendor/app/ims/ims.apk|3d935d63fea2d7b724a03f53b33b15fade389806
+-vendor/app/imssettings/imssettings.apk|d34ce39b079627024af4b3af5d9854aec5d2295e
+-vendor/framework/imscmlibrary.jar
+-vendor/framework/qti-vzw-ims-internal.jar|d553e73402351a1fda47f87c9f87ee53339f80a6
+vendor/bin/imscmservice
+vendor/bin/imsdatadaemon
+vendor/bin/imsqmidaemon
+vendor/bin/ims_rtp_daemon
+vendor/etc/permissions/imscm.xml
+vendor/etc/permissions/qti-vzw-ims-internal.xml
 vendor/lib/lib-imscamera.so
 vendor/lib/libimscamera_jni.so
 vendor/lib/lib-imsdpl.so
