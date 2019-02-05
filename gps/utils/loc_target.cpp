@@ -184,7 +184,6 @@ unsigned int loc_get_target(void)
     static const char hw_platform_dep[]  =
         "/sys/devices/system/soc/soc0/hw_platform";
     static const char id_dep[]           = "/sys/devices/system/soc/soc0/id";
-    static const char mdm[]              = "/dev/mdm"; // No such file or directory
 
     char rd_hw_platform[LINE_LEN];
     char rd_id[LINE_LEN];
@@ -229,7 +228,7 @@ unsigned int loc_get_target(void)
             (!memcmp(rd_hw_platform, STR_MTP,   LENGTH(STR_MTP))
              && IS_STR_END(rd_hw_platform[LENGTH(STR_MTP)]))) {
 
-            if (!read_a_line( mdm, rd_mdm, LINE_LEN))
+            if (!read_a_line( rd_mdm, LINE_LEN))
                 gTarget = TARGET_MDM;
         }
         else if( (!memcmp(rd_id, MSM8930_ID_1, LENGTH(MSM8930_ID_1))
