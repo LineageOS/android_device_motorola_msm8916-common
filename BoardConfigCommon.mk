@@ -25,6 +25,8 @@ TARGET_FS_CONFIG_GEN += \
     $(VENDOR_PATH)/fs_config/qcom_aids.fs \
     $(VENDOR_PATH)/fs_config/mot_aids.fs
 
+TARGET_SPECIFIC_HEADER_PATH := $(VENDOR_PATH)/include
+
 # Platform
 TARGET_BOARD_PLATFORM := msm8916
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno306
