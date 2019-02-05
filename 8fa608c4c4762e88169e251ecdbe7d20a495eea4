@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b275699b_11b7c049",
+        "filename": "BoardConfigCommon.mk",
+        "patchSetId": 3
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 13881
+      },
+      "writtenOn": "2019-02-05T05:46:03Z",
+      "side": 1,
+      "message": "Something got squashed wrong here",
+      "revId": "8fa608c4c4762e88169e251ecdbe7d20a495eea4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
