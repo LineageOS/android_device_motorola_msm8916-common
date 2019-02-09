@@ -1711,6 +1711,9 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
         <boolean name="carrier_rtt_supported_on_vtcalls" value="true"/>
         <boolean name="carrier_rtt_upgrade_supported" value="true"/>
         <boolean name="carrier_wfc_supports_wifi_only_bool" value="true"/>
+        <boolean name="carrier_volte_available_bool" value="true" />
+        <boolean name="carrier_vt_available_bool" value="true" />
+        <boolean name="carrier_wfc_ims_available_bool" value="true" />
     </carrier_config>
 
     <carrier_config mcc="310" mnc="160">
