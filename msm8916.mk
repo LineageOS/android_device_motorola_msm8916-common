@@ -336,6 +336,8 @@ PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile
 # for gms modules.
 PRODUCT_ALWAYS_PREOPT_EXTRACTED_APK := true
 
+ DONT_DEXPREOPT_PREBUILTS := true
+
 # Use a profile based boot image for this device. Note that this is currently a
 # generic profile and not Android Go optimized.
 PRODUCT_USE_PROFILE_FOR_BOOT_IMAGE := true
