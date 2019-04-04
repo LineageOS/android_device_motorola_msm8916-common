@@ -28,6 +28,10 @@
 # Partitions
 /dev/block/mmcblk0p26                                       u:object_r:metadata_block_device:s0
 
+# Perf
+/sys/devices/soc\.0/qcom,cpubw\.[0-9]+/devfreq/qcom,cpubw\.[0-9]+(/.*)? u:object_r:sysfs_devfreq:s0
+/sys/devices/soc\.0/qcom,gpubw\.[0-9]+/devfreq/qcom,gpubw\.[0-9]+(/.*)? u:object_r:sysfs_devfreq:s0
+
 # RIL
 /data/misc/cutback(/.*)?                                    u:object_r:cutback_data_file:s0
 /dev/socket/cutback                                         u:object_r:rild_socket:s0
