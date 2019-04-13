@@ -202,6 +202,10 @@ PRODUCT_PACKAGES += \
     libshim_ril \
     libxml2
 
+# Voice mail
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/voicemail-conf.xml:system/etc/voicemail-conf.xml
+
 # Sensors
 PRODUCT_PACKAGES += \
     android.hardware.sensors@1.0-impl
