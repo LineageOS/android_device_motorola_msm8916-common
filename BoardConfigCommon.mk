@@ -154,6 +154,7 @@ TARGET_LD_SHIM_LIBS := \
 
 # Vendor Interface Manifest
 DEVICE_MANIFEST_FILE := $(VENDOR_PATH)/manifest.xml
+DEVICE_MATRIX_FILE := $(VENDOR_PATH)/compatibility_matrix.xml
 
 ifeq ($(filter surnia,$(TARGET_DEVICE)),)
 DEVICE_MANIFEST_FILE += $(VENDOR_PATH)/live_display_manifest.xml
