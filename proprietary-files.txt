@@ -26,9 +26,6 @@ vendor/lib/libfastcvopt.so
 vendor/lib/libmmcamera2_imglib_modules.so|e5b722e22814902057ab081fc548219400799288
 
 # Camera firmware
-etc/firmware/cpp_firmware_v1_1_1.fw
-etc/firmware/cpp_firmware_v1_1_6.fw
-etc/firmware/cpp_firmware_v1_2_0.fw
 etc/firmware/cpp_firmware_v1_4_0.fw
 
 # Display Color Calibration
