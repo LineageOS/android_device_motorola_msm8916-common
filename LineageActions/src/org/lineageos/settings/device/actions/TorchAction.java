@@ -23,7 +23,7 @@ import android.hardware.camera2.CameraCharacteristics;
 import android.hardware.camera2.CameraManager;
 import android.os.VibrationEffect;
 import android.os.Vibrator;
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 import org.lineageos.settings.device.SensorAction;
 
