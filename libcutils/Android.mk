@@ -18,7 +18,7 @@ include $(CLEAR_VARS)
 
 LOCAL_SRC_FILES := atomic.c
 LOCAL_WHOLE_STATIC_LIBRARIES := libcutils
-LOCAL_SHARED_LIBRARIES := liblog
+LOCAL_SHARED_LIBRARIES := liblog libbase
 LOCAL_MODULE := libc_util
 LOCAL_MODULE_TAGS := optional
 
