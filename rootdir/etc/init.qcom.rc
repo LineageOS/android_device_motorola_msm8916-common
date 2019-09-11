@@ -31,12 +31,6 @@ import /vendor/etc/init/hw/init.target.rc
 on early-init
     mkdir /system 0777 root root
 
-    # Create firmware mount point
-    mkdir /firmware 0771 system system
-
-    # Create modem FSG mount point
-    mkdir /fsg 755 root root
-
     # Mount debugfs
     mount debugfs debugfs /sys/kernel/debug
     chown system system /sys/kernel/debug
@@ -45,9 +39,6 @@ on early-init
     symlink /data/tombstones /tombstones
 
 on init
-    # Set permissions for persist partition
-    mkdir /persist 0771 system system
-
     mount pstore pstore /sys/fs/pstore
     chown system log /sys/fs/pstore/console-ramoops
     chmod 0440 /sys/fs/pstore/console-ramoops
