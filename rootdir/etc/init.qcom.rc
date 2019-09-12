@@ -70,6 +70,9 @@ on fs
     mkdir /persist/data 0700  system system
     restorecon_recursive /persist
 
+    setprop persist.adb.nonblocking_ffs 0
+    setprop ro.adb.nonblocking_ffs 0
+
 on early-boot
     # set RLIMIT_MEMLOCK to 64MB
     setrlimit 8 67108864 67108864
