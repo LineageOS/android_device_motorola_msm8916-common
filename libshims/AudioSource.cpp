@@ -5,17 +5,17 @@
 
 namespace android {
 
-    // This is the constructor prototype for android::AudioSource in Pie which has an extra parameter
-    extern "C" void _ZN7android11AudioSourceC1E14audio_source_tRKNS_8String16Ejjjjii(audio_source_t inputSource, const String16 &opPackageName,
+    // This is the constructor prototype for android::AudioSource in Ten which has an extra parameter
+    extern "C" void _ZN7android11AudioSourceC1E14audio_source_tRKNS_8String16Ejjjjii28audio_microphone_direction_tf(audio_source_t inputSource, const String16 &opPackageName,
             uint32_t sampleRate, uint32_t channels, uint32_t outSampleRate, uid_t uid, pid_t pid,
-            audio_port_handle_t selectedDeviceId);
+            audio_port_handle_t selectedDeviceId, int32_t selectedMicDirection, float selectedMicFieldDimension);
 
     // Define the missing constructor symbol
     extern "C" void _ZN7android11AudioSourceC1E14audio_source_tRKNS_8String16Ejjjji(audio_source_t inputSource, const String16 &opPackageName,
         uint32_t sampleRate, uint32_t channelCount, uint32_t outSampleRate, uid_t uid, pid_t pid)
     {
-        // Invoke the Pie android::AudioSource constructor with the extra parameter
-        _ZN7android11AudioSourceC1E14audio_source_tRKNS_8String16Ejjjjii(inputSource, opPackageName, sampleRate, channelCount, outSampleRate, uid, pid, 0);
+        // Invoke the Ten android::AudioSource constructor with the extra parameter
+        _ZN7android11AudioSourceC1E14audio_source_tRKNS_8String16Ejjjjii28audio_microphone_direction_tf(inputSource, opPackageName, sampleRate, channelCount, outSampleRate, uid, pid, 0, 0, 0.0f);
     }
 
 }
