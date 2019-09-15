@@ -481,9 +481,9 @@ on property:sys.wifi.tethering=true
 
 service vendor.imsdatadaemon /vendor/bin/imsdatadaemon
     class main
-    user system
+    user radio
     socket ims_datad stream 0660 system radio
-    group system wifi radio inet log diag
+    group radio wifi radio inet log diag
     writepid /dev/cpuset/system-background/tasks
     disabled
 
@@ -503,7 +503,7 @@ on property:vendor.ims.DATA_DAEMON_STATUS=1
 
 service vendor.imsqmidaemon /vendor/bin/imsqmidaemon
     class main
-    user system
+    user radio
     socket ims_qmid stream 0660 system radio
     group radio log diag
     writepid /dev/cpuset/system-background/tasks
