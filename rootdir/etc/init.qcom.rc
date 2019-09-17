@@ -37,16 +37,8 @@ on early-init
     chmod 0775 /sys/kernel/debug
 
 on init
-    mount pstore pstore /sys/fs/pstore
-    chown system log /sys/fs/pstore/console-ramoops
-    chmod 0440 /sys/fs/pstore/console-ramoops
-    chown system log /sys/fs/pstore/annotate-ramoops
-    chmod 0640 /sys/fs/pstore/annotate-ramoops
 
     # Full speed for bootup
-    write /sys/devices/system/cpu/cpu1/online 1
-    write /sys/devices/system/cpu/cpu2/online 1
-    write /sys/devices/system/cpu/cpu3/online 1
     write /sys/module/msm_thermal/core_control/enabled 0
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor "performance"
     write /sys/module/msm_thermal/core_control/enabled 1
@@ -61,9 +53,6 @@ on fs
 
     # set up a symbolic link so the many references to the old location still work and the java code can remain platform agnostic.
     symlink /dev/block/bootdevice /dev/block/platform/msm_sdcc.1
-
-    # use /persist as phony PDS partition
-    symlink /persist /pds
 
     mkdir /persist/data 0700  system system
     restorecon_recursive /persist
