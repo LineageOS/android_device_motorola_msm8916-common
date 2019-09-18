@@ -1,4 +1,5 @@
 /*
+ * Copyright (C) 2019 The LineageOS Project
  * Copyright (C) 2016 The CyanogenMod Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -21,6 +22,8 @@
 #include <errno.h>
 #include <fcntl.h>
 #include <string.h>
+#include <stdlib.h>
+#include <sys/stat.h>
 
 #include <utils/Log.h>
 
@@ -28,7 +31,12 @@
 #include "power_device.h"
 
 #define CPUFREQ_PATH "/sys/devices/system/cpu/cpu0/cpufreq/"
+
+#ifdef MSM8939
+#define INTERACTIVE_PATH "/sys/devices/system/cpu0/cpufreq/interactive/"
+#else
 #define INTERACTIVE_PATH "/sys/devices/system/cpu/cpufreq/interactive/"
+#endif
 
 static pthread_mutex_t lock = PTHREAD_MUTEX_INITIALIZER;
 static int boostpulse_fd = -1;
@@ -69,6 +77,15 @@ static int sysfs_write_int(char *path, int value)
     return sysfs_write_str(path, buf);
 }
 
+
+static bool check_governor(void) {
+    struct stat s;
+    int err = stat(INTERACTIVE_PATH, &s);
+    if (err != 0) return false;
+    if (S_ISDIR(s.st_mode)) return true;
+    return false;
+}
+
 static int is_profile_valid(int profile)
 {
     return profile >= 0 && profile < PROFILE_MAX;
@@ -96,6 +113,9 @@ static void power_set_interactive(__attribute__((unused)) struct power_module *m
         ALOGD("%s: no power profile selected yet", __func__);
         return;
     }
+
+    // break out early if governor is not interactive
+    if (!check_governor()) return;
 
     if (on) {
         sysfs_write_int(INTERACTIVE_PATH "hispeed_freq",
@@ -127,6 +147,9 @@ static void set_power_profile(int profile)
 
     if (profile == current_power_profile)
         return;
+
+    // break out early if governor is not interactive
+    if (!check_governor()) return;
 
     ALOGD("%s: setting profile %d", __func__, profile);
 
@@ -217,7 +240,7 @@ struct power_module HAL_MODULE_INFO_SYM = {
         .hal_api_version = HARDWARE_HAL_API_VERSION,
         .id = POWER_HARDWARE_MODULE_ID,
         .name = "msm8916 Power HAL",
-        .author = "The CyanogenMod Project",
+        .author = "The LineageOS Project",
         .methods = &power_module_methods,
     },
 
