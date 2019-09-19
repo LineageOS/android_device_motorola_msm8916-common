@@ -33,6 +33,9 @@
 # Partitions
 /dev/block/platform/soc\.0/7824900\.sdhci/by-name/metadata  u:object_r:metadata_block_device:s0
 
+# Power
+/(vendor|system/vendor)/bin/hw/android\.hardware\.power@1\.0-service\.msm8916  u:object_r:hal_power_default_exec:s0
+
 # RIL
 /data/misc/cutback(/.*)?                                    u:object_r:cutback_data_file:s0
 /dev/socket/cutback                                         u:object_r:rild_socket:s0
