@@ -173,7 +173,7 @@ lib/libmdmcutback.so
 lib/libmotext_inf.so
 lib/libqmimotext.so
 vendor/qcril.db
-vendor/lib/libcneapiclient.so
+vendor/lib/libcneapiclient.so|70a053a90f9b6979f6fff81ca96ab1e6737259ae
 vendor/lib/libconfigdb.so
 vendor/lib/liblqe.so
 vendor/lib/libmdmdetect.so
