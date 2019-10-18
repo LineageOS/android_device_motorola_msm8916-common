@@ -152,6 +152,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/extract_firmware.sh:install/bin/extract_firmware.sh
 endif
 
+# Encryption
+PRODUCT_PACKAGES += \
+    vendor.qti.hardware.cryptfshw@1.0-service-qti
+
 # FM
 PRODUCT_PACKAGES += \
     FMRadio \
