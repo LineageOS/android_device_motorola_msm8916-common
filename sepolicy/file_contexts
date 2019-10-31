@@ -23,6 +23,9 @@
 # Camera
 /sys/devices/w1_bus_master1(/.*)?                           u:object_r:sysfs_graphics:s0
 
+# DRM
+/(vendor|system/vendor)/bin/hw/android\.hardware\.drm@1\.1-service\.widevine                u:object_r:hal_drm_widevine_exec:s0
+
 # Lights
 /sys/devices/soc\.0/leds-atc-[0-9]+/leds(/.*)?              u:object_r:sysfs_leds:s0
 /sys/devices/soc\.0/78b7000\.spi/spi_master/spi0/spi0\.0/leds/rgb(/.*)? u:object_r:sysfs_leds:s0
