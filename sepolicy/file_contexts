@@ -25,6 +25,7 @@
 
 # DRM
 /(vendor|system/vendor)/bin/hw/android\.hardware\.drm@1\.1-service\.widevine                u:object_r:hal_drm_widevine_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.drm@1\.2-service\.clearkey                u:object_r:hal_drm_clearkey_exec:s0
 
 # Lights
 /sys/devices/soc\.0/leds-atc-[0-9]+/leds(/.*)?              u:object_r:sysfs_leds:s0
