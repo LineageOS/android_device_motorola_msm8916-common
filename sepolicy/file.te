@@ -10,5 +10,8 @@ type grep_exec, exec_type, file_type;
 # Touch script
 type sysfs_mmi_touch, fs_type, sysfs_type;
 
+# proc
+type proc_bootinfo, fs_type, proc_type;
+
 # RIL
 type netmgr_data_file, file_type, data_file_type;
