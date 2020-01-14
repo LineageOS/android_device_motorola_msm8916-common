@@ -4,3 +4,5 @@ ro.device.dualsim           u:object_r:dualsim_prop:s0
 ro.device.cdma              u:object_r:dualsim_prop:s0
 ro.hw.revision              u:object_r:hw_rev_prop:s0
 rmtfs.                      u:object_r:rmtfs_prop:s0
+
+wifi.active.interface u:object_r:exported_wifi_prop:s0 exact string
