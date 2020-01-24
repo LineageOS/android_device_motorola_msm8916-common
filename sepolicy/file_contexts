@@ -24,6 +24,7 @@
 /sys/devices/w1_bus_master1(/.*)?                           u:object_r:sysfs_graphics:s0
 
 # Device nodes
+/dev/cpuset(/.*)?                                           u:object_r:cgroup:s0
 /dev/stune(/.*)?                                            u:object_r:cgroup:s0
 
 # DRM
