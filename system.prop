@@ -78,6 +78,7 @@ persist.rild.nitz_short_ons_2=
 persist.rild.nitz_short_ons_3=
 
 # Radio
+DEVICE_PROVISIONED=1
 persist.data.mode=concurrent
 persist.data.netmgrd.qos.enable=true
 persist.data.qmi.adb_logmask=0
