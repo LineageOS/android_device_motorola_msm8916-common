@@ -39,7 +39,6 @@
 
 # mmi_touch related /sys files
 /sys/devices/soc\.0/78b6000\.i2c/i2c-2/2-0020(/.*)?         u:object_r:sysfs_mmi_touch:s0
-/sys/devices/soc\.0/78b8000\.i2c/i2c-4/4-0020(/.*)?         u:object_r:sysfs_mmi_touch:s0
 
 # Partitions
 /dev/block/platform/soc\.0/7824900\.sdhci/by-name/metadata  u:object_r:metadata_block_device:s0
