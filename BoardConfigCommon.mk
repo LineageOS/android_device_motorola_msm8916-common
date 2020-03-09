@@ -18,6 +18,8 @@
 
 VENDOR_PATH := device/motorola/msm8916-common
 
+BUILD_BROKEN_USES_BUILD_COPY_HEADERS := true
+
 BOARD_VENDOR := motorola-qcom
 
 TARGET_FS_CONFIG_GEN += \
