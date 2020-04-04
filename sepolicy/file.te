@@ -20,4 +20,4 @@ type persist_modem_file, file_type;
 type sysfs_msm_subsys, sysfs_type, fs_type;
 type sysfs_timekeep, fs_type, sysfs_type;
 type sysfs_camera,  fs_type, sysfs_type;
-
+type proc_swap, fs_type;
