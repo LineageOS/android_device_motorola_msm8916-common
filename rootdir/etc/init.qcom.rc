@@ -290,10 +290,6 @@ on post-fs-data
     # Create directory for cutback
     mkdir /data/misc/cutback 0770 radio wifi
 
-    #create netmgr log dir
-    mkdir /data/misc/netmgr 0770 radio radio
-    chmod 0770 /data/misc/netmgr
-
     # Permissions for Factory Test of Charging Paths
     chown oem_5001 oem_5001 /sys/class/power_supply/battery/device/force_chg_auto_enable
     chown oem_5001 oem_5001 /sys/class/power_supply/battery/device/force_chg_ibatt
@@ -394,12 +390,12 @@ service time_daemon /system/bin/time_daemon
    user root
    group root
 
-service irsc_util /system/bin/irsc_util "/vendor/etc/sec_config"
+service irsc_util /system/vendor/bin/irsc_util "/system/vendor/etc/sec_config"
     class main
     user root
     oneshot
 
-service rmt_storage /system/bin/rmt_storage
+service rmt_storage /system/vendor/bin/rmt_storage
     class core
     user root
     group system wakelock
@@ -416,12 +412,12 @@ on property:hw.fm.init=1
     write /sys/module/radio_iris_transport/parameters/fmsmd_set 1
 
 # QMUX must be in multiple groups to support external process connections
-service qmuxd /system/bin/qmuxd
+service qmuxd /system/vendor/bin/qmuxd
     class main
     user root
     group radio audio bluetooth gps nfc oem_2950
 
-service netmgrd /system/bin/netmgrd
+service netmgrd /system/vendor/bin/netmgrd
     class main
     user root
     group root wifi wakelock radio inet oem_2950
