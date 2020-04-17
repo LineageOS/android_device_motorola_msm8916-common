@@ -1,4 +1,4 @@
-# Proprietary files for msm8916-common
+# Common proprietary files - from Motorola package version NCD26.48-7.14 , unless pinned
 
 # ADSP
 vendor/bin/adsprpcd
