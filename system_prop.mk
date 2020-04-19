@@ -39,6 +39,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.sf.latch_unsignaled=0 \
     debug.cpurend.vsync=false
 
+# Force triple frame buffers
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.surface_flinger.max_frame_buffer_acquired_buffers=3
+
 # GPS
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.gps.agps_provider=1 \
