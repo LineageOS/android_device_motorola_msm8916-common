@@ -163,7 +163,7 @@ endif
 
 # Encryption
 PRODUCT_PACKAGES += \
-    vendor.qti.hardware.cryptfshw@1.0-service-qti
+    vendor.qti.hardware.cryptfshw@1.0-service-qti.qsee
 
 # FM
 PRODUCT_PACKAGES += \
