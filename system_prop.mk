@@ -51,7 +51,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # IMS
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.dbg.volte_avail_ovr=1
+    persist.dbg.volte_avail_ovr=1 \
+    persist.vendor.radio.jbims=1
 
 # Media
 PRODUCT_PROPERTY_OVERRIDES += \
