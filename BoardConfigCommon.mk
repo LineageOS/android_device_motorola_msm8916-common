@@ -142,6 +142,10 @@ TARGET_LD_SHIM_LIBS := \
 # Vendor Interface Manifest
 DEVICE_MANIFEST_FILE := $(VENDOR_PATH)/manifest.xml
 
+ifeq ($(filter surnia,$(TARGET_DEVICE)),)
+DEVICE_MANIFEST_FILE += $(VENDOR_PATH)/live_display_manifest.xml
+endif
+
 # Peripheral manager
 TARGET_PER_MGR_ENABLED := true
 
