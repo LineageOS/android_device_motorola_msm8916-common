@@ -12,3 +12,4 @@ allow rild wifi_prop:file read;
 allow rild rild_exec:file execute_no_trans;
 
 dontaudit rild vendor_file:file ioctl;
+get_prop(rild, wifi_prop);
