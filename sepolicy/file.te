@@ -16,3 +16,6 @@ type proc_bootinfo, fs_type, proc_type;
 # RIL
 type netmgr_data_file, file_type, data_file_type;
 type persist_modem_file, file_type;
+
+type sysfs_msm_subsys, sysfs_type, fs_type;
+type sysfs_timekeep, fs_type, sysfs_type;

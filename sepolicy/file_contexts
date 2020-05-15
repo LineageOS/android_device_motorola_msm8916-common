@@ -9,8 +9,8 @@
 /vendor/bin/qmuxd                                           u:object_r:qmuxd_exec:s0
 /system/bin/qseecomd                                        u:object_r:tee_exec:s0
 /vendor/bin/rmt_storage                                     u:object_r:rmt_storage_exec:s0
-/system/bin/time_daemon                                     u:object_r:time_daemon_exec:s0
 
+/(vendor|system/vendor)/bin/timekeep                        u:object_r:timekeep_exec:s0
 /(vendor|system/vendor)/bin/stml0xx                         u:object_r:stml0xx_exec:s0
 /(vendor|system/vendor)/bin/qmi_motext_hook                 u:object_r:rild_exec:s0
 /(vendor|system/vendor)/bin/akmd09912                       u:object_r:akmd09912_exec:s0
