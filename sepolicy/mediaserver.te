@@ -10,5 +10,11 @@ allow mediaserver camera_bgproc_service:service_manager { add };
 
 allow mediaserver device:dir r_dir_perms;
 
+allow mediaserver serialno_prop:file read;
+allow mediaserver serialno_prop:file open;
+
+allow mediaserver sysfs_battery_supply:dir search;
+allow mediaserver sysfs_battery_supply:file { getattr open read };
+
 # Use HALs
 hal_client_domain(mediaserver, hal_lineage_camera_motor)
