@@ -65,6 +65,7 @@ on early-boot
     write /sys/kernel/boot_adsp/boot 1
 
     start qseecomd
+    restart qcamerasvr
 
 on boot
     #Create QMUX deamon socket area
@@ -526,4 +527,3 @@ on moto-charger
 on property:sys.boot_completed=1
     # Enable ZRAM on boot_complete
     swapon_all /vendor/etc/fstab.qcom
-    restart qcamerasvr
