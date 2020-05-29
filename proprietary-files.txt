@@ -1,7 +1,7 @@
 # Proprietary files for msm8916-common
 
 # ADSP
-bin/adsprpcd
+vendor/bin/adsprpcd
 vendor/lib/libadsprpc.so
 
 # Audio
@@ -16,7 +16,7 @@ vendor/lib/libaudcal.so
 vendor/lib/libqct_resampler.so
 
 # Bluetooth
-lib/vendor.qti.hardware.fm@1.0.so
+vendor/lib/vendor.qti.hardware.fm@1.0.so
 vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti
 vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc
 vendor/lib/hw/android.hardware.bluetooth@1.0-impl-qti.so
@@ -25,19 +25,19 @@ vendor/lib/libbtnv.so
 vendor/lib/vendor.qti.hardware.fm@1.0_vendor.so
 
 # Camera
-lib/libmot_sensorlistener.so
+vendor/lib/libmot_sensorlistener.so
 vendor/lib/libfastcvopt.so
 vendor/lib/libmmcamera2_imglib_modules.so|e5b722e22814902057ab081fc548219400799288
 
 # Camera firmware
-etc/firmware/cpp_firmware_v1_4_0.fw
+vendor/firmware/cpp_firmware_v1_4_0.fw
 
 # Display Color Calibration
 vendor/lib/libmm-disp-apis.so
 vendor/lib/libmm-qdcm.so
 
 # DRM
-bin/qseecomd
+vendor/bin/qseecomd
 vendor/lib/mediadrm/libwvdrmengine.so
 vendor/lib/libdrmfs.so
 vendor/lib/libdrmtime.so
@@ -48,10 +48,10 @@ vendor/lib/librpmb.so
 vendor/lib/libssd.so
 
 # GPS
-etc/flp.conf
-etc/sap.conf
-lib/libloc_api_v02.so
-lib/libloc_ds_api.so
+vendor/etc/flp.conf
+vendor/etc/sap.conf
+vendor/lib/libloc_api_v02.so
+vendor/lib/libloc_ds_api.so
 vendor/lib/hw/flp.default.so
 vendor/lib/libflp.so
 vendor/lib/libgeofence.so
@@ -89,13 +89,13 @@ vendor/lib/libsc-a3xx.so
 vendor/lib/libscale.so
 
 # Graphics firmware
-etc/firmware/a300_pfp.fw
-etc/firmware/a300_pm4.fw
-etc/firmware/a420_pfp.fw
-etc/firmware/a420_pm4.fw
+vendor/firmware/a300_pfp.fw
+vendor/firmware/a300_pm4.fw
+vendor/firmware/a420_pfp.fw
+vendor/firmware/a420_pm4.fw
 
 # Media
-lib/libOmxVdecHevc.so
+vendor/lib/libOmxVdecHevc.so
 -vendor/lib/libHevcSwDecoder.so
 vendor/lib/libI420colorconvert.so
 vendor/lib/libmmosal.so
@@ -105,15 +105,15 @@ vendor/lib/libOmxEvrcDec.so
 vendor/lib/libOmxQcelp13Dec.so
 
 # IMS
--vendor/app/ims/ims.apk|3d935d63fea2d7b724a03f53b33b15fade389806
--vendor/app/imssettings/imssettings.apk|d34ce39b079627024af4b3af5d9854aec5d2295e
+priv-app/ims/ims.apk
+-vendor/app/imssettings/imssettings.apk
 vendor/bin/imsdatadaemon
 vendor/bin/imsqmidaemon
 vendor/lib/libimscamera_jni.so
 vendor/lib/libimsmedia_jni.so
 
 # Qualcomm framework
-bin/irsc_util
+vendor/bin/irsc_util
 vendor/lib/libdiag.so
 vendor/lib/libDiagService.so
 vendor/lib/libdsi_netctrl.so
@@ -135,24 +135,25 @@ vendor/lib/libsmemlog.so
 
 # Radio
 -priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
-bin/netmgrd
-bin/qmuxd
-bin/radish
-bin/rmt_storage
-bin/qmi_motext_hook
-etc/data/dsi_config.xml
-etc/data/netmgr_config.xml
-etc/data/qmi_config.xml
-etc/permissions/qcnvitems.xml
-etc/permissions/qcrilhook.xml
--framework/qcnvitems.jar
--framework/qcrilhook.jar
-lib/libadropbox.so
-lib/libmdmcutback.so
-lib/libmotext_inf.so
-lib/libqmimotext.so
+vendor/bin/netmgrd
+vendor/bin/qmuxd
+vendor/bin/radish
+vendor/bin/rmt_storage
+vendor/bin/qmi_motext_hook
+vendor/etc/data/dsi_config.xml
+vendor/etc/data/netmgr_config.xml
+vendor/etc/data/qmi_config.xml
+vendor/etc/permissions/qcnvitems.xml
+vendor/etc/permissions/qcrilhook.xml
+vendor/framework/qcnvitems.jar
+vendor/framework/qcrilhook.jar
+vendor/lib/libadropbox.so
+vendor/lib/libmdmcutback.so
+vendor/lib/libmotext_inf.so
+vendor/lib/libqmimotext.so
 vendor/qcril.db
-vendor/lib/libcneapiclient.so|70a053a90f9b6979f6fff81ca96ab1e6737259ae
+vendor/lib/libperipheral_client.so
+vendor/lib/libcneapiclient.so
 vendor/lib/libconfigdb.so
 vendor/lib/liblqe.so
 vendor/lib/libmdmdetect.so
@@ -174,8 +175,8 @@ vendor/bin/pm-service
 vendor/lib/libperipheral_client.so
 
 # Sensorhub Firmware
-etc/firmware/sensorhubfw.bin
-etc/firmware/sensorhubver.txt
+vendor/firmware/sensorhubfw.bin
+vendor/firmware/sensorhubver.txt
 
 # Thermal
 vendor/bin/thermal-engine
@@ -186,10 +187,10 @@ vendor/lib/libthermalioctl.so
 vendor/lib/libtime_genoff.so
 
 # Venus (media) firmware
-etc/firmware/venus.b00
-etc/firmware/venus.b01
-etc/firmware/venus.b02
-etc/firmware/venus.b03
-etc/firmware/venus.b04
-etc/firmware/venus.mbn
-etc/firmware/venus.mdt
+vendor/firmware/venus.b00
+vendor/firmware/venus.b01
+vendor/firmware/venus.b02
+vendor/firmware/venus.b03
+vendor/firmware/venus.b04
+vendor/firmware/venus.mbn
+vendor/firmware/venus.mdt

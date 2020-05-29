@@ -34,9 +34,9 @@ mount_system
 
 for file in /firmware/image/*.gz; do
   OUT_FILE=$(basename $file .gz)
-  gzip -dc $file > $S/etc/firmware/$OUT_FILE
-  chmod 644 $S/etc/firmware/$OUT_FILE
-  chcon u:object_r:firmware_file:s0 $S/etc/firmware/$OUT_FILE
+  gzip -dc $file > $S/vendor/firmware/$OUT_FILE
+  chmod 644 $S/vendor/firmware/$OUT_FILE
+  chcon u:object_r:firmware_file:s0 $S/vendor/firmware/$OUT_FILE
 done
 
 unmount_system
