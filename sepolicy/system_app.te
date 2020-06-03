@@ -8,3 +8,7 @@ allow system_app time_data_file:file { write open getattr };
 set_prop(system_app, timekeep_prop)
 r_dir_file(system_app, sysfs_timekeep)
 r_dir_file(system_app, sysfs_rtc)
+
+allow system_app apex_service:service_manager find;
+allow system_app wificond:binder call;
+
