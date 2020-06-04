@@ -495,10 +495,30 @@ on property:ro.hw.revision=*
 on charger
     trigger moto-charger
 
-service per_mgr /system/vendor/bin/pm-service
+service vendor.per_mgr /vendor/bin/pm-service
     class core
     user system
     group system
+    writepid /dev/cpuset/system-background/tasks
+
+service vendor.per_proxy /vendor/bin/pm-proxy
+    class core
+    user system
+    group system
+    disabled
+    writepid /dev/cpuset/system-background/tasks
+
+on property:init.svc.vendor.per_mgr=running
+    start vendor.per_proxy
+
+on property:sys.shutdown.requested=*
+    stop vendor.per_proxy
+
+service ppd /vendor/bin/mm-pp-daemon
+    class hal
+    user system
+    socket pps stream 0660 system system
+    group system graphics
 
 on moto-charger
     setprop ro.board.platform msm8916
