@@ -347,6 +347,9 @@ service qcamerasvr /vendor/bin/mm-qcamera-daemon
     group camera system inet input graphics
     writepid /dev/cpuset/camera-daemon/tasks
 
+on property:init.svc.qcamerasvr=running
+    restart media
+
 service charger /system/bin/charger
     class charger
     user system
