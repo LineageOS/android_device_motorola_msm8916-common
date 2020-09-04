@@ -12,3 +12,7 @@ r_dir_file(system_app, sysfs_rtc)
 allow system_app apex_service:service_manager find;
 allow system_app wificond:binder call;
 
+dontaudit system_app {
+  apex_service
+  system_suspend_control_service
+}:service_manager find;
