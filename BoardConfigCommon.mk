@@ -175,6 +175,9 @@ TARGET_PROVIDES_QTI_TELEPHONY_JAR := true
 # Peripheral manager
 TARGET_PER_MGR_ENABLED := true
 
+# WFD
+TARGET_USES_LEGACY_WFD := true
+
 # Wifi
 BOARD_HAS_QCOM_WLAN := true
 BOARD_WLAN_DEVICE := qcwcn
