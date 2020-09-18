@@ -2,6 +2,7 @@
 
 setenforce 0
 export SYSDEV="$(readlink -nf "/dev/block/bootdevice/by-name/system")"
+export FWDEV="$(readlink -nf "/dev/block/bootdevice/by-name/modem")"
 export SYSFS="ext4"
 
 determine_system_mount() {
@@ -28,6 +29,15 @@ unmount_system() {
   umount $SYSMOUNT
 }
 
+mount_firmware() {
+  mount $FWDEV /firmware
+}
+
+unmount_firmware() {
+  umount /firmware
+}
+
+mount_firmware
 determine_system_mount
 
 mount_system
@@ -40,4 +50,5 @@ for file in /firmware/image/*.gz; do
 done
 
 unmount_system
+unmount_firmware
 setenforce 1

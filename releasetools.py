@@ -16,8 +16,6 @@ def FullOTA_InstallEnd(info):
   ExtractFirmwares(info)
 
 def ExtractFirmwares(info):
-  info.script.AppendExtra('mount("ext4", "EMMC", "/dev/block/bootdevice/by-name/modem", "/firmware", "");')
   info.script.AppendExtra('ui_print("Extracting modem firmware");')
   info.script.AppendExtra('run_program("/sbin/sh", "/tmp/install/bin/extract_firmware.sh");')
   info.script.AppendExtra('ui_print("Firmware extracted");')
-  info.script.AppendExtra('unmount("/firmware");')
