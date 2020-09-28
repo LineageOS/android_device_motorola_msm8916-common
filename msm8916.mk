@@ -269,6 +269,7 @@ PRODUCT_PACKAGES += \
 # RIL
 PRODUCT_PACKAGES += \
     libcnefeatureconfig \
+    libcutils_shim \
     libqsap_shim \
     librmnetctl \
     libxml2
