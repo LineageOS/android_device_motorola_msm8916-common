@@ -57,8 +57,8 @@ vendor/lib/libQSEEComAPI.so
 vendor/lib/librpmb.so
 vendor/lib/libssd.so
 vendor/lib/libtzdrmgenprov.so |47ca656eb2873410cc78de2553c70066dce87b65
-vendor/lib/libwvhidl.so |868d9d7f8b3a89860b4df7c3aa3f22020fae121d
-vendor/lib/mediadrm/libwvdrmengine.so |53ab49eb413c40ec47e6a83a991cc94c88fb2162
+vendor/lib/libwvhidl.so |0881cb4ca98d38f4d033a0b4dd971e74e067942c
+vendor/lib/mediadrm/libwvdrmengine.so |102f6287cb9949be9999f94f803b4113e4030a34
 
 # GPS
 vendor/lib/hw/flp.default.so
@@ -207,7 +207,7 @@ vendor/lib/lib-rtpcommon.so |afccef8edcb66fe5ab563967e3152f09b0e86f4a
 vendor/lib/lib-rtpcore.so |600ee02d2e827c8b22a63816a2f80204fa9e2c58
 vendor/lib/lib-rtpdaemoninterface.so |3bf68abd65bd66fce8a5163f472b71aabbcae63b
 vendor/lib/lib-rtpsl.so |c9bc38cb3061829f7776569c5835a1ac02c6cd98
-vendor/lib/libsettings.so |380ba180ab53849ecd7cf3cc68c695489e48ec1e
+vendor/lib/libsettings.so |fb16bc952c6b121a899414fc9590e14d6641eff6
 vendor/lib/lib-siputility.so |695dad4f6bde3e613357ca5179ef89bb809414f8
 vendor/lib/libsubsystem_control.so |f5c1d1b50ff9dde8b440d7606aa43e787b6faa72
 vendor/lib/libSubSystemShutdown.so |dfd0b427ab94d4fdc3b0ed7cb51868586a26d0e7
