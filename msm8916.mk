@@ -190,6 +190,12 @@ PRODUCT_COPY_FILES += \
 # HIDL
 PRODUCT_ENFORCE_VINTF_MANIFEST_OVERRIDE := true
 
+PRODUCT_PACKAGES += \
+    libhidltransport \
+    libhidltransport.vendor \
+    libhwbinder \
+    libhwbinder.vendor
+
 # Telephony
 PRODUCT_PACKAGES += \
     ims-ext-common_system \
