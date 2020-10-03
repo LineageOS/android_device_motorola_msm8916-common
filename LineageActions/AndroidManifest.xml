@@ -49,7 +49,7 @@
 
         <activity
             android:name=".ActionsPreferenceActivity"
-            android:label="@string/screen_gestures_panel_title"
+            android:label="@string/actions_label"
             android:theme="@style/LineageActions">
             <intent-filter>
                 <action android:name="com.android.settings.action.IA_SETTINGS" />
