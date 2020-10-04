@@ -126,6 +126,7 @@ BOARD_FLASH_BLOCK_SIZE := 131072
 
 # Qualcomm support
 BOARD_USES_QCOM_HARDWARE := true
+MALLOC_SVELTE := true
 
 # Recovery
 BOARD_HAS_NO_SELECT_BUTTON := true
