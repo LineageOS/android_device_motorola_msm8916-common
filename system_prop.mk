@@ -65,7 +65,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Memory optimizations
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.config.avoid_gfx_accel=true \
     ro.vendor.qti.am.reschedule_service=true \
     ro.vendor.qti.sys.fw.bservice_enable=true
 

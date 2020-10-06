@@ -347,13 +347,7 @@ PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 
 PRODUCT_GMS_CLIENTID_BASE := android-motorola
 
-# Speed profile services and wifi-service to reduce RAM and storage.
-PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile
-
-# Always preopt extracted APKs to prevent extracting out of the APK
-# for gms modules.
-PRODUCT_ALWAYS_PREOPT_EXTRACTED_APK := true
-
 $(call inherit-product-if-exists, vendor/motorola/msm8916-common/msm8916-common-vendor.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/go_defaults.mk)
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
