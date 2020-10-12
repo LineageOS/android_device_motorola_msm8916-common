@@ -194,7 +194,6 @@ on post-fs
     mkdir /persist/security 02770 oem_5007 oem_5007
     mkdir /persist/batt_health 0755 oem_5001 oem_5001
     mkdir /persist/mdm 0770 radio radio
-    mkdir /persist/sds 0700 vold vold
 
     chown system oem_5004 /persist/public/hiddenmenu/life_calls
     chown system oem_5004 /persist/public/hiddenmenu/life_timer
