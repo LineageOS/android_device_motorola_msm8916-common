@@ -19,12 +19,6 @@
     <!-- Show enabled lte option for lte device -->
     <bool name="config_enabled_lte" translatable="false">true</bool>
 
-    <!-- Flag indicating if network query through TelephonyManager.requestNetworkScan() should be
-         disabled.
-         If set to true, it will send network query through Phone.getAvailableNetworks() directly
-         rather than attempt to query through TelephonyManager.requestNetworkScan() first. -->
-    <bool name="config_disable_TelephonyManager_network_scan">true</bool>
-
     <!-- String indicating the package name of the device ImsService implementation for MMTEL. -->
     <string name="config_ims_mmtel_package" translatable="false">org.codeaurora.ims</string>
 
