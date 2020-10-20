@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3c05e5d2_33df607f",
+        "filename": "sepolicy/mmi_touch_sh.te",
+        "patchSetId": 4
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 25126
+      },
+      "writtenOn": "2020-10-20T16:56:06Z",
+      "side": 1,
+      "message": "Remove? Rule duplicated by line below.",
+      "revId": "f966bbca6eb94855379f0c8229ad65f4084c69a7",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
