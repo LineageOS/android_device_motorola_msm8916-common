@@ -5,3 +5,6 @@ allow system_server sysfs_livedisplay_tuneable:file rw_file_perms;
 
 # location
 binder_call(system_server, location);
+
+get_prop(system_server, userspace_reboot_exported_prop);
+get_prop(system_server, userspace_reboot_config_prop);
