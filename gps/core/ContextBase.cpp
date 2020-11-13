@@ -40,8 +40,8 @@
 
 namespace loc_core {
 
-loc_gps_cfg_s_type ContextBase::mGps_conf {0};
-loc_sap_cfg_s_type ContextBase::mSap_conf {0};
+loc_gps_cfg_s_type ContextBase::mGps_conf {};
+loc_sap_cfg_s_type ContextBase::mSap_conf {};
 
 uint32_t ContextBase::getCarrierCapabilities() {
     #define carrierMSA (uint32_t)0x2
