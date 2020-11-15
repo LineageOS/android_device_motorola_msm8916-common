@@ -156,7 +156,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/extract_firmware.sh:install/bin/extract_firmware.sh
 
 # LiveDisplay
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     vendor.lineage.livedisplay@2.0-service-sysfs
 endif
 
@@ -175,7 +175,7 @@ PRODUCT_PACKAGES += \
     android.hardware.health@2.0-service
 
 # LiveDisplay
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     vendor.lineage.livedisplay@2.0-service-legacymm
 
 # GPS

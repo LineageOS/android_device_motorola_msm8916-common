@@ -158,9 +158,9 @@ DEVICE_MANIFEST_FILE := $(VENDOR_PATH)/manifest.xml
 DEVICE_MATRIX_FILE := $(VENDOR_PATH)/compatibility_matrix.xml
 
 ifneq ($(filter surnia,$(TARGET_DEVICE)),)
-DEVICE_MANIFEST_FILE += $(VENDOR_PATH)/live_display_surnia_manifest.xml
+#DEVICE_MANIFEST_FILE += $(VENDOR_PATH)/live_display_surnia_manifest.xml
 else
-DEVICE_MANIFEST_FILE += $(VENDOR_PATH)/live_display_manifest.xml
+#DEVICE_MANIFEST_FILE += $(VENDOR_PATH)/live_display_manifest.xml
 endif
 
 # Peripheral manager
