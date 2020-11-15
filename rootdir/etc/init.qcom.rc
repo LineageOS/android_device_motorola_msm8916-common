@@ -488,6 +488,7 @@ on property:sys.shutdown.requested=*
 service ppd /vendor/bin/mm-pp-daemon
     class hal
     user system
+    disabled
     socket pps stream 0660 system system
     group system graphics
 
