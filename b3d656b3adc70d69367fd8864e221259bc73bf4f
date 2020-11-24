@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c80a9ce5_7dc0eb48",
+        "filename": "msm8916.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 141,
+      "author": {
+        "id": 18796
+      },
+      "writtenOn": "2020-11-24T07:23:28Z",
+      "side": 0,
+      "message": "we use TARGET_USES_C2D_COMPOSITION right?\n\nhttps://github.com/LineageOS/android_hardware_qcom_display/blob/2facb060edd926529c0da4a6c653ca48d1904fca/libcopybit/Android.mk#L33",
+      "revId": "b3d656b3adc70d69367fd8864e221259bc73bf4f",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
