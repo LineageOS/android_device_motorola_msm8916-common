@@ -46,6 +46,30 @@
       "revId": "b7a6ce044a0dd192a4ed9e1e5f97901897daf6d9",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "fbcaf340_9c91018b",
+        "filename": "proprietary-files.txt",
+        "patchSetId": 3
+      },
+      "lineNbr": 170,
+      "author": {
+        "id": 25126
+      },
+      "writtenOn": "2020-11-25T12:25:23Z",
+      "side": 1,
+      "message": "I got it from here, so I guess it is a bsp blob:\nhttps://github.com/android-eleven/proprietary_vendor_xiaomi/tree/eleven/mido/proprietary/product/priv-app/qcrilmsgtunnel\n\nAs this has already merged, I can add a new commit with a replacement if you you prefer.",
+      "parentUuid": "d486f96f_9cc0752a",
+      "range": {
+        "startLine": 170,
+        "startChar": 15,
+        "endLine": 170,
+        "endChar": 40
+      },
+      "revId": "b7a6ce044a0dd192a4ed9e1e5f97901897daf6d9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
     }
   ]
 }
