@@ -40,6 +40,8 @@
 /sys/devices/soc\.0/78b7000\.spi/spi_master/spi0/spi0\.0/leds/rgb(/.*)? u:object_r:sysfs_leds:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.light@2\.0-service.msm8916    u:object_r:hal_light_default_exec:s0
 
+/vendor/bin/hw/vendor\.lineage\.livedisplay@2\.0-service\.surnia                u:object_r:hal_lineage_livedisplay_qti_exec:s0
+
 # mmi_touch related /sys files
 /sys/devices/soc\.0/78b6000\.i2c/i2c-2/2-0020(/.*)?         u:object_r:sysfs_mmi_touch:s0
 
