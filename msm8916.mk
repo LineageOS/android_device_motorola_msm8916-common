@@ -173,8 +173,15 @@ PRODUCT_PACKAGES += \
 
 # LiveDisplay
 PRODUCT_PACKAGES += \
-    vendor.lineage.livedisplay@2.0-service-legacymm \
+    vendor.lineage.livedisplay@2.0-service-legacymm
+
+ifeq ($(filter surnia,$(TARGET_DEVICE)),)
+PRODUCT_PACKAGES += \
     vendor.lineage.livedisplay@2.0-service-sysfs
+else
+PRODUCT_PACKAGES += \
+    vendor.lineage.livedisplay@2.0-service.surnia
+endif
 
 # GPS
 PRODUCT_PACKAGES += \
