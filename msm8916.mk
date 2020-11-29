@@ -171,9 +171,11 @@ PRODUCT_PACKAGES += \
     android.hardware.health@2.0-service
 
 # LiveDisplay
+ifeq ($(filter surnia,$(TARGET_DEVICE)),)
 PRODUCT_PACKAGES += \
     vendor.lineage.livedisplay@2.0-service-legacymm \
     vendor.lineage.livedisplay@2.0-service-sysfs
+endif
 
 # GPS
 PRODUCT_PACKAGES += \
