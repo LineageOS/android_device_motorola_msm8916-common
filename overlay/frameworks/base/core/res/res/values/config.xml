@@ -230,4 +230,25 @@
     <!-- Minimum screen brightness setting allowed by the power manager.
          The user is forbidden from setting the brightness below this level. -->
     <integer name="config_screenBrightnessSettingMinimum">1</integer>
+<<<<<<< HEAD   (938f3e msm8916-common: enable TARGET_HAS_MEMFD_BACKPORT)
+=======
+
+    <!-- Flag to disable all transition animations -->
+    <bool name="config_disableTransitionAnimation">true</bool>
+
+    <!-- Feature flag to enable memory efficient task snapshots that are used in recents optimized
+         for low memory devices and replace the app transition starting window with the splash
+         screen. -->
+    <bool name="config_lowRamTaskSnapshotsAndRecents">true</bool>
+
+    <!-- Device configuration indicating whether we should avoid using accelerated graphics
+         in certain places to reduce RAM footprint.  This is ignored if ro.config.low_ram
+         is true (in that case this is assumed true as well).  It can allow you to tune down
+         your device's memory use without going to the point of causing applications to turn
+         off features. -->
+    <bool name="config_avoidGfxAccel">true</bool>
+
+    <!-- Feature flag to store TaskSnapshot in 16 bit pixel format to save memory. -->
+    <bool name="config_use16BitTaskSnapshotPixelFormat">true</bool>
+>>>>>>> CHANGE (90a911 msm8916-common: Set config_use16BitTaskSnapshotPixelFormat t)
 </resources>
