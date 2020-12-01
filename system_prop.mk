@@ -87,6 +87,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Radio
 PRODUCT_PROPERTY_OVERRIDES += \
+    keyguard.no_require_sim=true \
     DEVICE_PROVISIONED=1 \
     persist.data.mode=concurrent \
     persist.data.netmgrd.qos.enable=true \
