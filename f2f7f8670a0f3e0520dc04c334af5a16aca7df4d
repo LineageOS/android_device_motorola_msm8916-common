@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2dbbaa41_0e2fe2c6",
+        "filename": "msm8916.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 366,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2020-12-09T12:47:31Z",
+      "side": 1,
+      "message": "Already in vendor/lineage.",
+      "range": {
+        "startLine": 365,
+        "startChar": 0,
+        "endLine": 366,
+        "endChar": 47
+      },
+      "revId": "f2f7f8670a0f3e0520dc04c334af5a16aca7df4d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
