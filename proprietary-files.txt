@@ -42,9 +42,7 @@ vendor/lib/libmm-disp-apis.so
 vendor/lib/libmm-qdcm.so
 
 # DRM - from aljeter - PPP29.55-25
-vendor/bin/hw/android.hardware.drm@1.1-service.widevine |2c2455a218eb8d5368f1ccd39bea51be8364a0f3
 vendor/bin/qseecomd
-vendor/etc/init/android.hardware.drm@1.1-service.widevine.rc |5a01d337c1d375ee24a6c8992ba91f54afb7637e
 vendor/lib/libcpion.so |a5fb435eccdbfab44ba89639eb0a7605fc54994a
 vendor/lib/libcppf.so |22601c97e794c3b4b1cac9e95aedba93206e692f
 vendor/lib/libdrmfs.so
@@ -59,6 +57,10 @@ vendor/lib/libssd.so
 vendor/lib/libtzdrmgenprov.so |47ca656eb2873410cc78de2553c70066dce87b65
 vendor/lib/libwvhidl.so |0881cb4ca98d38f4d033a0b4dd971e74e067942c
 vendor/lib/mediadrm/libwvdrmengine.so |102f6287cb9949be9999f94f803b4113e4030a34
+
+# DRM services - from Channel QPY30.52-2
+vendor/bin/hw/android.hardware.drm@1.2-service.widevine |2491689eba91885a5e61f6c83f35f0c4c64f52d8
+vendor/etc/init/android.hardware.drm@1.2-service.widevine.rc |e3cb732c0bd519988100675edf385d947abf5f6c
 
 # GPS
 vendor/lib/hw/flp.default.so
