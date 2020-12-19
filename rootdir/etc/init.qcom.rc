@@ -65,7 +65,6 @@ on early-boot
     write /sys/kernel/boot_adsp/boot 1
 
     start qseecomd
-    restart qcamerasvr
 
 on boot
     #Create QMUX deamon socket area
@@ -311,6 +310,8 @@ on post-fs-data
     setprop ro.hw.hwrev ${ro.boot.hwrev}
     setprop ro.hw.radio ${ro.boot.radio}
 
+    restart vendor.qcamerasvr
+
 # Start Sensor daemon
 service stml0xx /vendor/bin/stml0xx_wrapper.sh
     class late_start
@@ -342,7 +343,7 @@ service wcnss-service /vendor/bin/wcnss_service
     group system wifi radio
 
 #start camera server as daemon
-service qcamerasvr /vendor/bin/mm-qcamera-daemon
+service vendor.qcamerasvr /vendor/bin/mm-qcamera-daemon
     class late_start
     user camera
     group camera system inet input graphics
