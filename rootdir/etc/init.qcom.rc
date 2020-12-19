@@ -65,7 +65,6 @@ on early-boot
     write /sys/kernel/boot_adsp/boot 1
 
     start qseecomd
-    restart qcamerasvr
 
 on boot
     #Create QMUX deamon socket area
@@ -342,13 +341,16 @@ service wcnss-service /vendor/bin/wcnss_service
     group system wifi radio
 
 #start camera server as daemon
-service qcamerasvr /vendor/bin/mm-qcamera-daemon
+service vendor.qcamerasvr /vendor/bin/mm-qcamera-daemon
     class late_start
     user camera
     group camera system inet input graphics
     writepid /dev/cpuset/camera-daemon/tasks
 
-on property:init.svc.qcamerasvr=running
+on property:init.svc.vendor.qcamerasvr=stopped
+    restart vendor.qcamerasvr
+
+on property:init.svc.vendor.qcamerasvr=running
     restart media
 
 service charger /system/bin/charger
