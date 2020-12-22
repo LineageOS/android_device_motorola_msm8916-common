@@ -15,7 +15,6 @@
 -->
 
 <resources>
-
     <!-- Show enabled lte option for lte device -->
     <bool name="config_enabled_lte" translatable="false">true</bool>
 
