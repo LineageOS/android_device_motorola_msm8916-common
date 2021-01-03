@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d7f66baa_0a985b8d",
+        "filename": "msm8916.mk",
+        "patchSetId": 4
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2021-01-03T10:53:32Z",
+      "side": 0,
+      "message": "This removal is part of the original change only because the device was inheriting from AOSP Go makefiles.",
+      "range": {
+        "startLine": 52,
+        "startChar": 4,
+        "endLine": 52,
+        "endChar": 126
+      },
+      "revId": "32c83bc9aa7fefde7bb9bbd0954befb144342cbe",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
