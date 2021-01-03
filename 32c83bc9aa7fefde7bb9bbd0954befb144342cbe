@@ -70,6 +70,30 @@
       "revId": "32c83bc9aa7fefde7bb9bbd0954befb144342cbe",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "9268534d_e125b6fe",
+        "filename": "msm8916.mk",
+        "patchSetId": 4
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 13589
+      },
+      "writtenOn": "2021-01-03T11:04:10Z",
+      "side": 0,
+      "message": "Same, just found out, it was added to Android 11 the same way they did for Android Go :\nhttps://github.com/LineageOS/android_build/commit/dccce7bbe9673d4b8ce1a3559182767f926e1ff8\n\nBruno, this means normal devices \"might\" want to cleanup their trees.\nDo it in a different commit though, as its a generic cleanup.",
+      "parentUuid": "94393fb4_8572d8d4",
+      "range": {
+        "startLine": 52,
+        "startChar": 4,
+        "endLine": 52,
+        "endChar": 126
+      },
+      "revId": "32c83bc9aa7fefde7bb9bbd0954befb144342cbe",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
     }
   ]
 }
