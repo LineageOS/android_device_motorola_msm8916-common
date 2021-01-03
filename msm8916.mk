@@ -216,9 +216,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service.msm8916
 
-# LineageActions
+# MotoActions
+ifeq ($(filter harpia,$(TARGET_DEVICE)),)
 PRODUCT_PACKAGES += \
-    LineageActions
+    MotoActions
+endif
 
 # Media
 PRODUCT_COPY_FILES += \

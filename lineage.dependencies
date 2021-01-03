@@ -12,6 +12,10 @@
     "target_path": "external/sony/boringssl-compat"
   },
   {
+    "repository": "android_hardware_motorola",
+    "target_path": "hardware/motorola"
+  },
+  {
     "repository": "android_hardware_sony_timekeep",
     "target_path": "hardware/sony/timekeep"
   },
