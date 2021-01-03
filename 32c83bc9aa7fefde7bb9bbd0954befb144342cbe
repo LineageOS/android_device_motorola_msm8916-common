@@ -94,6 +94,30 @@
       "revId": "32c83bc9aa7fefde7bb9bbd0954befb144342cbe",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "4d4601e5_e038525a",
+        "filename": "msm8916.mk",
+        "patchSetId": 4
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2021-01-03T11:05:41Z",
+      "side": 0,
+      "message": "Yes, I was just thinking about doing that cleanup.",
+      "parentUuid": "9268534d_e125b6fe",
+      "range": {
+        "startLine": 52,
+        "startChar": 4,
+        "endLine": 52,
+        "endChar": 126
+      },
+      "revId": "32c83bc9aa7fefde7bb9bbd0954befb144342cbe",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
     }
   ]
 }
