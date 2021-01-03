@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4497b1b8_b194fe49",
+        "filename": "msm8916.mk",
+        "patchSetId": 3
+      },
+      "lineNbr": 343,
+      "author": {
+        "id": 13589
+      },
+      "writtenOn": "2021-01-03T10:34:56Z",
+      "side": 1,
+      "message": "Commit to revert once you\u0027re importing Go build configurations as this is done in Go by default",
+      "revId": "598878d4b2afe47822a32e90d872042bb5358beb",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "820c7d10_0f4fbefb",
+        "filename": "msm8916.mk",
+        "patchSetId": 3
+      },
+      "lineNbr": 362,
+      "author": {
+        "id": 13589
+      },
+      "writtenOn": "2021-01-03T10:34:56Z",
+      "side": 1,
+      "message": "It\u0027s because you missed the full_base_telephony part of the commit, hence need the keyguard.no_require_sim\u003dtrue afterwards",
+      "revId": "598878d4b2afe47822a32e90d872042bb5358beb",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
