@@ -36,11 +36,6 @@ vendor/lib/libmot_sensorlistener.so
 # Camera firmware
 vendor/firmware/cpp_firmware_v1_4_0.fw
 
-# Display Color Calibration
-vendor/bin/mm-pp-daemon
-vendor/lib/libmm-disp-apis.so
-vendor/lib/libmm-qdcm.so
-
 # DRM - from aljeter - PPP29.55-25
 vendor/bin/qseecomd
 vendor/lib/libcpion.so |a5fb435eccdbfab44ba89639eb0a7605fc54994a
