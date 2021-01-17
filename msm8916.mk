@@ -169,9 +169,6 @@ PRODUCT_PACKAGES += \
     android.hardware.health@2.1-service
 
 # LiveDisplay
-PRODUCT_PACKAGES += \
-    vendor.lineage.livedisplay@2.0-service-legacymm
-
 ifeq ($(filter surnia,$(TARGET_DEVICE)),)
 PRODUCT_PACKAGES += \
     vendor.lineage.livedisplay@2.0-service-sysfs
