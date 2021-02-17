@@ -1,6 +1,5 @@
 #!/sbin/sh
 
-setenforce 0
 export SYSDEV="$(readlink -nf "/dev/block/bootdevice/by-name/system")"
 export SYSFS="ext4"
 
@@ -40,4 +39,3 @@ for file in /firmware/image/*.gz; do
 done
 
 unmount_system
-setenforce 1
