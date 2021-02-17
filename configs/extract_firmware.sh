@@ -1,6 +1,5 @@
 #!/sbin/sh
 
-setenforce 0
 export SYSDEV="$(readlink -nf "/dev/block/bootdevice/by-name/system")"
 export FWDEV="$(readlink -nf "/dev/block/bootdevice/by-name/modem")"
 export SYSFS="ext4"
@@ -51,4 +50,3 @@ done
 
 unmount_system
 unmount_firmware
-setenforce 1
