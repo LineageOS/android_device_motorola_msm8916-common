@@ -28,7 +28,7 @@
 #include <sys/select.h>
 #include <dlfcn.h>
 
-#include <cutils/log.h>
+#include <log/log.h>
 
 #include "AkmSensor.h"
 #include <utils/SystemClock.h>
@@ -51,7 +51,7 @@ AkmSensor::AkmSensor()
 		mDelay[i] = -1;
 	}
 	memset(mPendingEvents, 0, sizeof(mPendingEvents));
-	
+
 	mPendingEvents[Accelerometer].version = sizeof(sensors_event_t);
 	mPendingEvents[Accelerometer].sensor = ID_A;
 	mPendingEvents[Accelerometer].type = SENSOR_TYPE_ACCELEROMETER;
@@ -374,21 +374,21 @@ void AkmSensor::processEvent(int code, int value)
 	case EVENT_TYPE_UCMAGV_X:
 		mPendingMask |= 1<<UncalMagneticField;
 		mPendingEvents[UncalMagneticField].uncalibrated_magnetic.x_uncalib = value * CONVERT_M;
-		mPendingEvents[UncalMagneticField].uncalibrated_magnetic.x_bias = 
+		mPendingEvents[UncalMagneticField].uncalibrated_magnetic.x_bias =
 			mPendingEvents[UncalMagneticField].uncalibrated_magnetic.x_uncalib
 			- mPendingEvents[MagneticField].magnetic.x;
 		break;
 	case EVENT_TYPE_UCMAGV_Y:
 		mPendingMask |= 1<<UncalMagneticField;
 		mPendingEvents[UncalMagneticField].uncalibrated_magnetic.y_uncalib = value * CONVERT_M;
-		mPendingEvents[UncalMagneticField].uncalibrated_magnetic.y_bias = 
+		mPendingEvents[UncalMagneticField].uncalibrated_magnetic.y_bias =
 			mPendingEvents[UncalMagneticField].uncalibrated_magnetic.y_uncalib
 			- mPendingEvents[MagneticField].magnetic.y;
 		break;
 	case EVENT_TYPE_UCMAGV_Z:
 		mPendingMask |= 1<<UncalMagneticField;
 		mPendingEvents[UncalMagneticField].uncalibrated_magnetic.z_uncalib = value * CONVERT_M;
-		mPendingEvents[UncalMagneticField].uncalibrated_magnetic.z_bias = 
+		mPendingEvents[UncalMagneticField].uncalibrated_magnetic.z_bias =
 			mPendingEvents[UncalMagneticField].uncalibrated_magnetic.z_uncalib
 			- mPendingEvents[MagneticField].magnetic.z;
 	break;

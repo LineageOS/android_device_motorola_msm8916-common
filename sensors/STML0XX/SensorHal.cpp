@@ -21,7 +21,7 @@
 #include <float.h>
 #include <string.h>
 
-#include <cutils/log.h>
+#include <log/log.h>
 
 #include <hardware/sensors.h>
 #include <hardware/mot_sensorhub_stml0xx.h>
@@ -122,7 +122,7 @@ static int open_sensors(const struct hw_module_t* module, const char* id,
 }
 
 static int sensors__get_sensors_list(struct sensors_module_t* module,
-				     struct sensor_t const** list) 
+				     struct sensor_t const** list)
 {
 	(void)module;
 	*list = sSensorList;
