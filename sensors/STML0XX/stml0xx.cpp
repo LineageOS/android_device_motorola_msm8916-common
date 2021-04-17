@@ -12,7 +12,7 @@
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <fcntl.h>
-#include <cutils/log.h>
+#include <log/log.h>
 #include <linux/stml0xx.h>
 
 /******************************* # defines **************************************/

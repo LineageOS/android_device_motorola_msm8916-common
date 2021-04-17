@@ -32,7 +32,7 @@
 #include <linux/input.h>
 
 #include <cutils/atomic.h>
-#include <cutils/log.h>
+#include <log/log.h>
 
 #include <hardware/sensors.h>
 #include <hardware/mot_sensorhub_stml0xx.h>
