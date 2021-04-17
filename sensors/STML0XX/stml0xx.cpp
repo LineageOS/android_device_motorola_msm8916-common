@@ -17,8 +17,8 @@
 
 /******************************* # defines **************************************/
 #define STM_DRIVER "/dev/stml0xx"
-#define STM_FIRMWARE_FILE "/system/etc/firmware/sensorhubfw"
-#define STM_VERSION_FILE "/system/etc/firmware/sensorhubver"
+#define STM_FIRMWARE_FILE "/vendor/firmware/sensorhubfw"
+#define STM_VERSION_FILE "/vendor/firmware/sensorhubver"
 #define STM_FIRMWARE_FACTORY_FILE "/system/etc/firmware/sensorhubfactory.bin"
 #define STM_SUCCESS 0
 #define STM_FAILURE -1
