@@ -32,7 +32,7 @@
 
 #include <linux/stml0xx.h>
 
-#include <cutils/log.h>
+#include <log/log.h>
 
 #include <hardware/mot_sensorhub_stml0xx.h>
 
