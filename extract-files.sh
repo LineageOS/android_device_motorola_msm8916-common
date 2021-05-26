@@ -25,6 +25,15 @@ if [ -z "${SRC}" ]; then
     SRC="adb"
 fi
 
+function blob_fixup() {
+    case "${1}" in
+    # Hex-edit ppd to disable dyn_pu
+    vendor/bin/mm-pp-daemon)
+        sed -i 's|/sys/class/graphics/fb0/dyn_pu|/sys/class/graphics/fb0/disabl|g' "${2}"
+        ;;
+    esac
+}
+
 # Initialize the helper
 setup_vendor "${DEVICE_COMMON}" "${VENDOR}" "${ANDROID_ROOT}" true
 extract "${MY_DIR}/proprietary-files.txt" "${SRC}"
