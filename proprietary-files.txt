@@ -37,7 +37,7 @@ vendor/lib/libmot_sensorlistener.so
 vendor/firmware/cpp_firmware_v1_4_0.fw
 
 # Display Color Calibration
-vendor/bin/mm-pp-daemon
+vendor/bin/mm-pp-daemon|87908dd6de07b2867ea8619aa53b7ed11be0b359
 vendor/lib/libmm-disp-apis.so
 vendor/lib/libmm-qdcm.so
 
