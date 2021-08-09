@@ -50,11 +50,11 @@ HubSensor::HubSensor()
       mEnabledHandles(0)
 {
     // read the actual value of all sensors if they're enabled already
-    struct input_absinfo absinfo;
+    struct input_absinfo absinfo __unused;
     char flags[3];
-    FILE *fp;
+    FILE *fp __unused;
     int i;
-    int err = 0;
+    int err = 0 __unused;
 
     static_assert(MAX_SENSOR_ID < (sizeof(mEnabledHandles) * CHAR_BIT),
         "enabled handlers bit mask can NOT hold all the handles");

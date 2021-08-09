@@ -175,7 +175,7 @@ int SensorsPollContext::setDelay(int handle, int64_t ns)
 int SensorsPollContext::pollEvents(sensors_event_t* data, int count)
 {
 	int nbEvents = 0;
-	int n = 0;
+	int n = 0 __unused;
 	int ret;
 	int err;
 
