@@ -4,6 +4,6 @@
 namespace android {
 
     // The android::MetaData class doesn't exist in Pie. Define the missing symbol returning false.
-    extern "C" bool _ZN7android8MetaData9findInt64EjPx(uint32_t key, int64_t *value) { return false; }
+    extern "C" bool _ZN7android8MetaData9findInt64EjPx(int64_t *value __unused) { return false; }
 
 }
