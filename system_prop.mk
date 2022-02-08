@@ -140,7 +140,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Timeout failed shutdowns
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.build.shutdown_timeout=5
+    ro.build.shutdown_timeout=2
 
 # WiFi
 PRODUCT_PROPERTY_OVERRIDES += \
