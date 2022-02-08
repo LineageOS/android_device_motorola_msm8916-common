@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "512ca110_a9c16ee2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 19286
+      },
+      "writtenOn": "2022-02-08T12:15:14Z",
+      "side": 1,
+      "message": "this caused on hima strange effects, like a borked cam, so I reverted this",
+      "revId": "6cee298ef7a682bafad7e449c1799119534ba058",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
