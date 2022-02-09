@@ -52,6 +52,24 @@
       "parentUuid": "e8554b47_0c85772a",
       "revId": "72b59f46a7e4191e654419807bb1cd85ce4d008d",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "584f9ea3_b105598c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 20430
+      },
+      "writtenOn": "2022-02-09T13:47:05Z",
+      "side": 1,
+      "message": "it requires that all new devices as of Android 11 will have to run the GO variant if they have 2GB RAM or less. anyways abandoned",
+      "parentUuid": "0bdeeec6_ab0bc52d",
+      "revId": "72b59f46a7e4191e654419807bb1cd85ce4d008d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
