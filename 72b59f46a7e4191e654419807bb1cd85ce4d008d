@@ -34,6 +34,24 @@
       "parentUuid": "513eb50e_8f5e2dd3",
       "revId": "72b59f46a7e4191e654419807bb1cd85ce4d008d",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0bdeeec6_ab0bc52d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 22728
+      },
+      "writtenOn": "2022-02-09T13:15:55Z",
+      "side": 1,
+      "message": "We already call enough of \"go\" stuff with that call and others added latter. We don\u0027t have any problem related with storage size to reduce fonts or whatever.",
+      "parentUuid": "e8554b47_0c85772a",
+      "revId": "72b59f46a7e4191e654419807bb1cd85ce4d008d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
