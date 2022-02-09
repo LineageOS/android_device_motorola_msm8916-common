@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d39bf056_57e328ae",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 18796
+      },
+      "writtenOn": "2022-02-09T11:50:05Z",
+      "side": 1,
+      "message": "pick this instead\nhttps://review.lineageos.org/c/LineageOS/android_device_motorola_victara/+/308906",
+      "revId": "07ed7bcd1ae35cfeca6f56412c9b65baf7a33e65",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
