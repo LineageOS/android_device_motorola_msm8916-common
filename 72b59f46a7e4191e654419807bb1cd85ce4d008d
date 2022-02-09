@@ -16,6 +16,24 @@
       "message": "https://github.com/LineageOS/android_device_motorola_msm8916-common/commit/77ee89198872af962d3bce69b5d445e796fb7818",
       "revId": "72b59f46a7e4191e654419807bb1cd85ce4d008d",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e8554b47_0c85772a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 20430
+      },
+      "writtenOn": "2022-02-09T09:55:21Z",
+      "side": 1,
+      "message": "common_full_go_phone.mk contains PRODUCT_TYPE \u003d go and inherit common_full_phone.mk\ncommon_full__phone inherit common_full.mk and telephony.mk and overlays also build LatinIME(keyboard) common full contains common_mobile and some fonts + recorder. and contains all lineage inherits. there is no link of this with that. didn\u0027t get it can you clarify?",
+      "parentUuid": "513eb50e_8f5e2dd3",
+      "revId": "72b59f46a7e4191e654419807bb1cd85ce4d008d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
