@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "731ec182_f26cc50c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2022-02-14T21:51:32Z",
+      "side": 1,
+      "message": "Neverming, I see that you are building MotoActions in device trees.",
+      "revId": "922a2a22be4e9e6e066afa3a252fecaee72c7281",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
