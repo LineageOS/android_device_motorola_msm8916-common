@@ -34,6 +34,23 @@
       "parentUuid": "ce0a65fb_dbc5e9b5",
       "revId": "f996297354f0371366ae2bacdf12de0e3128bb11",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3df5d941_43418cd7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 22728
+      },
+      "writtenOn": "2022-02-17T10:38:46Z",
+      "side": 1,
+      "message": "\u003e Patch Set 2:\n\u003e \n\u003e that is done for a specific reason, that family of devices is very vulnerable to a technicolor screen bug that is caused in part by live display color profiles\n\nYes, I\u0027m aware of it. Here on this family I choose because devices are shipped with 2gb and 1gb RAM and makes the initial setup more comfortable",
+      "revId": "f996297354f0371366ae2bacdf12de0e3128bb11",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
