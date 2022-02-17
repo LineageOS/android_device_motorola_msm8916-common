@@ -16,6 +16,24 @@
       "message": "these are safetynet related and should be denied. don\u0027t audit if anything, but I\u0027d just leave it. ",
       "revId": "7810b4d837ca86f0495c5d7c2ec6d7f5b9107e6b",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6308b337_5725101c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 22728
+      },
+      "writtenOn": "2022-02-17T00:06:56Z",
+      "side": 1,
+      "message": "Makes sense",
+      "parentUuid": "4ade70cb_27f08445",
+      "revId": "7810b4d837ca86f0495c5d7c2ec6d7f5b9107e6b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
