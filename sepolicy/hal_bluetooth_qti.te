@@ -1,0 +1,2 @@
+allow hal_bluetooth_qti hal_fm_hwservice:hwservice_manager { add find };
+
