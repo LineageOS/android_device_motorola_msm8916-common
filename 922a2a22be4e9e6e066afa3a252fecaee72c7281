@@ -16,6 +16,24 @@
       "message": "Neverming, I see that you are building MotoActions in device trees.",
       "revId": "922a2a22be4e9e6e066afa3a252fecaee72c7281",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0d054438_8e3293fb",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 22728
+      },
+      "writtenOn": "2022-02-17T10:50:39Z",
+      "side": 1,
+      "message": "yes",
+      "parentUuid": "731ec182_f26cc50c",
+      "revId": "922a2a22be4e9e6e066afa3a252fecaee72c7281",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
