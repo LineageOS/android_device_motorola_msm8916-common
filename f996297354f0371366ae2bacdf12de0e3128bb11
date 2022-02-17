@@ -16,6 +16,24 @@
       "message": "why tho - all other devices leave the UX same?",
       "revId": "f996297354f0371366ae2bacdf12de0e3128bb11",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "aea5ea85_227bb9ca",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 22728
+      },
+      "writtenOn": "2022-02-17T00:22:26Z",
+      "side": 1,
+      "message": "https://github.com/LineageOS/android_device_motorola_sdm660-common/blob/lineage-18.1/overlay/lineage-sdk/lineage/res/res/values/config.xml#L44\n\nI used as standard",
+      "parentUuid": "ce0a65fb_dbc5e9b5",
+      "revId": "f996297354f0371366ae2bacdf12de0e3128bb11",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
